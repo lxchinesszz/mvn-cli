@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    {{if root}}
+    <groupId>{{@groupId}}</groupId>
+    <artifactId>{{@projectName}}</artifactId>
+    <version>{{@projectVersion}}</version>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>{{@packaging}}</packaging>
+    <modules>
+        {{each modules}}
+        <module>{{$value}}</module>
+        {{/each}}
+    </modules>
+
+    <name>{{@projectName}}</name>
+    <description>{{@projectDescription}}</description>
+    {{else}}
+    <parent>
+        <groupId>{{@groupId}}</groupId>
+        <artifactId>{{@projectName}}</artifactId>
+        <version>{{@projectVersion}}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>{{@moduleName}}</artifactId>
+    <version>{{@projectVersion}}</version>
+    {{/if}}
+
+
+    <!--强烈建议你将依赖版本在这里控制,方便后期维护-->
+    <properties>
+    </properties>
+
+    <!--    【建议】父pom才具有依赖版本管理的能力,父pom控制version,子pom只用引入即可-->
+    {{if root}}
+    <dependencyManagement>
+        {{/if}}
+        {{if dependencies}}
+        <dependencies>
+            {{each dependencies}}
+            <dependency>
+                <groupId>{{$value.groupId}}</groupId>
+                <artifactId>{{$value.artifactId}}</artifactId>
+                <version>{{$value.version}}</version>
+            </dependency>
+            {{/each}}
+        </dependencies>
+        {{/if}}
+        {{if root}}
+    </dependencyManagement>
+    {{/if}}
+
+
+    <!--指定使用maven打包-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>{{@mavenSurefireJavaVersion}}</source>
+                    <target>{{@mavenSurefireJavaVersion}}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>    <!--默认关掉单元测试 -->
+                </configuration>
+            </plugin>
+
+            <!-- 加入此插件, deploy时将源码一并发布至nexus, 这样调用方就可以下载源码看到接口注释啦 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

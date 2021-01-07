@@ -1,9 +1,12 @@
 const {NamespaceAction} = require('./NamespaceAction')
-const {MavenModuleAction} = require('./MavenModuleAction')
-// 1. 根据项目名创建项目目录
+const {MavenModuleAction} = require('./maven/MavenModuleAction')
+const {MavenModuleDependenciesAction} = require('./maven/MavenModuleDependenciesAction')
 
-// 2. 进入项目
-
+/**
+ * 构建Maven多模块应用
+ * @param config
+ * @constructor
+ */
 function Project(config) {
 
     this.namespaceConfig = config.namespaceConfig
@@ -11,16 +14,13 @@ function Project(config) {
     this.create = function () {
         // 1. 构建命名处理类
         let namespace = new NamespaceAction(this.namespaceConfig);
-        let mavenModule = new MavenModuleAction(namespace)
+        // 2. 模块依赖配置
+        let mavenModuleDependencies = new MavenModuleDependenciesAction(namespace);
+        // 3. 构建工具
+        let mavenModule = new MavenModuleAction(namespace, mavenModuleDependencies)
         mavenModule.init();
     }
 }
 
-const {MvnConfig, DefaultDomainConfig} = require('../config/config')
 
-const project = new Project({
-    namespaceConfig: DefaultDomainConfig
-})
-
-
-project.create();
+module.exports = {Project}

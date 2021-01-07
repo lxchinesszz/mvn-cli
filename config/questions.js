@@ -29,6 +29,19 @@ const projectInfoQuestions = [{
     },
     {
         type: 'input',
+        name: 'projectDescription',
+        message: '项目描述',
+        suffix: ':',
+        filter: function (val) {
+            if (val) {
+                return val
+            } else {
+                return 'description'
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'projectVersion',
         message: '初始版本号',
         default: '1.0.0',

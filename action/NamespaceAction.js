@@ -62,6 +62,35 @@ function NamespaceAction(config) {
     this._common = config.common
 
     /**
+     * _groupId
+     * @type {string|string|boolean|ConstrainDOMString|*}
+     * @private
+     */
+    this._groupId = config.groupId
+
+    /**
+     * 项目版本
+     * @type {string|*}
+     * @private
+     */
+    this._projectVersion = config.projectVersion
+
+    /**
+     * 项目描述
+     * @type {string|MavenModuleAction._createModulePom._namespaceAction.projectDescription|*}
+     * @private
+     */
+    this._projectDescription = config.projectDescription
+
+    /**
+     * 获取项目描述
+     * @returns {string|MavenModuleAction._createModulePom._namespaceAction.projectDescription|*}
+     */
+    this.getProjectDescription = function (){
+        return this._projectDescription;
+    }
+
+    /**
      * web层命名
      * @returns {string}
      */
@@ -117,56 +146,127 @@ function NamespaceAction(config) {
     }
 
     /**
+     * 获取groupId
+     * @returns {string|boolean|ConstrainDOMString|*}
+     */
+    this.getGroupId = function () {
+        return this._groupId
+    }
+
+    /**
+     * 项目名
+     * @returns {string}
+     */
+    this.getProjectName = function () {
+        return this._projectName
+    }
+
+    /**
+     * 获取项目版本号
+     * @returns {string|*}
+     */
+    this.getProjectVersion = function () {
+        return this._projectVersion
+    }
+    /**
      * web入口层路径
      */
-    this.webPath = function () {
-        return `${this._projectName}/${this._projectName}-${this._web}/`
+    this.webNamespace = function () {
+        return {
+            projectName: this._projectName,
+            type: 'web',
+            version: this._projectVersion,
+            moduleName: `${this._projectName}-${this._web}`,
+            path: `${this._projectName}/${this._projectName}-${this._web}/`
+        }
     }
     /**
      * 服务层路径
      */
-    this.servicePath = function () {
-        return `${this._projectName}/${this._projectName}-${this._biz}/`
+    this.serviceNamespace = function () {
+        return {
+            projectName: this._projectName,
+            type: 'service',
+            version: this._projectVersion,
+            moduleName: `${this._projectName}-${this._biz}`,
+            path: `${this._projectName}/${this._projectName}-${this._biz}/`
+        }
     }
 
     /**
      * 领域层
      */
-    this.domainPath = function () {
-        return `${this._projectName}/${this._projectName}-${this._domain}/`
-
+    this.domainNamespace = function () {
+        return {
+            projectName: this._projectName,
+            type: 'domain',
+            version: this._projectVersion,
+            moduleName: `${this._projectName}-${this._domain}`,
+            path: `${this._projectName}/${this._projectName}-${this._domain}/`
+        }
     }
 
     /**
      * db操作层
      */
-    this.dalPath = function () {
-        return `${this._projectName}/${this._projectName}-${this._dal}/`
-
+    this.dalNamespace = function () {
+        return {
+            projectName: this._projectName,
+            type: 'dal',
+            version: this._projectVersion,
+            moduleName: `${this._projectName}-${this._dal}`,
+            path: `${this._projectName}/${this._projectName}-${this._dal}/`
+        }
     }
 
     /**
      * 三方API调用防腐层
      */
-    this.integrationPath = function () {
-        return `${this._projectName}/${this._projectName}-${this._integration}/`
-
+    this.integrationNamespace = function () {
+        return {
+            projectName: this._projectName,
+            type: 'integration',
+            version: this._projectVersion,
+            moduleName: `${this._projectName}-${this._integration}`,
+            path: `${this._projectName}/${this._projectName}-${this._integration}/`
+        }
     }
 
     /**
      * 配置层
      */
-    this.configPath = function () {
-        return `${this._projectName}/${this._projectName}-${this._config}/`
-
+    this.configNamespace = function () {
+        return {
+            projectName: this._projectName,
+            type: 'config',
+            version: this._projectVersion,
+            moduleName: `${this._projectName}-${this._config}`,
+            path: `${this._projectName}/${this._projectName}-${this._config}/`
+        }
     }
 
     /**
      * 通用配置(不依赖容器)
      */
-    this.commonPath = function () {
-        return `${this._projectName}/${this._projectName}-${this._common}/`
+    this.commonNamespace = function () {
+        return {
+            projectName: this._projectName,
+            type: 'common',
+            version: this._projectVersion,
+            moduleName: `${this._projectName}-${this._common}`,
+            path: `${this._projectName}/${this._projectName}-${this._common}/`
+        }
     }
+
+    /**
+     * 获取所有的命名
+     */
+    this.getAllNamespace = function () {
+        return [this.webNamespace(), this.serviceNamespace(), this.domainNamespace()
+            , this.dalNamespace(), this.integrationNamespace(), this.configNamespace(), this.commonNamespace()
+        ]
+    }
+
 }
 
 module.exports = {NamespaceAction}

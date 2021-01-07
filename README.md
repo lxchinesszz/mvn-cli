@@ -1,4 +1,3 @@
-
 # mvn-cli
 
 构建maven多模块应用。
@@ -12,11 +11,11 @@
 - [ ] 是否集成Mybatils-Plus,是否集成SpringBoot,是否集成Web,MQ,
 
 ```xml
-    <groupId>com.idanchuang</groupId>
-    <artifactId>spring-cloud-starter-parent</artifactId>
-    <version>0.5.1-RELEASE</version>
-```
 
+<groupId>com.idanchuang</groupId>
+<artifactId>spring-cloud-starter-parent</artifactId>
+<version>0.5.1-RELEASE</version>
+```
 
 ```
 Mvn CLI v1.0.0
@@ -25,7 +24,6 @@ Mvn CLI v1.0.0
 └───────────────────────────┘
 
 ```
-
 
 ```
 scm

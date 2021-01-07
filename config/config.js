@@ -17,13 +17,13 @@ const LOMBOK = "Lombok"
 
 // 领域模型配置
 const DefaultDomainConfig = {
-    projectName: "example",
+    projectName: "ascm",
     // web层
     web: "web",
     // 业务层
     biz: "service",
     // 领域层
-    domain: "manager",
+    domain: "domain",
     // 数据层
     dal: "dal",
     // 接口层
@@ -33,7 +33,13 @@ const DefaultDomainConfig = {
     // 通用模块
     common: "common",
     // 分组
-    groupId: "com.danchuang"
+    groupId: "com.danchuang",
+    // 版本
+    projectVersion: '1.0.0-SNAPSHOT',
+    // maven编译版本
+    mavenSurefireJavaVersion: '1.8',
+    // 项目描述
+    projectDescription:'mvn-cli build'
 }
 
 
