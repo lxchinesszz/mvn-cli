@@ -3,6 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     {{if root}}
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>{{@springBootVersion}}</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <groupId>{{@groupId}}</groupId>
     <artifactId>{{@projectName}}</artifactId>
     <version>{{@projectVersion}}</version>
@@ -26,15 +33,28 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>{{@moduleName}}</artifactId>
     <version>{{@projectVersion}}</version>
+    {{if packaging}}
+    <packaging>{{@packaging}}</packaging>
     {{/if}}
 
+    {{/if}}
 
     <!--强烈建议你将依赖版本在这里控制,方便后期维护-->
     <properties>
     </properties>
 
-    <!--    【建议】父pom才具有依赖版本管理的能力,父pom控制version,子pom只用引入即可-->
     {{if root}}
+    <!--    SpringBoot应用添加到全局中,每个模块都要用到-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+    {{/if}}
+
+    {{if root}}
+    <!--    【建议】父pom才具有依赖版本管理的能力,父pom控制version,子pom只用引入即可-->
     <dependencyManagement>
         {{/if}}
         {{if dependencies}}
@@ -43,7 +63,9 @@
             <dependency>
                 <groupId>{{$value.groupId}}</groupId>
                 <artifactId>{{$value.artifactId}}</artifactId>
+                {{if $value.version}}
                 <version>{{$value.version}}</version>
+                {{/if}}
             </dependency>
             {{/each}}
         </dependencies>
@@ -56,6 +78,25 @@
     <!--指定使用maven打包-->
     <build>
         <plugins>
+            {{if packaging === 'jar'}}
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.3.5.RELEASE</version>
+                <configuration><!-- 指定该Main Class为全局的唯一入口 -->
+                    <mainClass>{{@bootClassPath}}</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            {{/if}}
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

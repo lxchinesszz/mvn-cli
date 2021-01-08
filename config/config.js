@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 // 配置属性
 
 // Mybatis-Plus
@@ -39,7 +41,9 @@ const DefaultDomainConfig = {
     // maven编译版本
     mavenSurefireJavaVersion: '1.8',
     // 项目描述
-    projectDescription:'mvn-cli build'
+    projectDescription: 'mvn-cli build',
+    // SpringBoot版本号
+    springBootVersion: '2.3.1.RELEASE',
 }
 
 
@@ -54,7 +58,7 @@ const MvnConfig = {
     // 是否自动生成readme文档
     isAutoCreateReadme: true,
     // SpringBoot版本号
-    springBootVersion: '',
+    springBootVersion: '2.3.1.RELEASE',
     // 持续集成
     integrations: [MYBATIS_PLUS, REDIS, RABBITMQ, WEB, LOMBOK]
 }
@@ -62,5 +66,20 @@ const MvnConfig = {
 // 缓存: GuavaCache/Caffeine/Redis-sion
 const integrationCaches = []
 
+function log(ConfigSource) {
+    fs.writeFile(`${DefaultDomainConfig.projectName}/log`, JSON.stringify(JSON.parse(ConfigSource), null, "\t"), err => {
+        if (err) {
+            throw err;
+        }
+    })
+}
 
-module.exports = {MvnConfig, DefaultDomainConfig}
+function mvnCliConfig() {
+    let configContext = fs.readFile(`${DefaultDomainConfig.projectName}/log`, err => {
+        throw Error("配置文件读取失败")
+    })
+    return JSON.stringify(configContext)
+}
+
+
+module.exports = {MvnConfig, DefaultDomainConfig, log, mvnCliConfig}

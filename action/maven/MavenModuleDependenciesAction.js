@@ -19,7 +19,12 @@ function MavenModuleDependenciesAction(NamespaceAction) {
 
     this.getWebDependencies = function () {
         // 依赖common
-        return [this.dependencies(this._namespaceAction.commonNamespace())]
+        return [this.dependencies(this._namespaceAction.commonNamespace()),
+            {
+                groupId: 'org.springframework.boot',
+                artifactId: 'spring-boot-starter-web',
+            }
+        ]
     }
 
     this.getServiceDependencies = function () {
@@ -54,7 +59,7 @@ function MavenModuleDependenciesAction(NamespaceAction) {
     }
 
     this.getCommonDependencies = function () {
-        return [this.dependencies(this._namespaceAction.commonNamespace())]
+        return []
     }
 }
 

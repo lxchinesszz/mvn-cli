@@ -49,6 +49,14 @@ const projectInfoQuestions = [{
     }
     ,
     {
+        type: 'input',
+        name: 'springBootVersion',
+        message: 'SpringBoot版本号',
+        default: '2.3.1.RELEASE',
+        suffix: ':'
+    }
+    ,
+    {
         type: 'confirm',
         name: 'isAutoCreateReadme',
         message: '是否生成README',

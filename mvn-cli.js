@@ -24,6 +24,7 @@ Program
             DefaultDomainConfig.projectName = result.projectName
             DefaultDomainConfig.projectVersion = result.projectVersion
             DefaultDomainConfig.projectDescription = result.projectDescription
+            DefaultDomainConfig.springBootVersion = result.springBootVersion
             const project = new Project({
                 namespaceConfig: DefaultDomainConfig
             })

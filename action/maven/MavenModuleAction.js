@@ -2,9 +2,9 @@ const fs = require("fs");
 const _ = require('lodash')
 const path = require('path')
 const chalk = require('chalk')
-const {NamespaceAction} = require('../NamespaceAction')
+const {log} = require('../../config/config')
 const {MavenPomTemplate} = require('../../template/MavenPomTemplate')
-const {MavenModuleDependenciesAction} = require('./MavenModuleDependenciesAction')
+const {SpringBootTemplate} = require('../../template/SpringBootTemplate')
 
 /**
  * 构建module依赖
@@ -22,6 +22,10 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
 
     this._mavenPomTemplate = new MavenPomTemplate(path.resolve(__dirname, 'root.xml'))
 
+    this._bootTemplate = new SpringBootTemplate(path.resolve(__dirname, 'boot'))
+
+    this._localConfig = {namespace: []}
+
     this.init = function () {
         // 1. 创建maven模块
         this._createModule(this._namespaceAction.webNamespace())
@@ -34,6 +38,41 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
 
         // 2. 构建模块之间的pom关系
         this._createProjectPom(this._namespaceAction)
+
+        // 3. 记录配置信息
+        log(JSON.stringify(this._localConfig))
+
+        let bootClassPath = this.getWebApplicationPath()
+        let bootClass = `${_.capitalize(this._namespaceAction.getProjectName())}Application`
+        // 4. 生成SpringBoot引导类
+        this._bootTemplate.create(
+            {
+                className: `${bootClass}`,
+                packagePath: `${this.getWebPackagePath()}`
+            },
+            `${bootClassPath}${bootClass}.java`
+        )
+    }
+
+
+    this._getBootClass = function (){
+        let bootClass = `${_.capitalize(this._namespaceAction.getProjectName())}Application`
+        return bootClass
+    }
+
+    this.getWebApplicationPath = function () {
+        let index = _.findIndex(this._localConfig.namespace, function (o) {
+            return o.type == 'web';
+        });
+        return this._localConfig.namespace[index].path
+    }
+
+    this.getWebPackagePath = function () {
+        let index = _.findIndex(this._localConfig.namespace, function (o) {
+            return o.type == 'web';
+        });
+        let packagePath = this._localConfig.namespace[index].packagePath
+        return replaceAll(packagePath, '/', '\.') + ';'
     }
 
     this.getGroupId = function () {
@@ -42,10 +81,18 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
 
     this._createModule = function (namespace) {
         // 1. 构建模块信息
-        mkdir(this._createJavaModule(namespace))
+        let fullJavaModulePath = this._createJavaModule(namespace)
+        this._localConfig.namespace.push({
+            type: namespace.type,
+            path: fullJavaModulePath,
+            packagePath: `${this._getPackagePath(namespace)}`
+        })
+        mkdir(fullJavaModulePath)
         let type = namespace.type
         // 2. 根据模块类型构建依赖及目录
         let dependencies = []
+        // 3. 本地配置文件
+        let localConfig = {type: type, path: fullJavaModulePath}
         switch (type) {
             case 'web':
                 mkdir(this._createJavaResource(namespace))
@@ -85,13 +132,19 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
 
     this._createModulePom = function (namespace, dependencies) {
         let projectName = namespace.projectName;
+        let packagePath;
+        if (namespace.type === 'web'){
+            packagePath =  replaceAll(this._getPackagePath(namespace), '/', '\.')
+            packagePath = `${packagePath}.${_.capitalize(this._namespaceAction.getProjectName())}Application`
+        }
         this._mavenPomTemplate.create({
             root: false,
             projectName: projectName,
             projectVersion: namespace.version,
             moduleName: namespace.moduleName,
             // 需要打包的模块应该是jar
-            packaging: 'pom',
+            packaging: namespace.type === 'web' ? 'jar' : null,
+            bootClassPath: packagePath,
             groupId: this._namespaceAction.getGroupId(),
             mavenSurefireJavaVersion: '1.8',
             dependencies: dependencies
@@ -111,6 +164,7 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
             packaging: 'pom',
             groupId: this._namespaceAction.getGroupId(),
             projectDescription: this._namespaceAction.getProjectDescription(),
+            springBootVersion: this._namespaceAction.getSpringBootVersion(),
             mavenSurefireJavaVersion: '1.8',
             dependencies: [
                 {
@@ -121,6 +175,14 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
             ]
         }, `./${projectName}/pom.xml`)
 
+    }
+
+    this._getPackagePath = function (namespace) {
+        let groupId = this.getGroupId();
+        let moduleName = namespace.type
+        let directory = namespace.path;
+        let projectName = namespace.projectName
+        return `${groupId}/${projectName}/${moduleName}`
     }
 
     this._createJavaModule = function (namespace) {

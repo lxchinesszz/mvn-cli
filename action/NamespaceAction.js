@@ -83,6 +83,22 @@ function NamespaceAction(config) {
     this._projectDescription = config.projectDescription
 
     /**
+     * SpringBoot的版本号
+     * @type {string|undefined|*}
+     * @private
+     */
+    this._springBootVersion = config.springBootVersion
+
+
+    /**
+     * 获取SpringBoot版本号
+     * @returns {string|undefined|*}
+     */
+    this.getSpringBootVersion = function (){
+        return this._springBootVersion
+    }
+
+    /**
      * 获取项目描述
      * @returns {string|MavenModuleAction._createModulePom._namespaceAction.projectDescription|*}
      */
