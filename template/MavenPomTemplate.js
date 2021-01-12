@@ -27,6 +27,7 @@ function MavenPomTemplate(filePath) {
      * @returns {string}
      */
     this.render = function (data) {
+        template.defaults.escape=false;
         return formatXml(template.render(this.readSource(), data))
     }
 

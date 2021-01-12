@@ -67,7 +67,7 @@ const MvnConfig = {
 const integrationCaches = []
 
 function log(ConfigSource) {
-    fs.writeFile(`${DefaultDomainConfig.projectName}/log`, JSON.stringify(JSON.parse(ConfigSource), null, "\t"), err => {
+    fs.writeFile(`${DefaultDomainConfig.projectName}/.mvn-cli`, JSON.stringify(JSON.parse(ConfigSource), null, "\t"), err => {
         if (err) {
             throw err;
         }
@@ -75,7 +75,7 @@ function log(ConfigSource) {
 }
 
 function mvnCliConfig() {
-    let configContext = fs.readFile(`${DefaultDomainConfig.projectName}/log`, err => {
+    let configContext = fs.readFile(`${DefaultDomainConfig.projectName}/.mvn-cli`, err => {
         throw Error("配置文件读取失败")
     })
     return JSON.stringify(configContext)

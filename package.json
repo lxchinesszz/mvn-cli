@@ -2,12 +2,12 @@
   "name": "mvn-cli",
   "version": "1.0.0",
   "description": "构建maven多模块应用。",
-  "main": "mvn-cli.js",
+  "main": "mvn-cli",
   "scripts": {
     "start": "node mvn-cli.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "lxchinesszz",
   "license": "ISC",
   "dependencies": {
     "art-template": "^4.13.2",

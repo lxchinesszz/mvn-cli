@@ -43,19 +43,25 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
         log(JSON.stringify(this._localConfig))
 
         let bootClassPath = this.getWebApplicationPath()
-        let bootClass = `${_.capitalize(this._namespaceAction.getProjectName())}Application`
+        bootClassPath = replaceAll(bootClassPath,'/web','')
+        let bootClassName = this._getBootClassName()
+        let webPackagePath = this.getWebPackagePath()
         // 4. 生成SpringBoot引导类
         this._bootTemplate.create(
             {
-                className: `${bootClass}`,
-                packagePath: `${this.getWebPackagePath()}`
+                className: `${bootClassName}`,
+                bootClassPath: `${webPackagePath}.${bootClassName}`,
+                packagePath: `${webPackagePath}`
             },
-            `${bootClassPath}${bootClass}.java`
+            `${bootClassPath}${bootClassName}.java`
         )
     }
 
+    this._getBootClassName = function (){
+        return `${_.capitalize(this._namespaceAction.getProjectName())}Application`
+    }
 
-    this._getBootClass = function (){
+    this._getBootClass = function () {
         let bootClass = `${_.capitalize(this._namespaceAction.getProjectName())}Application`
         return bootClass
     }
@@ -72,7 +78,7 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
             return o.type == 'web';
         });
         let packagePath = this._localConfig.namespace[index].packagePath
-        return replaceAll(packagePath, '/', '\.') + ';'
+        return replaceAll(replaceAll(packagePath, '/', '\.'),'.web','')
     }
 
     this.getGroupId = function () {
@@ -90,7 +96,7 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
         mkdir(fullJavaModulePath)
         let type = namespace.type
         // 2. 根据模块类型构建依赖及目录
-        let dependencies = []
+        let dependencyManagement
         // 3. 本地配置文件
         let localConfig = {type: type, path: fullJavaModulePath}
         switch (type) {
@@ -98,44 +104,45 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
                 mkdir(this._createJavaResource(namespace))
                 mkdir(this._createTestJavaModule(namespace))
                 // 依赖common
-                dependencies = this._mavenModuleDependenciesAction.getWebDependencies()
+                dependencyManagement = this._mavenModuleDependenciesAction.getWebDependencies()
                 break
             case 'service':
                 // 依赖domain,common
-                dependencies = this._mavenModuleDependenciesAction.getServiceDependencies()
+                dependencyManagement = this._mavenModuleDependenciesAction.getServiceDependencies()
                 break
             case 'domain':
                 // 依赖dal,integration,common
-                dependencies = this._mavenModuleDependenciesAction.getDomainDependencies()
+                dependencyManagement = this._mavenModuleDependenciesAction.getDomainDependencies()
                 break
             case 'dal':
                 // 依赖common
-                dependencies = this._mavenModuleDependenciesAction.getDalDependencies()
+                dependencyManagement = this._mavenModuleDependenciesAction.getDalDependencies()
                 break
             case 'integration':
                 // 依赖common
-                dependencies = this._mavenModuleDependenciesAction.getIntegrationDependencies()
+                dependencyManagement = this._mavenModuleDependenciesAction.getIntegrationDependencies()
                 break
             case 'config':
                 // 依赖common
-                dependencies = this._mavenModuleDependenciesAction.getConfigDependencies()
+                dependencyManagement = this._mavenModuleDependenciesAction.getConfigDependencies()
                 break
             case 'common':
-                dependencies = this._mavenModuleDependenciesAction.getCommonDependencies()
+                dependencyManagement = this._mavenModuleDependenciesAction.getCommonDependencies()
                 break
             default:
                 break;
 
         }
-        this._createModulePom(namespace, dependencies)
+        this._createModulePom(namespace, dependencyManagement)
     }
 
-    this._createModulePom = function (namespace, dependencies) {
+    this._createModulePom = function (namespace, dependencyManagement) {
         let projectName = namespace.projectName;
         let packagePath;
-        if (namespace.type === 'web'){
-            packagePath =  replaceAll(this._getPackagePath(namespace), '/', '\.')
-            packagePath = `${packagePath}.${_.capitalize(this._namespaceAction.getProjectName())}Application`
+        let bootClassName;
+        if (namespace.type === 'web') {
+            packagePath = this.getWebPackagePath();
+            bootClassName = this._getBootClassName()
         }
         this._mavenPomTemplate.create({
             root: false,
@@ -144,14 +151,16 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
             moduleName: namespace.moduleName,
             // 需要打包的模块应该是jar
             packaging: namespace.type === 'web' ? 'jar' : null,
-            bootClassPath: packagePath,
+            bootClassPath: `${packagePath}.${bootClassName}`,
             groupId: this._namespaceAction.getGroupId(),
             mavenSurefireJavaVersion: '1.8',
-            dependencies: dependencies
+            dependencies: dependencyManagement.dependencies
         }, `./${namespace.path}/pom.xml`)
     }
 
     this._createProjectPom = function (namespace) {
+        let dependencyManagement = this._mavenModuleDependenciesAction
+            .getIntegrationDependencyManagement(['spring-boot-web'])
         let projectName = namespace.getProjectName();
         let allNamespace = this._namespaceAction.getAllNamespace();
         let modules = _.map(allNamespace, 'moduleName')
@@ -166,13 +175,8 @@ function MavenModuleAction(NamespaceAction, MavenModuleDependenciesAction) {
             projectDescription: this._namespaceAction.getProjectDescription(),
             springBootVersion: this._namespaceAction.getSpringBootVersion(),
             mavenSurefireJavaVersion: '1.8',
-            dependencies: [
-                {
-                    groupId: 'org.projectlombok',
-                    artifactId: 'lombok',
-                    version: '1.4.0'
-                }
-            ]
+            properties: dependencyManagement.properties,
+            dependencies: dependencyManagement.dependencies
         }, `./${projectName}/pom.xml`)
 
     }

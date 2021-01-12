@@ -1,107 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="1. 支持脚本启动">
-      <change afterPath="$PROJECT_DIR$/action/maven/boot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/$PROJECT_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_aop_5_2_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_beans_5_2_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_context_5_2_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_core_5_2_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_expression_5_2_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_yaml_snakeyaml_1_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/qaplug_profiles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-common/ascm-common.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-common/target/ascm-common-1.0.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-common/target/ascm-common-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-common/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-config/ascm-config.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-config/target/ascm-config-1.0.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-config/target/ascm-config-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-config/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/ascm-dal.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/target/ascm-dal-1.0.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/target/ascm-dal-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-domain/ascm-domain.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-domain/target/ascm-domain-1.0.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-domain/target/ascm-domain-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-domain/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-integration/ascm-integration.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-integration/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-integration/target/ascm-integration-1.0.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-integration/target/ascm-integration-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-integration/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-integration/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-service/ascm-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-service/target/ascm-service-1.0.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-service/target/ascm-service-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/ascm-web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/java/com/danchuang/ascm/web/AscmApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/java/com/danchuang/ascm/web/sdf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/ascm-web-1.0.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/ascm-web-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/ascm-web-1.0.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/classes/com/danchuang/ascm/web/AscmApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/classes/com/danchuang/ascm/web/sdf.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/liuxin-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/liuxin-config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/liuxin-dal/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/liuxin-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/liuxin-integration/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/liuxin-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/liuxin-web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/liuxin-web/src/main/java/com/danchuang/liuxin/web/LiuxinApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liuxin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/SpringBootTemplate.js" afterDir="false" />
+    <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/action/maven/dependency.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/NamespaceAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/NamespaceAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/EchoVersionAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/EchoVersionAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/maven/boot" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/boot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/maven/root.xml" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/root.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvn-cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/mvn-cli.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvn-cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/mvn-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/MavenPomTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/MavenPomTemplate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +50,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.20" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Github/me_blog/ddd-website/src/theme" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/action/maven" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -147,6 +60,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/action/maven" />
       <recent name="$USER_HOME$/Github/me_blog/ddd-website/src/theme" />
       <recent name="$USER_HOME$/Github/me_blog/ddd-website/docs" />
     </key>
@@ -160,13 +74,13 @@
     <configuration name="EchoVersionAction.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/EchoVersionAction.js" working-dir="$PROJECT_DIR$/action">
       <method v="2" />
     </configuration>
-    <configuration name="ProgressBarTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/ProgressBarTest.js" working-dir="$PROJECT_DIR$">
+    <configuration name="MavenModuleDependenciesAction.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" working-dir="$PROJECT_DIR$/action/maven">
       <method v="2" />
     </configuration>
     <configuration name="SpringBootTemplate.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/template/SpringBootTemplate.js" working-dir="$PROJECT_DIR$/template">
       <method v="2" />
     </configuration>
-    <configuration name="mvn-cli.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/mvn-cli.js" working-dir="$PROJECT_DIR$">
+    <configuration name="fstest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/fstest.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test.js" working-dir="$PROJECT_DIR$">
@@ -175,10 +89,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.test.js" />
+        <item itemvalue="Node.js.fstest.js" />
+        <item itemvalue="Node.js.MavenModuleDependenciesAction.js" />
         <item itemvalue="Node.js.SpringBootTemplate.js" />
         <item itemvalue="Node.js.EchoVersionAction.js" />
-        <item itemvalue="Node.js.ProgressBarTest.js" />
-        <item itemvalue="Node.js.mvn-cli.js" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +109,8 @@
       <workItem from="1609580528409" duration="17510000" />
       <workItem from="1609691485551" duration="3000" />
       <workItem from="1609931348109" duration="32423000" />
-      <workItem from="1610070776714" duration="5541000" />
+      <workItem from="1610070776714" duration="19391000" />
+      <workItem from="1610459734118" duration="1415000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -204,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610019559589</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1. 支持脚本启动">
+      <created>1610076875374</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610076875374</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,73 +135,26 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="1. 支持脚本启动" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 支持脚本启动" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/NamespaceAction.js</url>
-          <line>149</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/mvn-cli.js</url>
-          <line>25</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/NamespaceAction.js</url>
-          <line>82</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/action/maven/MavenModuleAction.js</url>
+          <line>46</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/template/SpringBootTemplate.js</url>
           <line>39</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/action/maven/MavenModuleAction.js</url>
-          <line>44</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/template/SpringBootTemplate.js</url>
-          <line>20</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/maven/MavenModuleAction.js</url>
-          <line>24</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/maven/MavenModuleAction.js</url>
-          <line>42</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/maven/MavenModuleAction.js</url>
-          <line>70</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/maven/MavenModuleAction.js</url>
-          <line>63</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/maven/MavenModuleAction.js</url>
-          <line>136</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="32" />
+          <line>47</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -63,25 +63,25 @@ const projectInfoQuestions = [{
         default: true,
         suffix: ':'
     },
-    {
-        type: "confirm",
-        message: "是否选择集成",
-        name: "integration",
-        suffix: '?',
-        default: true
-    },
-    {
-        type: "checkbox",
-        message: "集成",
-        name: "integrations",
-        suffix: ':',
-        choices: [
-            ...MvnConfig.integrations,
-        ],
-        when: function (answers) { // 当watch为true的时候才会提问当前问题
-            return answers.integration
-        }
-    }
+    // {
+    //     type: "confirm",
+    //     message: "是否选择集成",
+    //     name: "integration",
+    //     suffix: '?',
+    //     default: true
+    // },
+    // {
+    //     type: "checkbox",
+    //     message: "集成",
+    //     name: "integrations",
+    //     suffix: ':',
+    //     choices: [
+    //         ...MvnConfig.integrations,
+    //     ],
+    //     when: function (answers) { // 当watch为true的时候才会提问当前问题
+    //         return answers.integration
+    //     }
+    // }
 ];
 
 module.exports = {

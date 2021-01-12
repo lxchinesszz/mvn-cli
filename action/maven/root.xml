@@ -21,7 +21,9 @@
         {{/each}}
     </modules>
 
+    <!--    项目名-->
     <name>{{@projectName}}</name>
+    <!--    项目描述-->
     <description>{{@projectDescription}}</description>
     {{else}}
     <parent>
@@ -40,8 +42,15 @@
     {{/if}}
 
     <!--强烈建议你将依赖版本在这里控制,方便后期维护-->
+    {{if properties}}
     <properties>
+        {{each properties}}
+        {{$value}}
+        {{/each}}
     </properties>
+    {{/if}}
+
+
 
     {{if root}}
     <!--    SpringBoot应用添加到全局中,每个模块都要用到-->

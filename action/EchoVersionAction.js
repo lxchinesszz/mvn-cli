@@ -1,7 +1,7 @@
 const {MvnConfig} = require('../config/config')
 const chalk = require('chalk')
 const Table = require('cli-table');
-
+const package = require('../package.json')
 /**
  * 打印mvn-cli版本信息
  */
@@ -9,8 +9,8 @@ function echoMvnCliVersion() {
     const updateTable = new Table({
         style: {'padding-left': 0, 'padding-right': 0, 'border': ['green']},
     });
-    updateTable.push([' Update available: 1.0.0 '])
-    console.log(chalk.cyan(`Mvn CLI v${MvnConfig.version}`))
+    updateTable.push([` Update available: ${package.version} `])
+    console.log(chalk.cyan(`Mvn CLI v${package.version}`))
     console.log(chalk.green(updateTable))
 }
 

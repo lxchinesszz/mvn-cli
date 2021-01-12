@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const {MvnConfig, DefaultDomainConfig} = require('./config/config');
 const {echoMvnCliVersion,successTip} = require('./action/EchoVersionAction')
 const {projectInfoQuestions} = require('./config/questions')
