@@ -12,6 +12,13 @@ const projectInfoQuestions = [{
         } else {
             return 'example'
         }
+    },
+    validate: function (val) {
+        if (new RegExp('^[a-zA-Z]*$').test(val)) {
+            return true
+        } else {
+            return '建议您使用有意义的名字,不要使用特殊字符(-/￥%@)'
+        }
     }
 },
     {
@@ -42,9 +49,30 @@ const projectInfoQuestions = [{
     },
     {
         type: 'input',
+        name: 'groupId',
+        message: 'groupId坐标',
+        default: 'com.idea',
+        suffix: ':',
+        validate: function (val) {
+            if (new RegExp('^[a-zA-Z]*\\.\\w*$').test(val)) {
+                return true
+            } else {
+                return 'GroupId不合法(建议使用全字母 eg: com.idea/com.alibaba.taobao)'
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'projectVersion',
-        message: '初始版本号',
+        message: '项目初始版本号',
         default: '1.0.0',
+        suffix: ':'
+    },
+    {
+        type: 'input',
+        name: 'port',
+        message: '应用端口号',
+        default: '8081',
         suffix: ':'
     }
     ,

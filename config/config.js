@@ -17,8 +17,8 @@ const WEB = "Web"
 //
 const LOMBOK = "Lombok"
 
-// 领域模型配置
-const DefaultDomainConfig = {
+// 构建项目配置配置
+const ProjectTemplateConfig = {
     projectName: "ascm",
     // web层
     web: "web",
@@ -41,9 +41,13 @@ const DefaultDomainConfig = {
     // maven编译版本
     mavenSurefireJavaVersion: '1.8',
     // 项目描述
-    projectDescription: 'mvn-cli build',
+    projectDescription: 'JMVN-CLI BUILD',
     // SpringBoot版本号
     springBootVersion: '2.3.1.RELEASE',
+    // 端口号
+    port: 8081,
+    // 作者
+    projectAuthor: 'JMVN-CLI'
 }
 
 
@@ -67,7 +71,7 @@ const MvnConfig = {
 const integrationCaches = []
 
 function log(ConfigSource) {
-    fs.writeFile(`${DefaultDomainConfig.projectName}/.mvn-cli`, JSON.stringify(JSON.parse(ConfigSource), null, "\t"), err => {
+    fs.writeFile(`${ProjectTemplateConfig.projectName}/.mvn-cli`, JSON.stringify(JSON.parse(ConfigSource), null, "\t"), err => {
         if (err) {
             throw err;
         }
@@ -75,11 +79,11 @@ function log(ConfigSource) {
 }
 
 function mvnCliConfig() {
-    let configContext = fs.readFile(`${DefaultDomainConfig.projectName}/.mvn-cli`, err => {
+    let configContext = fs.readFile(`${ProjectTemplateConfig.projectName}/.mvn-cli`, err => {
         throw Error("配置文件读取失败")
     })
     return JSON.stringify(configContext)
 }
 
 
-module.exports = {MvnConfig, DefaultDomainConfig, log, mvnCliConfig}
+module.exports = {MvnConfig,  ProjectTemplateConfig, log, mvnCliConfig}

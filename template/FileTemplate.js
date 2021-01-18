@@ -3,7 +3,7 @@ const fs = require('fs')
 const _ = require('lodash')
 
 
-function SpringBootTemplate(filePath) {
+function FileTemplate(filePath) {
 
     /**
      * 当前处理的文件模板路径
@@ -44,4 +44,5 @@ function SpringBootTemplate(filePath) {
         })
     }
 }
-module.exports = {SpringBootTemplate}
+
+module.exports = {FileTemplate}

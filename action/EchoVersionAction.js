@@ -2,6 +2,8 @@ const {MvnConfig} = require('../config/config')
 const chalk = require('chalk')
 const Table = require('cli-table');
 const package = require('../package.json')
+
+
 /**
  * 打印mvn-cli版本信息
  */
@@ -25,6 +27,7 @@ function successTip(config) {
         ` / /|_/ /| |/ /    /___/ /__/ /___/ /  \n` +
         `/_/  /_/ |___/_/|_/    \\___/____/___/  Application ${config.projectName} Build Success ` +
         `                                          `))
+    console.log(chalk.cyan(` - JMVN CLI v${package.version}`))
 }
 
 module.exports = {echoMvnCliVersion, successTip}

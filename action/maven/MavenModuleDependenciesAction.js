@@ -3,16 +3,16 @@ const _ = require('lodash')
 
 /**
  * 依赖管理
- * @param namespaceAction 命名管理
+ * @param mavenModuleNamespaceConfig Maven模块的命名管理
  * @constructor
  */
-function MavenModuleDependenciesAction(namespaceAction) {
+function MavenModuleDependenciesAction(mavenModuleNamespaceConfig) {
 
-    this._namespaceAction = namespaceAction
+    this._mavenModuleNamespaceConfig = mavenModuleNamespaceConfig
 
     this.dependencies = function (moduleNamespace) {
         return {
-            groupId: this._namespaceAction.getGroupId(),
+            groupId: this._mavenModuleNamespaceConfig.getGroupId(),
             artifactId: moduleNamespace.moduleName,
             version: moduleNamespace.version
         }
@@ -21,16 +21,16 @@ function MavenModuleDependenciesAction(namespaceAction) {
     this.getWebDependencies = function () {
         // 依赖common
         return this.dependencyManagement(['spring-boot-web'],
-            [this.dependencies(this._namespaceAction.commonNamespace()),
-                this.dependencies(this._namespaceAction.serviceNamespace())
+            [this.dependencies(this._mavenModuleNamespaceConfig.commonNamespace()),
+                this.dependencies(this._mavenModuleNamespaceConfig.serviceNamespace())
             ])
     }
 
     this.getServiceDependencies = function () {
         // 依赖domain,common
         return this.dependencyManagement([],
-            [this.dependencies(this._namespaceAction.domainNamespace()),
-                this.dependencies(this._namespaceAction.commonNamespace())
+            [this.dependencies(this._mavenModuleNamespaceConfig.domainNamespace()),
+                this.dependencies(this._mavenModuleNamespaceConfig.commonNamespace())
             ])
 
     }
@@ -38,28 +38,28 @@ function MavenModuleDependenciesAction(namespaceAction) {
     this.getDomainDependencies = function () {
         // 依赖dal,integration,common
         return this.dependencyManagement([],
-            [this.dependencies(this._namespaceAction.integrationNamespace()),
-                this.dependencies(this._namespaceAction.commonNamespace()),
-                this.dependencies(this._namespaceAction.dalNamespace())
+            [this.dependencies(this._mavenModuleNamespaceConfig.integrationNamespace()),
+                this.dependencies(this._mavenModuleNamespaceConfig.commonNamespace()),
+                this.dependencies(this._mavenModuleNamespaceConfig.dalNamespace())
             ])
     }
 
     this.getDalDependencies = function () {
         // 依赖common
         return this.dependencyManagement([],
-            [this.dependencies(this._namespaceAction.commonNamespace())])
+            [this.dependencies(this._mavenModuleNamespaceConfig.commonNamespace())])
     }
 
     this.getIntegrationDependencies = function () {
         // 依赖common
         return this.dependencyManagement([],
-            [this.dependencies(this._namespaceAction.commonNamespace())])
+            [this.dependencies(this._mavenModuleNamespaceConfig.commonNamespace())])
     }
 
     this.getConfigDependencies = function () {
         // 依赖common
         return this.dependencyManagement([],
-            [this.dependencies(this._namespaceAction.commonNamespace())])
+            [this.dependencies(this._mavenModuleNamespaceConfig.commonNamespace())])
     }
 
     this.getCommonDependencies = function () {
@@ -68,11 +68,11 @@ function MavenModuleDependenciesAction(namespaceAction) {
 
     this._getSystemDependencies = function () {
         return [
-            this.dependencies(this._namespaceAction.commonNamespace()),
-            this.dependencies(this._namespaceAction.integrationNamespace()),
-            this.dependencies(this._namespaceAction.dalNamespace()),
-            this.dependencies(this._namespaceAction.domainNamespace()),
-            this.dependencies(this._namespaceAction.webNamespace()),
+            this.dependencies(this._mavenModuleNamespaceConfig.commonNamespace()),
+            this.dependencies(this._mavenModuleNamespaceConfig.integrationNamespace()),
+            this.dependencies(this._mavenModuleNamespaceConfig.dalNamespace()),
+            this.dependencies(this._mavenModuleNamespaceConfig.domainNamespace()),
+            this.dependencies(this._mavenModuleNamespaceConfig.webNamespace()),
         ]
     }
 

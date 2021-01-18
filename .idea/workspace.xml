@@ -2,19 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/action/maven/dependency.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/MavenHooks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/maven/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/.mvn-cli" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-config/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-domain/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-integration/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/java/com/danchuang/ascm/AscmApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/FileTemplate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/EchoVersionAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/EchoVersionAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/ProjectAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/ProjectAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/maven/boot" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/boot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/maven/root.xml" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/root.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvn-cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/mvn-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cli-table/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cli-table/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/MavenPomTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/MavenPomTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/SpringBootTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/SpringBootTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +63,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.15.3" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.20" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/action/maven" />
+    <property name="javascript.nodejs.core.library.configured.version" value="13.14.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="13.13.40" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/template" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -60,11 +75,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/template" />
       <recent name="$PROJECT_DIR$/action/maven" />
       <recent name="$USER_HOME$/Github/me_blog/ddd-website/src/theme" />
       <recent name="$USER_HOME$/Github/me_blog/ddd-website/docs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/action/maven" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$" />
@@ -110,7 +127,10 @@
       <workItem from="1609691485551" duration="3000" />
       <workItem from="1609931348109" duration="32423000" />
       <workItem from="1610070776714" duration="19391000" />
-      <workItem from="1610459734118" duration="1415000" />
+      <workItem from="1610459734118" duration="4337000" />
+      <workItem from="1610621315466" duration="591000" />
+      <workItem from="1610624027669" duration="6000" />
+      <workItem from="1610727617729" duration="9509000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -126,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610076875374</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1. 支持脚本启动">
+      <created>1610461806437</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610461806437</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,27 +164,6 @@
     <MESSAGE value="init" />
     <MESSAGE value="1. 支持脚本启动" />
     <option name="LAST_COMMIT_MESSAGE" value="1. 支持脚本启动" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/maven/MavenModuleAction.js</url>
-          <line>46</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/template/SpringBootTemplate.js</url>
-          <line>39</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/maven/MavenModuleAction.js</url>
-          <line>47</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

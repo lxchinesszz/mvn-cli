@@ -1,10 +1,13 @@
 {
-  "name": "mvn-cli",
-  "version": "1.0.0",
+  "name": "jmvn",
+  "version": "1.0.1",
   "description": "构建maven多模块应用。",
-  "main": "mvn-cli",
+  "main": "bin/mvn-cli",
   "scripts": {
     "start": "node mvn-cli.js"
+  },
+  "bin": {
+    "jmvn": "bin/mvn-cli"
   },
   "keywords": [],
   "author": "lxchinesszz",

@@ -1,24 +1,33 @@
 const {NamespaceAction} = require('./NamespaceAction')
 const {MavenModuleAction} = require('./maven/MavenModuleAction')
 const {MavenModuleDependenciesAction} = require('./maven/MavenModuleDependenciesAction')
+const {MavenHooks} = require('./MavenHooks')
 
 /**
  * 构建Maven多模块应用
- * @param config
+ * @param config 项目配置
  * @constructor
  */
 function Project(config) {
 
-    this.namespaceConfig = config.namespaceConfig
+    /**
+     * 项目的模板配置
+     * @type {{mavenSurefireJavaVersion: string, groupId: string, dal: string, biz: string, common: string, web: string, port: number, domain: string, integration: string, projectDescription: string, springBootVersion: string, projectName: string, config: string, projectAuthor: string, projectVersion: string}}
+     * @private
+     */
+    this._projectTemplateConfig = config.projectTemplateConfig
 
     this.create = function () {
-        // 1. 构建命名处理类
-        let namespace = new NamespaceAction(this.namespaceConfig);
-        // 2. 模块依赖配置
-        let mavenModuleDependencies = new MavenModuleDependenciesAction(namespace);
-        // 3. 构建工具
-        let mavenModule = new MavenModuleAction(namespace, mavenModuleDependencies)
-        mavenModule.init();
+        // 1. 构建模块命名处理类
+        let mavenModuleNamespaceConfig = new NamespaceAction(this._projectTemplateConfig);
+        // 2. 构建模块的依赖信息
+        let mavenModuleDependencies = new MavenModuleDependenciesAction(mavenModuleNamespaceConfig);
+        // 3. 执行构建动作
+        let mavenModule = new MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies)
+        // 4. 构建扩展的钩子函数
+        let mavenHooks = new MavenHooks(this._projectTemplateConfig);
+        // 4. 注册钩子
+        mavenModule.init(mavenHooks);
     }
 }
 
