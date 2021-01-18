@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/ascm/.mvn-cli" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-integration/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/java/com/danchuang/ascm/AscmApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/EchoVersionAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/EchoVersionAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/MavenHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/MavenHooks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +104,7 @@
       <workItem from="1610459734118" duration="4337000" />
       <workItem from="1610621315466" duration="591000" />
       <workItem from="1610624027669" duration="6000" />
-      <workItem from="1610727617729" duration="22308000" />
+      <workItem from="1610727617729" duration="22910000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -152,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610940017952</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1. 支持脚本启动">
+      <created>1610971775370</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610971775370</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
