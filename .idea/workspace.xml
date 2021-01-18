@@ -102,6 +102,7 @@
       <workItem from="1610621315466" duration="591000" />
       <workItem from="1610624027669" duration="6000" />
       <workItem from="1610727617729" duration="24534000" />
+      <workItem from="1610974160392" duration="197000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -194,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610973903602</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add 开源协议">
+      <created>1610974190184</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610974190184</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +212,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="1. 支持脚本启动" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 支持脚本启动" />
+    <MESSAGE value="add 开源协议" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 开源协议" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

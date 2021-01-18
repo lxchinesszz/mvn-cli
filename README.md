@@ -4,15 +4,15 @@
 
 快速构建支持SpringBoot的Maven多模块应用,启动及快速打包部署
 
-# 二、快速安装
+# 二、快速安装 | Fast installation
 
 ```
 ➜ npm i jmvn -g
 ```
 
-# 三、快速构建
+# 三、快速构建 | To quickly build
 
-## 3.1 命令行构建项目
+## 3.1 命令行构建项目 | Command line build
 
 ![](https://img.springlearn.cn/blog/learn_1610973272000.png)
 
@@ -38,12 +38,12 @@ Build: ascm/ascm-common/src/main/java/com/idea/ascm/common/
 └────────┴─────────┴──────────┴────────────────┴─────────────┴────────┘
 ```
 
-## 3.2 idea直接打开
+## 3.2 idea直接打开 | Use idea to open
 
 - 可以点击 `run main` 启动
 ![](https://img.springlearn.cn/blog/learn_1610973142000.png)
 
-## 3.3 打包jar文件部署
+## 3.3 打包jar文件部署 | Package JAR deployment
 
 - 输入 `mvn package` 快速打包构建部署
 
