@@ -48,6 +48,7 @@ getVersion(packageConfig.name).then(res => {
                     ProjectTemplateConfig.springBootVersion = result.springBootVersion
                     ProjectTemplateConfig.groupId = result.groupId
                     ProjectTemplateConfig.projectAuthor = result.projectAuthor
+                    ProjectTemplateConfig.port = result.port
                     const project = new Project({
                         projectTemplateConfig: ProjectTemplateConfig
                     })
