@@ -28,4 +28,7 @@
 
 # 五、定制 | Custom
 
-欢迎感兴趣的小伙伴一起参与编程
+欢迎感兴趣的小伙伴一起参与开发, 🚀 `call me！`
+
+- 微信: `lxchinesszz`
+- 邮箱: `lxchinesszz@163.com`
