@@ -47,7 +47,7 @@
 
 ```
 
-- 进入 `web` 目录直接运行启动 `java -jar ascm-web.jar`
+- 进入 `web/target` 目录直接运行启动 `java -jar ascm-web.jar`
 
 # 四、发布记录 | Release record
 
