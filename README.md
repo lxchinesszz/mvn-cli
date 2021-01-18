@@ -12,7 +12,13 @@
 
 # 三、快速构建
 
+## 3.1 命令行构建项目
 
+![](https://img.springlearn.cn/blog/learn_1610973272000.png)
+
+## 3.2 idea直接打开
+
+![](https://img.springlearn.cn/blog/learn_1610973142000.png)
 
 # 四、发布记录 | Release record
 
