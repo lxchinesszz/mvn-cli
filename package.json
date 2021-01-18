@@ -1,6 +1,6 @@
 {
   "name": "jmvn",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "构建maven多模块应用。",
   "main": "bin/mvn-cli",
   "scripts": {
@@ -14,10 +14,12 @@
   "license": "ISC",
   "dependencies": {
     "art-template": "^4.13.2",
+    "axios": "^0.21.1",
     "babel-preset-es2015": "^6.24.1",
     "chalk": "^4.1.0",
     "cli-color": "^2.0.0",
     "cli-table": "^0.3.4",
+    "co": "^4.6.0",
     "commander": "^6.2.1",
     "fs": "0.0.1-security",
     "inquirer": "^7.3.3",

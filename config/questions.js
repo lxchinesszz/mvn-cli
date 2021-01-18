@@ -83,14 +83,14 @@ const projectInfoQuestions = [{
         default: '2.3.1.RELEASE',
         suffix: ':'
     }
-    ,
-    {
-        type: 'confirm',
-        name: 'isAutoCreateReadme',
-        message: '是否生成README',
-        default: true,
-        suffix: ':'
-    },
+    // ,
+    // {
+    //     type: 'confirm',
+    //     name: 'isAutoCreateReadme',
+    //     message: '是否生成README',
+    //     default: true,
+    //     suffix: ':'
+    // },
     // {
     //     type: "confirm",
     //     message: "是否选择集成",

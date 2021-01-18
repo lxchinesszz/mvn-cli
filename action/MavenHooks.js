@@ -24,11 +24,12 @@ function MavenHooks(namespace) {
         const {projectName, port} = namespace
         const application = path.resolve(__dirname, './maven/application.yml')
         const fileTemplate = new FileTemplate(application)
+        const applicationPath = `${javaResourcePath}application.yml`
         fileTemplate.create({
             projectName: projectName,
             port: port,
-        }, `${javaResourcePath}/application.yml`)
-        console.log("Add SpringBoot application.yml:" + javaResourcePath)
+        }, applicationPath)
+        console.log(chalk.yellow('Build:'), chalk.green(`Add SpringBoot Config:${applicationPath}`));
     }
 
     /**
@@ -39,7 +40,8 @@ function MavenHooks(namespace) {
         const table = new Table({
             head: ['项目名', '作者', '项目版本', 'SpringBoot版本', '描述', '端口号'],
             style: {
-                border: ['green']
+                border: ['green'],
+                head: ['green']
             }
         });
         const {projectName, projectVersion, springBootVersion, projectDescription, projectAuthor, port} = namespace

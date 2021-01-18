@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 const {MvnConfig, ProjectTemplateConfig} = require('../config/config');
-const {echoMvnCliVersion,successTip} = require('../action/EchoVersionAction')
+const {echoMvnCliVersion} = require('../action/EchoVersionAction')
 const {projectInfoQuestions} = require('../config/questions')
-const semver = require('semver')
 const Program = require("commander");
 const Prompt = require("inquirer");
 const {Project} = require('../action/ProjectAction')
@@ -10,9 +9,10 @@ const {Project} = require('../action/ProjectAction')
 
 Program
     .version(`v${MvnConfig.version}`)
-    .description("快速构建maven多模块应用")
+    .description("快速构建支持SpringBoot的Maven多模块应用")
 
 echoMvnCliVersion()
+
 Program
     .command("create")
     .alias("c")
@@ -20,7 +20,6 @@ Program
     .action(() => {
         Prompt.prompt(projectInfoQuestions).then(result => {
             console.log("您选择的平台类型信息如下：");
-            console.log(JSON.stringify(result));
             // 1. 项目名称
             ProjectTemplateConfig.projectName = result.projectName
             ProjectTemplateConfig.projectVersion = result.projectVersion

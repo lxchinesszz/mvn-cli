@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/action/MavenHooks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/action/maven/application.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ascm/.mvn-cli" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ascm/ascm-common/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ascm/ascm-config/pom.xml" afterDir="false" />
@@ -15,20 +13,14 @@
       <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/java/com/danchuang/ascm/AscmApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/resources/application.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ascm/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/FileTemplate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/EchoVersionAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/EchoVersionAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/ProjectAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/ProjectAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/MavenHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/MavenHooks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cli-table/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cli-table/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/SpringBootTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/SpringBootTemplate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,17 +79,17 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.test.js">
+  <component name="RunManager" selected="Node.js.mvn-cli">
     <configuration name="EchoVersionAction.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/EchoVersionAction.js" working-dir="$PROJECT_DIR$/action">
       <method v="2" />
     </configuration>
-    <configuration name="MavenModuleDependenciesAction.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" working-dir="$PROJECT_DIR$/action/maven">
-      <method v="2" />
-    </configuration>
-    <configuration name="SpringBootTemplate.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/template/SpringBootTemplate.js" working-dir="$PROJECT_DIR$/template">
+    <configuration name="Jmvn.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/Jmvn.js" working-dir="$PROJECT_DIR$/action">
       <method v="2" />
     </configuration>
     <configuration name="fstest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/fstest.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="mvn-cli" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/bin/mvn-cli" working-dir="$PROJECT_DIR$/bin">
       <method v="2" />
     </configuration>
     <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test.js" working-dir="$PROJECT_DIR$">
@@ -105,11 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.test.js" />
-        <item itemvalue="Node.js.fstest.js" />
-        <item itemvalue="Node.js.MavenModuleDependenciesAction.js" />
-        <item itemvalue="Node.js.SpringBootTemplate.js" />
+        <item itemvalue="Node.js.mvn-cli" />
         <item itemvalue="Node.js.EchoVersionAction.js" />
+        <item itemvalue="Node.js.test.js" />
+        <item itemvalue="Node.js.Jmvn.js" />
+        <item itemvalue="Node.js.fstest.js" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +122,7 @@
       <workItem from="1610459734118" duration="4337000" />
       <workItem from="1610621315466" duration="591000" />
       <workItem from="1610624027669" duration="6000" />
-      <workItem from="1610727617729" duration="9509000" />
+      <workItem from="1610727617729" duration="22308000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -153,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610461806437</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. 支持脚本启动">
+      <created>1610940017952</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610940017952</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

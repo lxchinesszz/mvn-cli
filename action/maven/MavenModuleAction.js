@@ -148,9 +148,11 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
         let type = singleModuleNamed.type
         switch (type) {
             case 'web':
-                mkdir(this._createJavaResource(singleModuleNamed))
-                mkdir(this._createTestJavaModule(singleModuleNamed))
-                this.ignoreErrorHooks(mavenHooks.createJavaResource, this._createJavaResource(singleModuleNamed))
+                const javaResourcesPath = this._createJavaResource(singleModuleNamed)
+                const javaModuleTestPath = this._createTestJavaModule(singleModuleNamed)
+                mkdir(javaResourcesPath)
+                mkdir(javaModuleTestPath)
+                this.ignoreErrorHooks(mavenHooks.createJavaResource, javaResourcesPath)
                 // 依赖common
                 dependencyManagement = this._mavenModuleDependenciesAction.getWebDependencies()
                 break
