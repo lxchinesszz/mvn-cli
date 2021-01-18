@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/.mvn-cli" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/ascm-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/ascm-config/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/ascm-dal/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/ascm-domain/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/ascm-integration/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/ascm-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/ascm-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/ascm-web/src/main/java/com/idea/ascm/AscmApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/ascm-web/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ascm/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +115,7 @@
       <workItem from="1610459734118" duration="4337000" />
       <workItem from="1610621315466" duration="591000" />
       <workItem from="1610624027669" duration="6000" />
-      <workItem from="1610727617729" duration="22910000" />
+      <workItem from="1610727617729" duration="23400000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -141,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610971775370</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1. 支持脚本启动">
+      <created>1610972169392</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610972169392</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1. 支持脚本启动">
+      <created>1610972322957</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610972322957</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
