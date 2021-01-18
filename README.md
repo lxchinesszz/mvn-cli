@@ -47,6 +47,8 @@
 
 ```
 
+- 进入 `web` 目录直接运行启动 `java -jar ascm-web.jar`
+
 # 四、发布记录 | Release record
 
 **1.0.1**
