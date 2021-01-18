@@ -16,6 +16,28 @@
 
 ![](https://img.springlearn.cn/blog/learn_1610973272000.png)
 
+```
+Build: ascm/ascm-web/src/main/java/com/idea/ascm/web/
+Build: ascm/ascm-web/src/main/resources/
+Build: Add SpringBoot Config:ascm/ascm-web/src/main/resources/application.yml
+Build: ascm/ascm-service/src/main/java/com/idea/ascm/service/
+Build: ascm/ascm-domain/src/main/java/com/idea/ascm/domain/
+Build: ascm/ascm-dal/src/main/java/com/idea/ascm/dal/
+Build: ascm/ascm-integration/src/main/java/com/idea/ascm/integration/
+Build: ascm/ascm-config/src/main/java/com/idea/ascm/config/
+Build: ascm/ascm-common/src/main/java/com/idea/ascm/common/
+   __  ____   ___  __    _______   ____
+  /  |/  / | / / |/ /___/ ___/ /  /  _/
+ / /|_/ /| |/ /    /___/ /__/ /___/ /
+/_/  /_/ |___/_/|_/    \___/____/___/  Application ascm Build Success
+ - JMVN CLI v1.0.3
+┌────────┬─────────┬──────────┬────────────────┬─────────────┬────────┐
+│ 项目名 │ 作者    │ 项目版本 │ SpringBoot版本 │ 描述        │ 端口号 │
+├────────┼─────────┼──────────┼────────────────┼─────────────┼────────┤
+│ ascm   │ mvn-cli │ 1.0.0    │ 2.3.1.RELEASE  │ description │ 8082   │
+└────────┴─────────┴──────────┴────────────────┴─────────────┴────────┘
+```
+
 ## 3.2 idea直接打开
 
 - 可以点击 `run main` 启动

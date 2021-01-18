@@ -1,6 +1,6 @@
 {
   "name": "jmvn",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "构建maven多模块应用。",
   "main": "bin/mvn-cli",
   "scripts": {
