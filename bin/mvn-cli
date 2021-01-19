@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-const {MvnConfig, ProjectTemplateConfig} = require('../config/config');
-const {echoMvnCliVersion} = require('../action/EchoVersionAction')
+const {ProjectTemplateConfig} = require('../config/config');
 const {projectInfoQuestions} = require('../config/questions')
 const Program = require("commander");
 const Prompt = require("inquirer");
@@ -11,13 +10,54 @@ const packageConfig = require('../package.json')
 const semver = require('semver')
 const axios = require('axios');
 
+axios.interceptors.response.use(
+    response => {
+        return response
+    },
+    error => {
+        let originalRequest = error.config
+        if (error.code === 'ECONNABORTED' && error.message.indexOf('timeout') !== -1 && !originalRequest._retry) {
+            // eslint-disable-next-line
+            return Promise.reject('TIMEOUT')
+        }
+        return Promise.reject(error)
+    }
+)
+
 async function getVersion(id) {
+    axios.defaults.timeout = 100;
     return await axios.get(`https://registry.npmjs.org/${id}`)
 }
 
 Program
-    .version(`v${MvnConfig.version}`)
+    .version(`v${packageConfig.version}`)
     .description("快速构建支持SpringBoot的Maven多模块应用")
+
+
+function viewProgram() {
+    Program
+        .command("create")
+        .alias("c")
+        .description("初始化平台")
+        .action(() => {
+            Prompt.prompt(projectInfoQuestions).then(result => {
+                console.log("您选择的平台类型信息如下：");
+                // 1. 项目名称
+                ProjectTemplateConfig.projectName = result.projectName
+                ProjectTemplateConfig.projectVersion = result.projectVersion
+                ProjectTemplateConfig.projectDescription = result.projectDescription
+                ProjectTemplateConfig.springBootVersion = result.springBootVersion
+                ProjectTemplateConfig.groupId = result.groupId
+                ProjectTemplateConfig.projectAuthor = result.projectAuthor
+                ProjectTemplateConfig.port = result.port
+                const project = new Project({
+                    projectTemplateConfig: ProjectTemplateConfig
+                })
+                project.create();
+            })
+        });
+    Program.parse(process.argv);
+}
 
 // 打印当前版本号
 console.log(chalk.cyan(`JMVN CLI v${packageConfig.version}`))
@@ -33,31 +73,12 @@ getVersion(packageConfig.name).then(res => {
         console.log(chalk.red(updateTable))
         console.log(chalk.red(`最新版本为:${lastedVersion},建议你升级为新版`))
         console.log(chalk.green(`> npm i -g jmvn`))
-    }else {
-        Program
-            .command("create")
-            .alias("c")
-            .description("初始化平台")
-            .action(() => {
-                Prompt.prompt(projectInfoQuestions).then(result => {
-                    console.log("您选择的平台类型信息如下：");
-                    // 1. 项目名称
-                    ProjectTemplateConfig.projectName = result.projectName
-                    ProjectTemplateConfig.projectVersion = result.projectVersion
-                    ProjectTemplateConfig.projectDescription = result.projectDescription
-                    ProjectTemplateConfig.springBootVersion = result.springBootVersion
-                    ProjectTemplateConfig.groupId = result.groupId
-                    ProjectTemplateConfig.projectAuthor = result.projectAuthor
-                    ProjectTemplateConfig.port = result.port
-                    const project = new Project({
-                        projectTemplateConfig: ProjectTemplateConfig
-                    })
-                    project.create();
-                })
-            });
-        Program.parse(process.argv);
+    } else {
+        viewProgram()
     }
 }).catch(error => {
-
+    if (error === 'TIMEOUT') {
+        viewProgram()
+    }
 })
 
