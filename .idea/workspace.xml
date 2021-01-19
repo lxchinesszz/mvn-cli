@@ -103,6 +103,7 @@
       <workItem from="1610624027669" duration="6000" />
       <workItem from="1610727617729" duration="24534000" />
       <workItem from="1610974160392" duration="197000" />
+      <workItem from="1610974698202" duration="357000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -202,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610974190184</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add 开源协议">
+      <created>1610974776788</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610974776788</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add 开源协议">
+      <created>1610974870196</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610974870196</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

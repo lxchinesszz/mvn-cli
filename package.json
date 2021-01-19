@@ -15,7 +15,6 @@
   "dependencies": {
     "art-template": "^4.13.2",
     "axios": "^0.21.1",
-    "babel-preset-es2015": "^6.24.1",
     "chalk": "^4.1.0",
     "cli-color": "^2.0.0",
     "cli-table": "^0.3.4",
