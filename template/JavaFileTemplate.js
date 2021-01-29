@@ -3,7 +3,7 @@ const fs = require('fs')
 const _ = require('lodash')
 
 
-function FileTemplate(filePath) {
+function JavaFileTemplate(filePath) {
 
     /**
      * 当前处理的文件模板路径
@@ -51,4 +51,4 @@ function FileTemplate(filePath) {
     }
 }
 
-module.exports = FileTemplate
+module.exports = JavaFileTemplate

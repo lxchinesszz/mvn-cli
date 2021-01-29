@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const {ProjectTemplateConfig} = require('../config/config');
 const {projectInfoQuestions} = require('../config/questions')
+const {DbQuestions} = require('../config/db_questions')
 const Program = require("commander");
 const Prompt = require("inquirer");
 const {Project} = require('../action/ProjectAction')
@@ -54,6 +55,17 @@ function viewProgram() {
                     projectTemplateConfig: ProjectTemplateConfig
                 })
                 project.create();
+            })
+        });
+
+
+    Program
+        .command("install")
+        .alias("i")
+        .description("安装数据模型")
+        .action(() => {
+            Prompt.prompt(DbQuestions).then(result => {
+                console.log(result)
             })
         });
     Program.parse(process.argv);

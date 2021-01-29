@@ -6,6 +6,8 @@ const {log} = require('../../config/config')
 const {MavenPomTemplate} = require('../../template/MavenPomTemplate')
 const {SpringBootTemplate} = require('../../template/SpringBootTemplate')
 
+const FileDirCreatorAction = require('../FileDirCreatorAction')
+
 /**
  * 构建module依赖
  * @param NamespaceAction 命名管理
@@ -134,6 +136,8 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
     this._createModule = function (singleModuleNamed, mavenHooks) {
         // 1. 构建模块的完整路径名并创建目录
         let fullJavaModulePath = this._createJavaModule(singleModuleNamed)
+        let javaResourcesPath = this._createJavaResource(singleModuleNamed)
+
         this._localConfig.namespace.push({
             type: singleModuleNamed.type,
             path: fullJavaModulePath,
@@ -148,35 +152,42 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
         let type = singleModuleNamed.type
         switch (type) {
             case 'web':
-                const javaResourcesPath = this._createJavaResource(singleModuleNamed)
                 const javaModuleTestPath = this._createTestJavaModule(singleModuleNamed)
                 mkdir(javaResourcesPath)
                 mkdir(javaModuleTestPath)
-                this.ignoreErrorHooks(mavenHooks.createJavaResource, javaResourcesPath)
+                this.ignoreErrorHooks(mavenHooks.webCreateHook, fullJavaModulePath)
+                this.ignoreErrorHooks(mavenHooks.createJavaResourceApplication, javaResourcesPath)
                 // 依赖common
                 dependencyManagement = this._mavenModuleDependenciesAction.getWebDependencies()
                 break
             case 'service':
                 // 依赖domain,common
+                this.ignoreErrorHooks(mavenHooks.serviceCreateHook, fullJavaModulePath)
                 dependencyManagement = this._mavenModuleDependenciesAction.getServiceDependencies()
                 break
             case 'domain':
                 // 依赖dal,integration,common
+                this.ignoreErrorHooks(mavenHooks.domainCreateHook, fullJavaModulePath)
                 dependencyManagement = this._mavenModuleDependenciesAction.getDomainDependencies()
                 break
             case 'dal':
                 // 依赖common
+                this.ignoreErrorHooks(mavenHooks.dalCreateHook, fullJavaModulePath)
+                this.ignoreErrorHooks(mavenHooks.createJavaResource, javaResourcesPath)
                 dependencyManagement = this._mavenModuleDependenciesAction.getDalDependencies()
                 break
             case 'integration':
                 // 依赖common
+                this.ignoreErrorHooks(mavenHooks.integrationCreateHook, fullJavaModulePath)
                 dependencyManagement = this._mavenModuleDependenciesAction.getIntegrationDependencies()
                 break
             case 'config':
                 // 依赖common
+                this.ignoreErrorHooks(mavenHooks.configCreateHook, fullJavaModulePath)
                 dependencyManagement = this._mavenModuleDependenciesAction.getConfigDependencies()
                 break
             case 'common':
+                this.ignoreErrorHooks(mavenHooks.commonCreateHook, fullJavaModulePath)
                 dependencyManagement = this._mavenModuleDependenciesAction.getCommonDependencies()
                 break
             default:
@@ -273,14 +284,7 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
 }
 
 function mkdir(filepath) {
-    const directoryList = filepath.split('/');
-    let dir = directoryList[0];
-    for (let i = 1; i < directoryList.length; i++) {
-        if (!fs.existsSync(dir)) {
-            fs.mkdirSync(dir);
-        }
-        dir = dir + '/' + directoryList[i];
-    }
+    new FileDirCreatorAction().create(filepath)
 }
 
 function replaceAll(str, replaceKey, replaceVal) {

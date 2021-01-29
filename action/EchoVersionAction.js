@@ -11,7 +11,7 @@ function successTip(config) {
         ` / /|_/ /| |/ /    /___/ /__/ /___/ /  \n` +
         `/_/  /_/ |___/_/|_/    \\___/____/___/  Application ${config.projectName} Build Success ` +
         `                                          `))
-    console.log(chalk.cyan(` - JMVN CLI v${packageConfig.version}`))
+    console.log(chalk.cyan(` - 🚀 JMVN CLI v${packageConfig.version}`))
 }
 
 module.exports = {successTip}

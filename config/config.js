@@ -47,7 +47,9 @@ const ProjectTemplateConfig = {
     // 端口号
     port: 8081,
     // 作者
-    projectAuthor: 'JMVN-CLI'
+    projectAuthor: 'JMVN-CLI',
+    // 是否生成model规范目录
+    modelFlag: true
 }
 
 

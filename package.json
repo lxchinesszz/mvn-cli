@@ -15,6 +15,7 @@
   "dependencies": {
     "art-template": "^4.13.2",
     "axios": "^0.21.1",
+    "blear.utils.plan": "^2.2.2",
     "chalk": "^4.1.0",
     "cli-color": "^2.0.0",
     "cli-table": "^0.3.4",
@@ -23,6 +24,7 @@
     "fs": "0.0.1-security",
     "inquirer": "^7.3.3",
     "lodash": "^4.17.20",
+    "mysql": "^2.18.1",
     "progress": "^2.0.3",
     "semver": "^7.3.4"
   }
