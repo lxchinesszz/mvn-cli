@@ -1,0 +1,22 @@
+{
+  "varchar": {
+    "javaType": "String"
+  },
+  "int": {
+    "javaType": "Integer"
+  },
+  "bigint": {
+    "javaType": "Long"
+  },
+  "tinyint": {
+    "javaType": "Integer"
+  },
+  "datetime": {
+    "javaType": "Date",
+    "package": "java.util.Date"
+  },
+  "decimal": {
+    "javaType": "BigDecimal",
+    "package": "java.math.BigDecimal"
+  }
+}
