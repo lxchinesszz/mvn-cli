@@ -1,8 +1,11 @@
 const mysql = require('mysql')
+const path = require('path')
 const JavaFileTemplate = require('../../template/JavaFileTemplate')
-const javaFileTemplate = new JavaFileTemplate('./domain.java')
+const javaFileTemplate = new JavaFileTemplate(path.resolve(__dirname, 'domain.java'))
 let typeMapping = require('./mapper.json')
 const _ = require('lodash')
+const FileDirCreatorAction = require('../FileDirCreatorAction')
+
 
 function MysqlAction(host, user, password, database) {
 
@@ -15,7 +18,7 @@ function MysqlAction(host, user, password, database) {
         })
     }
 
-    this.create = function (tableName) {
+    this.create = function (tableName, suffix, filePath) {
         let connection = this._createConn()
         let table_info_query = `select TABLE_SCHEMA,TABLE_NAME, COLUMN_NAME,COLUMN_KEY,DATA_TYPE,COLUMN_COMMENT from information_schema.COLUMNS where table_name = '${tableName}' and TABLE_SCHEMA = '${database}';`
         connection.query(table_info_query, function (error, results, fields) {
@@ -46,13 +49,15 @@ function MysqlAction(host, user, password, database) {
                 }
                 console.log(result)
             }
-            let className = fistUpper(_.camelCase(tableName)) + 'DO'
+            let className = fistUpper(_.camelCase(tableName)) + suffix
+            new FileDirCreatorAction().create(filePath + '/')
+            console.log(`${filePath}/${className}.java`)
             javaFileTemplate.create({
                 className: className,
                 tableName: tableName,
                 fields: javaFields,
                 imports: _.uniq(imports)
-            }, `${className}.java`)
+            }, `${filePath}/${className}.java`)
             connection.destroy()
         });
 

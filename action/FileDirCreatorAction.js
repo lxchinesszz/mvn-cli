@@ -7,6 +7,7 @@ function FileDirCreatorAction() {
      * @param filePath
      */
     this.create = function (filePath) {
+        console.log("文件地址:" + filePath)
         const directoryList = filePath.split('/');
         let dir = directoryList[0];
         for (let i = 1; i < directoryList.length; i++) {

@@ -2,6 +2,7 @@
 const {ProjectTemplateConfig} = require('../config/config');
 const {projectInfoQuestions} = require('../config/questions')
 const {DbQuestions} = require('../config/db_questions')
+const DomainModelCreateAction = require('../action/DomainModelCreateAction')
 const Program = require("commander");
 const Prompt = require("inquirer");
 const {Project} = require('../action/ProjectAction')
@@ -64,9 +65,9 @@ function viewProgram() {
         .alias("i")
         .description("安装数据模型")
         .action(() => {
-            Prompt.prompt(DbQuestions).then(result => {
-                console.log(result)
-            })
+            // 读取配置文件
+            let domainModelCreateAction = new DomainModelCreateAction();
+            domainModelCreateAction.build();
         });
     Program.parse(process.argv);
 }
