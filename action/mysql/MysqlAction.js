@@ -1,6 +1,6 @@
 const mysql = require('mysql')
 const JavaFileTemplate = require('../../template/JavaFileTemplate')
-const javaFileTemplate = new JavaFileTemplate('./java')
+const javaFileTemplate = new JavaFileTemplate('./domain.java')
 let typeMapping = require('./mapper.json')
 const _ = require('lodash')
 
