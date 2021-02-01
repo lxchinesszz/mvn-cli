@@ -11,7 +11,10 @@ const JavaFileTemplate = require('../../template/JavaFileTemplate')
 
 const MysqlAction = require('./MysqlAction')
 
-const mysqlAction = new MysqlAction('10.70.21.50','erp-test','c5ggCY9z65jggNHX','pms_dev')
+const mysqlAction1 = new MysqlAction('10.70.21.50','erp-test','c5ggCY9z65jggNHX','pms_dev')
+const mysqlAction2 = new MysqlAction('10.70.21.50','erp-test','c5ggCY9z65jggNHX','pms_dev')
 
 
-mysqlAction.create('arrival_notice_order_detail')
+mysqlAction1.create("demand_plan_detail", "DO", './')
+mysqlAction2.create("demand_plan", "DO", './')
+

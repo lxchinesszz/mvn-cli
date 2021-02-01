@@ -16,10 +16,23 @@ function getConfig(filePath) {
  * @returns {*}
  */
 function getJmvnConfig() {
-    return getConfig('./.mvn-cli')
+    let jmvnConfig = getConfig('./.mvn-cli')
+    try {
+        JSON.parse(jmvnConfig)
+    } catch (e) {
+        throw new Error("./mvn-cli 语法检查警告, 建议复制配置信息检查Json语法！https://www.json.cn/️")
+    }
+    return jmvnConfig
 }
 
+/**
+ * 文件重置
+ * @param jmvnConfig
+ */
+function writeJmvnConfig(jmvnConfig) {
+    fs.writeFileSync('./.mvn-cli', jmvnConfig)
+}
 
-module.exports = {getJmvnConfig}
+module.exports = {getJmvnConfig, writeJmvnConfig}
 
 

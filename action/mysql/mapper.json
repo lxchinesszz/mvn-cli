@@ -18,5 +18,8 @@
   "decimal": {
     "javaType": "BigDecimal",
     "package": "java.math.BigDecimal"
+  },
+  "json": {
+    "javaType": "Map"
   }
 }

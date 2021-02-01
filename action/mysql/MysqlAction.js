@@ -9,6 +9,7 @@ const FileDirCreatorAction = require('../FileDirCreatorAction')
 
 function MysqlAction(host, user, password, database) {
 
+
     this._createConn = function () {
         return mysql.createConnection({
             host: host,
@@ -18,11 +19,20 @@ function MysqlAction(host, user, password, database) {
         })
     }
 
+
     this.create = function (tableName, suffix, filePath) {
         let connection = this._createConn()
         let table_info_query = `select TABLE_SCHEMA,TABLE_NAME, COLUMN_NAME,COLUMN_KEY,DATA_TYPE,COLUMN_COMMENT from information_schema.COLUMNS where table_name = '${tableName}' and TABLE_SCHEMA = '${database}';`
+        console.log("SQL:" + table_info_query)
+        let currentTableName = tableName
         connection.query(table_info_query, function (error, results, fields) {
+            if (results.length === 0) {
+                console.log(`不存在,${currentTableName}`)
+                connection.destroy()
+                return
+            }
             if (error) throw error;
+            console.log("results:" + JSON.stringify(results))
             let tableName = results[0]['TABLE_NAME'];
             let javaFields = []
             let imports = []
@@ -35,7 +45,6 @@ function MysqlAction(host, user, password, database) {
                 let columnType = result['DATA_TYPE'];
                 // 4. 字段备注
                 let columnComment = result['COLUMN_COMMENT'];
-
                 let javaType = typeMapping[`${columnType}`]['javaType']
                 let importPath = typeMapping[`${columnType}`]['package']
                 javaFields.push({

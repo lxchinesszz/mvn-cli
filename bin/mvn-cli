@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const {ProjectTemplateConfig} = require('../config/config');
 const {projectInfoQuestions} = require('../config/questions')
-const {DbQuestions} = require('../config/db_questions')
 const DomainModelCreateAction = require('../action/DomainModelCreateAction')
 const Program = require("commander");
 const Prompt = require("inquirer");
@@ -11,6 +10,8 @@ const Table = require('cli-table');
 const packageConfig = require('../package.json')
 const semver = require('semver')
 const axios = require('axios');
+let _ = require('lodash')
+
 
 axios.interceptors.response.use(
     response => {
@@ -60,15 +61,31 @@ function viewProgram() {
         });
 
 
-    Program
-        .command("install")
-        .alias("i")
-        .description("安装数据模型")
-        .action(() => {
-            // 读取配置文件
+    const installProgram = Program
+        .option('-i, --tables [String]', '要安装的表模型名称(可以使用,分隔)')
+        .option('-s, --suffix [String]', '模型后缀名', false)
+        .option('-p, --path [String]', '要安装的路径地址(相对路径)', false)
+        .description("安装数据模型");
+
+    installProgram.action(() => {
+        try {
             let domainModelCreateAction = new DomainModelCreateAction();
-            domainModelCreateAction.build();
-        });
+            if (_.isString(installProgram.tables) && _.isString(installProgram.path)) {
+                domainModelCreateAction.buildAndAdd({
+                    "suffix": _.isString(installProgram.suffix) ? installProgram.suffix : 'DO',
+                    "tableName": _.isString(installProgram.tables) ? _.split(installProgram.tables).filter(entry => {
+                        return !_.isEmpty(entry)
+                    }) : [],
+                    "path": `${installProgram.path}`
+                })
+            } else {
+                // 直接读取配置
+                domainModelCreateAction.build();
+            }
+        } catch (Error) {
+            console.log(chalk.red("❌  " + Error.message))
+        }
+    });
     Program.parse(process.argv);
 }
 
@@ -94,4 +111,5 @@ getVersion(packageConfig.name).then(res => {
         viewProgram()
     }
 })
+
 

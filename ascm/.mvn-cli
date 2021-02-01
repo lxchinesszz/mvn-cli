@@ -1,57 +1,71 @@
 {
-    "namespace":[
-        {
-            "type":"web",
-            "path":"ascm/ascm-web/src/main/java/com/idea/ascm/web/",
-            "packagePath":"com/idea/ascm/web"
-        },
-        {
-            "type":"service",
-            "path":"ascm/ascm-service/src/main/java/com/idea/ascm/service/",
-            "packagePath":"com/idea/ascm/service"
-        },
-        {
-            "type":"domain",
-            "path":"ascm/ascm-domain/src/main/java/com/idea/ascm/domain/",
-            "packagePath":"com/idea/ascm/domain"
-        },
-        {
-            "type":"dal",
-            "path":"ascm/ascm-dal/src/main/java/com/idea/ascm/dal/",
-            "packagePath":"com/idea/ascm/dal"
-        },
-        {
-            "type":"integration",
-            "path":"ascm/ascm-integration/src/main/java/com/idea/ascm/integration/",
-            "packagePath":"com/idea/ascm/integration"
-        },
-        {
-            "type":"config",
-            "path":"ascm/ascm-config/src/main/java/com/idea/ascm/config/",
-            "packagePath":"com/idea/ascm/config"
-        },
-        {
-            "type":"common",
-            "path":"ascm/ascm-common/src/main/java/com/idea/ascm/common/",
-            "packagePath":"com/idea/ascm/common"
-        }
-    ],
-    "config":{
-
-    },
-    "dbConfig":{
-        "user":"root",
-        "host":"120.26.68.230",
-        "password":"kdm001",
-        "database":"springlearn"
-    },
-    "models":[
-        {
-            "suffix":"BO",
-            "tableName":[
-                "soul"
-            ],
-            "path":"ascm-dal/src/main/java/com/idea/ascm/dal/model/DO"
-        }
-    ]
+	"namespace": [
+		{
+			"type": "web",
+			"path": "ascm/ascm-web/src/main/java/com/idea/ascm/web/",
+			"packagePath": "com/idea/ascm/web"
+		},
+		{
+			"type": "service",
+			"path": "ascm/ascm-service/src/main/java/com/idea/ascm/service/",
+			"packagePath": "com/idea/ascm/service"
+		},
+		{
+			"type": "domain",
+			"path": "ascm/ascm-domain/src/main/java/com/idea/ascm/domain/",
+			"packagePath": "com/idea/ascm/domain"
+		},
+		{
+			"type": "dal",
+			"path": "ascm/ascm-dal/src/main/java/com/idea/ascm/dal/",
+			"packagePath": "com/idea/ascm/dal"
+		},
+		{
+			"type": "integration",
+			"path": "ascm/ascm-integration/src/main/java/com/idea/ascm/integration/",
+			"packagePath": "com/idea/ascm/integration"
+		},
+		{
+			"type": "config",
+			"path": "ascm/ascm-config/src/main/java/com/idea/ascm/config/",
+			"packagePath": "com/idea/ascm/config"
+		},
+		{
+			"type": "common",
+			"path": "ascm/ascm-common/src/main/java/com/idea/ascm/common/",
+			"packagePath": "com/idea/ascm/common"
+		}
+	],
+	"config": {},
+	"dbConfig": {
+		"host": "10.70.21.50",
+		"user": "erp-test",
+		"password": "c5ggCY9z65jggNHX",
+		"database": "pms_dev"
+	},
+	"models": [
+		{
+			"suffix": "DO",
+			"tableName": [
+				"demand_plan",
+				"demand_plan_detail"
+			],
+			"path": "ascm-dal/src/main/java/com/idea/ascm/dal/model/DO"
+		},
+		{
+			"suffix": "DO",
+			"tableName": [
+				"purchase_order"
+			],
+			"path": "ascm-dal/src/main/java/com/idea/ascm/dal/model/DO1"
+		},
+		{
+			"suffix": "DO",
+			"tableName": [
+				"purchase_order",
+				"purchase_order1"
+			],
+			"path": "ascm-dal/src/main/java/com/idea/ascm/dal/model/DO2"
+		}
+	]
 }

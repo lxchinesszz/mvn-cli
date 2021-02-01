@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="add 开源协议">
-      <change afterPath="$PROJECT_DIR$/action/DomainModelCreateAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/.mvn-cli" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-integration/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/java/com/idea/ascm/AscmApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm-web/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/ascm/ascm-dal/src/main/java/com/idea/ascm/dal/model/DO/SoulDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ascm/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/ConfigUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/DbUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/DomainModelUtils.js" afterDir="false" />
+    <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/src/main/java/com/idea/ascm/dal/model/DO/DemandPlanDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ascm/ascm-dal/src/main/java/com/idea/ascm/dal/model/DO/DemandPlanDetailDO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/FileDirCreatorAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/FileDirCreatorAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/DomainModelCreateAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/DomainModelCreateAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/mysql/MysqlAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/MysqlAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/mysql/MysqlTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/MysqlTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/mysql/mapper.json" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/mapper.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/ascm/.mvn-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/src/main/java/com/idea/ascm/dal/model/DO/SoulBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/src/main/java/com/idea/ascm/dal/model/DO/SoulDO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/ConfigUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/ConfigUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/DbUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/DbUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/DomainModelUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/DomainModelUtils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +76,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.MysqlTest.js">
+  <component name="RunManager" selected="Node.js.test.js">
     <configuration name="Dujitang.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/mysql/Dujitang.js" working-dir="$PROJECT_DIR$/action/mysql">
       <method v="2" />
     </configuration>
@@ -99,10 +94,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.MysqlTest.js" />
         <item itemvalue="Node.js.MysqlAction.js" />
         <item itemvalue="Node.js.Dujitang.js" />
-        <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.mvn-cli" />
       </list>
     </recent_temporary>
@@ -135,7 +130,8 @@
       <workItem from="1611461080711" duration="6722000" />
       <workItem from="1611563347111" duration="6285000" />
       <workItem from="1611892821076" duration="10191000" />
-      <workItem from="1612105561631" duration="5966000" />
+      <workItem from="1612105561631" duration="8367000" />
+      <workItem from="1612176120989" duration="7904000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -291,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612105782905</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add 开源协议">
+      <created>1612111709523</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1612111709523</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +306,39 @@
     <MESSAGE value="1. 支持脚本启动" />
     <MESSAGE value="add 开源协议" />
     <option name="LAST_COMMIT_MESSAGE" value="add 开源协议" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/action/mysql/MysqlTest.js</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/action/mysql/MysqlTest.js</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/action/mysql/MysqlAction.js</url>
+          <line>33</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test.js</url>
+          <line>47</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test.js</url>
+          <line>58</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
