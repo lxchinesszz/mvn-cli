@@ -226,7 +226,7 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
      */
     this._createProjectPom = function () {
         let dependencyManagement = this._mavenModuleDependenciesAction
-            .getIntegrationDependencyManagement(['spring-boot-web'])
+            .getIntegrationDependencyManagement(['spring-boot-web','mybatis-plus'])
         let projectName = this._mavenModuleNamespaceConfig.getProjectName();
         let allNamespace = this._mavenModuleNamespaceConfig.getAllNamespace();
         let modules = _.map(allNamespace, 'moduleName')

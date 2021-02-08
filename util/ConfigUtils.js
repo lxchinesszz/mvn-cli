@@ -3,11 +3,10 @@ let fs = require('fs')
 
 function getConfig(filePath) {
     let jmvnConfigPath = path.resolve(filePath)
-    console.log("jmvnConfigPath:" + jmvnConfigPath)
     if (fs.existsSync(jmvnConfigPath)) {
         return fs.readFileSync(jmvnConfigPath, 'utf-8');
     } else {
-        throw new Error(`文件:${jmvnConfigPath},不存在`)
+        throw new Error(`File not found:[${jmvnConfigPath}',Please check if it is under the root of the project.`)
     }
 }
 
@@ -20,7 +19,7 @@ function getJmvnConfig() {
     try {
         JSON.parse(jmvnConfig)
     } catch (e) {
-        throw new Error("./mvn-cli 语法检查警告, 建议复制配置信息检查Json语法！https://www.json.cn/️")
+        throw new Error("./mvn-cli Configuration file syntax error warning, It is recommended to copy the configuration information and check the JSON syntax！https://www.json.cn/️")
     }
     return jmvnConfig
 }

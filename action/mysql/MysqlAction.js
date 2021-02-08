@@ -4,6 +4,7 @@ const JavaFileTemplate = require('../../template/JavaFileTemplate')
 const javaFileTemplate = new JavaFileTemplate(path.resolve(__dirname, 'domain.java'))
 let typeMapping = require('./mapper.json')
 const _ = require('lodash')
+const logger = require('../../util/logger')
 const FileDirCreatorAction = require('../FileDirCreatorAction')
 
 
@@ -23,16 +24,15 @@ function MysqlAction(host, user, password, database) {
     this.create = function (tableName, suffix, filePath) {
         let connection = this._createConn()
         let table_info_query = `select TABLE_SCHEMA,TABLE_NAME, COLUMN_NAME,COLUMN_KEY,DATA_TYPE,COLUMN_COMMENT from information_schema.COLUMNS where table_name = '${tableName}' and TABLE_SCHEMA = '${database}';`
-        console.log("SQL:" + table_info_query)
+        logger.info("SQL:" + table_info_query)
         let currentTableName = tableName
         connection.query(table_info_query, function (error, results, fields) {
             if (results.length === 0) {
-                console.log(`不存在,${currentTableName}`)
+                logger.error(`🚴 Creating a fail: tableName['${currentTableName}'],suffix:['${suffix}'],path:['${filePath}']`)
                 connection.destroy()
                 return
             }
             if (error) throw error;
-            console.log("results:" + JSON.stringify(results))
             let tableName = results[0]['TABLE_NAME'];
             let javaFields = []
             let imports = []
@@ -56,11 +56,9 @@ function MysqlAction(host, user, password, database) {
                 if (importPath) {
                     imports.push(importPath)
                 }
-                console.log(result)
             }
             let className = fistUpper(_.camelCase(tableName)) + suffix
             new FileDirCreatorAction().create(filePath + '/')
-            console.log(`${filePath}/${className}.java`)
             javaFileTemplate.create({
                 className: className,
                 tableName: tableName,
@@ -68,6 +66,8 @@ function MysqlAction(host, user, password, database) {
                 imports: _.uniq(imports)
             }, `${filePath}/${className}.java`)
             connection.destroy()
+            let fullPath = `${filePath}/${className}.java`;
+            logger.success(`🚴 Creating a successful: tableName['${tableName}'],suffix:['${suffix}'],path:['${fullPath}']`)
         });
 
 

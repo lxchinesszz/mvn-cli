@@ -37,7 +37,7 @@ function MavenModuleDependenciesAction(mavenModuleNamespaceConfig) {
 
     this.getDomainDependencies = function () {
         // 依赖dal,integration,common
-        return this.dependencyManagement([],
+        return this.dependencyManagement(['mybatis-plus'],
             [this.dependencies(this._mavenModuleNamespaceConfig.integrationNamespace()),
                 this.dependencies(this._mavenModuleNamespaceConfig.commonNamespace()),
                 this.dependencies(this._mavenModuleNamespaceConfig.dalNamespace())

@@ -21,5 +21,9 @@
   },
   "json": {
     "javaType": "Map"
+  },
+  "timestamp": {
+    "javaType": "Date",
+    "package": "java.util.Date"
   }
 }

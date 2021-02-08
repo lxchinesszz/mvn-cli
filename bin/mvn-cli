@@ -10,7 +10,9 @@ const Table = require('cli-table');
 const packageConfig = require('../package.json')
 const semver = require('semver')
 const axios = require('axios');
+const logger = require('../util/logger')
 let _ = require('lodash')
+const ora = require('ora')
 
 
 axios.interceptors.response.use(
@@ -37,11 +39,13 @@ Program
     .description("快速构建支持SpringBoot的Maven多模块应用")
 
 
+/**
+ * 命令行函数定义
+ */
 function viewProgram() {
     Program
-        .command("create")
-        .alias("c")
-        .description("初始化平台")
+        .command("init")
+        .description("创建一个新的Maven多模块项目")
         .action(() => {
             Prompt.prompt(projectInfoQuestions).then(result => {
                 console.log("您选择的平台类型信息如下：");
@@ -62,6 +66,8 @@ function viewProgram() {
 
 
     const installProgram = Program
+        .command("install")
+        .alias('i')
         .option('-i, --tables [String]', '要安装的表模型名称(可以使用,分隔)')
         .option('-s, --suffix [String]', '模型后缀名', false)
         .option('-p, --path [String]', '要安装的路径地址(相对路径)', false)
@@ -83,7 +89,7 @@ function viewProgram() {
                 domainModelCreateAction.build();
             }
         } catch (Error) {
-            console.log(chalk.red("❌  " + Error.message))
+            logger.error(Error.message)
         }
     });
     Program.parse(process.argv);
@@ -107,6 +113,7 @@ getVersion(packageConfig.name).then(res => {
         viewProgram()
     }
 }).catch(error => {
+    // 超时就不检查版本了,直接使用
     if (error === 'TIMEOUT') {
         viewProgram()
     }

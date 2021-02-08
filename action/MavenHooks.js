@@ -1,4 +1,4 @@
-const {FileTemplate} = require('../template/FileTemplate')
+const FileTemplate = require('../template/FileTemplate')
 const path = require('path')
 const Table = require('cli-table');
 const chalk = require('chalk')

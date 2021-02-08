@@ -36,6 +36,6 @@ public class {{@className}} implements Serializable {
     public String toString() {
         return "{{@className}}{" +{{each fields}}
           ",<%=$imports.camelCase($value.name)%>=" + this.<%=$imports.camelCase($value.name)%> + {{/each}}
-        "}"
+        "}";
     }
 }

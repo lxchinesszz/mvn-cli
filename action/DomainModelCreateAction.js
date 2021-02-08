@@ -1,7 +1,7 @@
 const {getDbConfig} = require('../util/DbUtils')
 const MysqlAction = require('./mysql/MysqlAction')
 const {getDomainModels, comparedDomainModel} = require('../util/DomainModelUtils')
-
+const logger = require('../util/logger')
 function DomainModelCreateAction() {
 
     this.build = function () {
@@ -11,11 +11,9 @@ function DomainModelCreateAction() {
             let domainModels = getDomainModels();
             domainModels.forEach(domainModel => {
                 domainModel.tableName.forEach(tableName => {
-                    console.log(`tableName:${tableName},suffix:${domainModel.suffix},path:${domainModel.path}`)
                     mysqlAction.create(tableName, domainModel.suffix, domainModel.path)
                 })
             })
-            mysqlAction.close()
         }
     }
 

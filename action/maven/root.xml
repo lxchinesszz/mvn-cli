@@ -53,7 +53,7 @@
 
 
     {{if root}}
-    <!--    SpringBoot应用添加到全局中,每个模块都要用到-->
+    <!--SpringBoot应用添加到全局中,每个模块都要用到-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -63,7 +63,7 @@
     {{/if}}
 
     {{if root}}
-    <!--    【建议】父pom才具有依赖版本管理的能力,父pom控制version,子pom只用引入即可-->
+    <!--【建议】父pom才具有依赖版本管理的能力,父pom控制version,子pom只用引入即可-->
     <dependencyManagement>
         {{/if}}
         {{if dependencies}}
@@ -99,7 +99,8 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                            <!--可以把依赖的包都打包到生成的Jar包中-->
+                            <goal>repackage</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -119,7 +120,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <skipTests>true</skipTests>    <!--默认关掉单元测试 -->
+                    <!--默认关掉单元测试 -->
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
 

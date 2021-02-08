@@ -1,11 +1,13 @@
 const {MvnConfig} = require('./config');
 const inquirer = require('inquirer');
+const logSymbols = require("log-symbols")
 
 const projectInfoQuestions = [{
     type: 'input',
     name: 'projectName',
     message: '请输入项目名称',
     suffix: ':',
+    prefix: logSymbols.success,
     filter: function (val) {
         if (val) {
             return val
@@ -26,6 +28,7 @@ const projectInfoQuestions = [{
         name: 'projectAuthor',
         message: '请输入Owner',
         suffix: ':',
+        prefix: logSymbols.success,
         filter: function (val) {
             if (val) {
                 return val
@@ -39,6 +42,7 @@ const projectInfoQuestions = [{
         name: 'projectDescription',
         message: '项目描述',
         suffix: ':',
+        prefix: logSymbols.success,
         filter: function (val) {
             if (val) {
                 return val
@@ -53,6 +57,7 @@ const projectInfoQuestions = [{
         message: 'groupId坐标',
         default: 'com.idea',
         suffix: ':',
+        prefix: logSymbols.success,
         validate: function (val) {
             if (new RegExp('^[a-zA-Z]*\\.\\w*$').test(val)) {
                 return true
@@ -66,6 +71,7 @@ const projectInfoQuestions = [{
         name: 'projectVersion',
         message: '项目初始版本号',
         default: '1.0.0',
+        prefix: logSymbols.success,
         suffix: ':'
     },
     {
@@ -73,6 +79,7 @@ const projectInfoQuestions = [{
         name: 'port',
         message: '应用端口号',
         default: '8081',
+        prefix: logSymbols.success,
         suffix: ':'
     }
     ,
@@ -81,6 +88,7 @@ const projectInfoQuestions = [{
         name: 'springBootVersion',
         message: 'SpringBoot版本号',
         default: '2.3.1.RELEASE',
+        prefix: logSymbols.success,
         suffix: ':'
     }
     // ,
