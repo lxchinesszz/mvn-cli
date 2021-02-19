@@ -95,29 +95,65 @@ function viewProgram() {
         }
     });
 
-    Program
+    const exportProgram = Program
         .command("export")
+        .option('-c, --commanded [String]', '命令行模式运行')
         .option('-m, --markdown [String]', '导出markdown格式', false)
-        .description("导出数据模型")
-        .action(() => {
+        .option('-h, --host [String]', '数据库[host]', "127.0.0.1")
+        .option('-u, --user [String]', '数据库登陆用户', "root")
+        .option('-p, --password [String]', '登陆密码(明文请注意安全)', "test")
+        .option('-t, --tables [String]', '要导出的表模型(支持,分隔)', "test")
+        .option('-db, --database [String]', '指定要导出的库', "test")
+        .description("导出数据模型 (支持命令行模式 & 交互模式)");
+    exportProgram.action(() => {
+        let config;
+        if (exportProgram.commanded) {
+            if (_.isUndefined(exportProgram.host)) {
+                logger.error(`Host cannot be empty(${exportProgram.host})`)
+            } else if (_.isUndefined(exportProgram.user)) {
+                logger.error("User cannot be empty")
+            } else if (_.isUndefined(exportProgram.tables)) {
+                logger.error("Tables cannot be empty")
+            } else if (_.isUndefined(exportProgram.database)) {
+                logger.error("Database cannot be empty")
+            } else {
+                config = {
+                    "host": exportProgram.host,
+                    "user": exportProgram.user,
+                    "password": exportProgram.password,
+                    "database": exportProgram.database,
+                    "format": exportProgram.markdown ? "markdown" : "table",
+                    "tables": _.split(exportProgram.tables, ',').reverse()
+                };
+                logger.info(`您输入的表模型信息:${JSON.stringify(config)}`);
+                _exportFunction(config)
+            }
+        } else {
             Prompt.prompt(DbQuestions).then(result => {
                 logger.info(`您输入的表模型信息:${JSON.stringify(result)}`);
-                const config = {
+                config = {
                     "host": result.host,
                     "user": result.user,
                     "password": result.password,
                     "database": result.database,
-                    "tables": _.split(result.tables,',')
+                    "format": result.format,
+                    "tables": _.split(result.tables, ',').reverse()
                 };
-                let domainModelCreateAction = new DomainModelCreateAction();
-                if (_.isEqual(result.format,"markdown")){
-                    domainModelCreateAction.exportsMarkdown(config)
-                }else {
-                    domainModelCreateAction.exports(config)
-                }
+                _exportFunction(config)
             })
-        });
+        }
+
+    });
     Program.parse(process.argv);
+}
+
+function _exportFunction(config) {
+    let domainModelCreateAction = new DomainModelCreateAction();
+    if (_.isEqual(config['format'], "markdown")) {
+        domainModelCreateAction.exportsMarkdown(config)
+    } else {
+        domainModelCreateAction.exports(config)
+    }
 }
 
 // 打印当前版本号

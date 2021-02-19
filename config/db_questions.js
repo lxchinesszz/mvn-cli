@@ -16,7 +16,8 @@ const DbQuestions = [
             if (val) {
                 return val
             } else {
-                return '127.0.0.1'
+                // return '127.0.0.1'
+                return '10.70.21.50'
             }
         }
     },
@@ -24,7 +25,7 @@ const DbQuestions = [
         type: 'input',
         name: 'database',
         message: '请输入要连接的库名',
-        default: 'test',
+        default: 'pms_test',
         suffix: ':'
     },
     {
@@ -36,7 +37,7 @@ const DbQuestions = [
             if (val) {
                 return val
             } else {
-                return 'root'
+                return 'erp-test'
             }
         }
     },
@@ -49,7 +50,7 @@ const DbQuestions = [
             if (val) {
                 return val
             } else {
-                return '123456'
+                return 'c5ggCY9z65jggNHX'
             }
         }
     },

@@ -2,6 +2,7 @@ const {getDbConfig} = require('../util/DbUtils')
 const MysqlAction = require('./mysql/MysqlAction')
 const {getDomainModels, comparedDomainModel} = require('../util/DomainModelUtils')
 const logger = require('../util/logger')
+const {animation} = require('../util/OraUtils')
 
 function DomainModelCreateAction() {
 
@@ -48,7 +49,13 @@ function DomainModelCreateAction() {
         // 1. 创建实例
         let mysqlAction = new MysqlAction(dbConfig.host, dbConfig.user, dbConfig.password, dbConfig.database)
         dbConfig.tables.forEach(tableName => {
-            mysqlAction.export(tableName);
+            animation(`正在执行导出表[${tableName}]从库[${dbConfig.database}]}`
+                , `${tableName}导出成功`
+                , 5000,
+                () => {
+                    mysqlAction.export(tableName)
+                })
+
         })
     }
 
@@ -60,7 +67,11 @@ function DomainModelCreateAction() {
         // 1. 创建实例
         let mysqlAction = new MysqlAction(dbConfig.host, dbConfig.user, dbConfig.password, dbConfig.database)
         dbConfig.tables.forEach(tableName => {
-            mysqlAction.exportMarkdown(tableName);
+            animation(`正在执行导出表[${tableName}]从库[${dbConfig.database}]}`,
+                `${tableName}导出成功`,
+                5000, () => {
+                    mysqlAction.exportMarkdown(tableName);
+                })
         })
     }
 

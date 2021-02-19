@@ -1,6 +1,28 @@
-let regExp = new RegExp(/^[a-zA-Z]+$/);
+function MyError(msg) {
+    this.name = "MyError";
+    this.message = msg || "自定义异常的默认消息";
+}
 
-console.log(regExp.test('test'));
+MyError.prototype = Object.create(Error.prototype);
 
-var str = "acb123..//_---!";
-console.log(str.match(/^[a-zA-Z]+$/));
+MyError.prototype.constructor = MyError
+
+
+function b() {
+    try {
+        a()
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+
+function a() {
+    try {
+        throw new MyError("xiaol")
+    } catch (e) {
+        throw new Error('12')
+    }
+}
+
+b()
