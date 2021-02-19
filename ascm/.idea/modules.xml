@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ascm.iml" filepath="$PROJECT_DIR$/ascm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ascm-common/ascm-common.iml" filepath="$PROJECT_DIR$/ascm-common/ascm-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ascm-config/ascm-config.iml" filepath="$PROJECT_DIR$/ascm-config/ascm-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ascm-dal/ascm-dal.iml" filepath="$PROJECT_DIR$/ascm-dal/ascm-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ascm-domain/ascm-domain.iml" filepath="$PROJECT_DIR$/ascm-domain/ascm-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ascm-integration/ascm-integration.iml" filepath="$PROJECT_DIR$/ascm-integration/ascm-integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ascm-service/ascm-service.iml" filepath="$PROJECT_DIR$/ascm-service/ascm-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ascm-web/ascm-web.iml" filepath="$PROJECT_DIR$/ascm-web/ascm-web.iml" />
+    </modules>
+  </component>
+</project>

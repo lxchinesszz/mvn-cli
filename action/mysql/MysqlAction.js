@@ -3,6 +3,7 @@ const path = require('path')
 const JavaFileTemplate = require('../../template/JavaFileTemplate')
 const javaFileTemplate = new JavaFileTemplate(path.resolve(__dirname, 'domain.java'))
 let typeMapping = require('./mapper.json')
+const {consoleTableString,markdownTableString} = require('../../util/TableUtils')
 const _ = require('lodash')
 const logger = require('../../util/logger')
 const FileDirCreatorAction = require('../FileDirCreatorAction')
@@ -69,8 +70,85 @@ function MysqlAction(host, user, password, database) {
             let fullPath = `${filePath}/${className}.java`;
             logger.success(`🚴 Creating a successful: tableName['${tableName}'],suffix:['${suffix}'],path:['${fullPath}']`)
         });
+    }
 
+    /**
+     * 执行导出表结构
+     * @param tableName
+     */
+    this.export = function (tableName) {
+        let table_info_query = `select TABLE_SCHEMA,TABLE_NAME, COLUMN_NAME,COLUMN_KEY,DATA_TYPE,COLUMN_COMMENT from information_schema.COLUMNS where table_name = '${tableName}' and TABLE_SCHEMA = '${database}';`
+        logger.info("SQL:" + table_info_query)
+        this._queryCallback(table_info_query, results => {
+            let rows = []
+            results.forEach(result => {
+                let model = this._convertModel(result)
+                let pri = model.primaryKeyFlag
+                let row = [model.columnName, model.javaType, model.columnType, model.columnComment, pri]
+                rows.push(row)
+            })
+            logger.successNoIcon(`表名:${tableName}`)
+            logger.successNoIcon(consoleTableString(["字段名", "字段Java类型", "字段db类型", "备注", "主键"], rows), true)
+        })
+    }
 
+    /**
+     * 执行导出表结构
+     * @param tableName
+     */
+    this.exportMarkdown = function (tableName) {
+        let table_info_query = `select TABLE_SCHEMA,TABLE_NAME, COLUMN_NAME,COLUMN_KEY,DATA_TYPE,COLUMN_COMMENT from information_schema.COLUMNS where table_name = '${tableName}' and TABLE_SCHEMA = '${database}';`
+        logger.info("SQL:" + table_info_query)
+        this._queryCallback(table_info_query, results => {
+            let rows = []
+            results.forEach(result => {
+                let model = this._convertModel(result)
+                let pri = model.primaryKeyFlag
+                let row = [model.columnName, model.javaType, model.columnType, model.columnComment, pri]
+                rows.push(row)
+            })
+            logger.successNoIcon(`## 表名:${tableName}`)
+            logger.successNoIcon(markdownTableString(["字段名", "字段Java类型", "字段db类型", "备注", "主键"], rows), true)
+        })
+    }
+
+    /**
+     * 将表模型转换成实体
+     * @param result
+     * @returns {{columnType: *, columnComment: *, primaryKeyFlag: *, columnName: *, javaType: *}}
+     * @private
+     */
+    this._convertModel = function (result) {
+        return {
+            // 1. 字段名
+            columnName: result['COLUMN_NAME'],
+            // 2. 是否是主键
+            primaryKeyFlag: result['COLUMN_KEY'],
+            // 3. 字段类型
+            columnType: result['DATA_TYPE'],
+            // 4. 字段备注
+            columnComment: result['COLUMN_COMMENT'],
+            // 5. 对应的java类型
+            javaType: typeMapping[`${result['DATA_TYPE']}`]['javaType']
+        }
+    }
+
+    /**
+     * 统一处理查询操作
+     * @param table_info_query
+     * @param callback
+     * @private
+     */
+    this._queryCallback = function (table_info_query, callback) {
+        let connection = this._createConn()
+        connection.query(table_info_query, function (error, results, fields) {
+            if (error) {
+                logger.error(error)
+                throw error;
+            }
+            callback(results)
+            connection.destroy()
+        })
     }
 }
 

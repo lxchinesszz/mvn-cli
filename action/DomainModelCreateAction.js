@@ -2,8 +2,12 @@ const {getDbConfig} = require('../util/DbUtils')
 const MysqlAction = require('./mysql/MysqlAction')
 const {getDomainModels, comparedDomainModel} = require('../util/DomainModelUtils')
 const logger = require('../util/logger')
+
 function DomainModelCreateAction() {
 
+    /**
+     * 读取配置文件并构建表结构
+     */
     this.build = function () {
         let dbConfig = getDbConfig()
         if (dbConfig.host && dbConfig.user && dbConfig.password && dbConfig.database) {
@@ -17,6 +21,10 @@ function DomainModelCreateAction() {
         }
     }
 
+    /**
+     * 新增表结构并重新构建配置文件
+     * @param models
+     */
     this.buildAndAdd = function (models) {
         // 1.
         let dbConfig = getDbConfig()
@@ -30,6 +38,30 @@ function DomainModelCreateAction() {
         // 3. 如果创建成功就将成功匹配的写入到信息
         comparedDomainModel(models)
 
+    }
+
+    /**
+     * 导出控制台表格
+     * @param dbConfig
+     */
+    this.exports = function (dbConfig) {
+        // 1. 创建实例
+        let mysqlAction = new MysqlAction(dbConfig.host, dbConfig.user, dbConfig.password, dbConfig.database)
+        dbConfig.tables.forEach(tableName => {
+            mysqlAction.export(tableName);
+        })
+    }
+
+    /**
+     * 导出markdown格式文档
+     * @param dbConfig
+     */
+    this.exportsMarkdown = function (dbConfig) {
+        // 1. 创建实例
+        let mysqlAction = new MysqlAction(dbConfig.host, dbConfig.user, dbConfig.password, dbConfig.database)
+        dbConfig.tables.forEach(tableName => {
+            mysqlAction.exportMarkdown(tableName);
+        })
     }
 
 }

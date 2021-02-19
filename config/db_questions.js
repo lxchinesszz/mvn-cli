@@ -1,18 +1,25 @@
-const inquirer = require('inquirer');
-
-const DbQuestions = [{
-    type: 'input',
-    name: 'host',
-    message: '请输入数据库地址',
-    suffix: ':',
-    filter: function (val) {
-        if (val) {
-            return val
-        } else {
-            return '127.0.0.1'
+const DbQuestions = [
+    {
+        type: 'rawlist',
+        message: '请选择要导出的格式',
+        name: 'format',
+        choices: [
+            "markdown",
+            "table"
+        ]
+    }, {
+        type: 'input',
+        name: 'host',
+        message: '请输入数据库地址',
+        suffix: ':',
+        filter: function (val) {
+            if (val) {
+                return val
+            } else {
+                return '127.0.0.1'
+            }
         }
-    }
-},
+    },
     {
         type: 'input',
         name: 'database',
@@ -48,18 +55,17 @@ const DbQuestions = [{
     },
     {
         type: 'input',
-        name: 'dalModelPath',
-        message: '请输入要安装的地址',
+        name: 'tables',
+        message: '请输入要导出的表模型',
         suffix: ':',
         filter: function (val) {
             if (val) {
                 return val
             } else {
-                return 'root'
+                throw Error('请输入要导出的表模型');
             }
         }
     },
-
 ];
 
 module.exports = {

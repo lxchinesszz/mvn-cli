@@ -1,5 +1,5 @@
 const logSymbols = require("log-symbols")
-const  chalk = require('chalk')
+const chalk = require('chalk')
 
 function logger() {
 }
@@ -18,6 +18,10 @@ logger.warning = function (msg) {
 
 logger.success = function (msg) {
     console.log(chalk.greenBright(logSymbols.success), chalk.greenBright(msg))
+}
+
+logger.successNoIcon = function (msg) {
+    console.log(chalk.greenBright(msg))
 }
 
 module.exports = logger

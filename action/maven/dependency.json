@@ -32,6 +32,16 @@
       ]
     },
     {
+      "name": "spring-boot-starter-test",
+      "dependencies": [
+        {
+          "groupId": "org.springframework.boot",
+          "artifactId": "spring-boot-starter-test",
+          "version": "2.3.1.RELEASE"
+        }
+      ]
+    },
+    {
       "name": "mybatis-plus",
       "dependencies": [
         {

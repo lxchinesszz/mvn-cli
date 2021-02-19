@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 const {ProjectTemplateConfig} = require('../config/config');
 const {projectInfoQuestions} = require('../config/questions')
+const {DbQuestions} = require('../config/db_questions')
+
 const DomainModelCreateAction = require('../action/DomainModelCreateAction')
 const Program = require("commander");
 const Prompt = require("inquirer");
@@ -92,6 +94,29 @@ function viewProgram() {
             logger.error(Error.message)
         }
     });
+
+    Program
+        .command("export")
+        .option('-m, --markdown [String]', '导出markdown格式', false)
+        .description("导出数据模型")
+        .action(() => {
+            Prompt.prompt(DbQuestions).then(result => {
+                logger.info(`您输入的表模型信息:${JSON.stringify(result)}`);
+                const config = {
+                    "host": result.host,
+                    "user": result.user,
+                    "password": result.password,
+                    "database": result.database,
+                    "tables": _.split(result.tables,',')
+                };
+                let domainModelCreateAction = new DomainModelCreateAction();
+                if (_.isEqual(result.format,"markdown")){
+                    domainModelCreateAction.exportsMarkdown(config)
+                }else {
+                    domainModelCreateAction.exports(config)
+                }
+            })
+        });
     Program.parse(process.argv);
 }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="">
+    <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="1. 支持配置">
       <change afterPath="$PROJECT_DIR$/ascm/.idea/$PROJECT_FILE$" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ascm/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ascm/.idea/compiler.xml" afterDir="false" />
@@ -229,36 +229,19 @@
       <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/test-classes/com/idea/ascm/dal/model/UserMapperTest.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ascm/ascm-web/target/test-classes/com/idea/ascm/web/WebControllerTest.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ascm/ascm.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/.mvn-cli" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/ascmvc-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/ascmvc-config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/ascmvc-dal/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/ascmvc-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/ascmvc-integration/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/ascmvc-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/ascmvc-web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/ascmvc-web/src/main/java/com/idea/ascmvc/AscmvcApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/ascmvc-web/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ascmvc/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/TableUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/DomainModelCreateAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/DomainModelCreateAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/MavenHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/MavenHooks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/maven/dependency.json" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/dependency.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/mysql/MysqlAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/MysqlAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/mysql/domain.java" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/domain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/mysql/mapper.json" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/mapper.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/src/main/java/com/idea/ascm/dal/model/DO/DemandPlanDO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/src/main/java/com/idea/ascm/dal/model/DO/DemandPlanDetailDO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ascm/ascm-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ascm/ascm-web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ascm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ascm/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/ConfigUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/ConfigUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db_questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/db_questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/logger.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +276,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.14.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="13.13.40" />
+    <property name="javascript.nodejs.core.library.typings.version" value="13.13.44" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -318,14 +301,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.logger.js">
-    <configuration name="Dujitang.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/mysql/Dujitang.js" working-dir="$PROJECT_DIR$/action/mysql">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Node.js.TableUtils.js">
     <configuration name="MysqlAction.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/mysql/MysqlAction.js" working-dir="$PROJECT_DIR$/action/mysql">
       <method v="2" />
     </configuration>
     <configuration name="MysqlTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/mysql/MysqlTest.js" working-dir="$PROJECT_DIR$/action/mysql">
+      <method v="2" />
+    </configuration>
+    <configuration name="TableUtils.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/util/TableUtils.js" working-dir="$PROJECT_DIR$/util">
       <method v="2" />
     </configuration>
     <configuration name="logger.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/util/logger.js" working-dir="$PROJECT_DIR$/util">
@@ -336,11 +319,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.TableUtils.js" />
         <item itemvalue="Node.js.logger.js" />
         <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.MysqlTest.js" />
         <item itemvalue="Node.js.MysqlAction.js" />
-        <item itemvalue="Node.js.Dujitang.js" />
       </list>
     </recent_temporary>
   </component>
@@ -377,7 +360,9 @@
       <workItem from="1612266428267" duration="1057000" />
       <workItem from="1612330582616" duration="5908000" />
       <workItem from="1612607747387" duration="1518000" />
-      <workItem from="1612770443317" duration="1074000" />
+      <workItem from="1612770443317" duration="1251000" />
+      <workItem from="1613123778921" duration="571000" />
+      <workItem from="1613702324371" duration="7283000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -547,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612184549330</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1. 支持配置">
+      <created>1612771737024</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612771737024</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +568,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/action/mysql/MysqlAction.js</url>
-          <line>34</line>
+          <line>35</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -593,6 +585,12 @@
           <url>file://$PROJECT_DIR$/action/MavenHooks.js</url>
           <line>103</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/util/TableUtils.js</url>
+          <line>72</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
