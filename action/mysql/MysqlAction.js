@@ -37,7 +37,7 @@ function MysqlAction(host, user, password, database) {
         logger.info("SQL:" + table_info_query)
         let currentTableName = tableName
         connection.query(table_info_query, function (error, results, fields) {
-            if (results.length === 0) {
+            if (!results || results.length === 0) {
                 logger.error(`🚴 Creating a fail: tableName['${currentTableName}'],suffix:['${suffix}'],path:['${filePath}']`)
                 connection.destroy()
                 return
@@ -73,7 +73,8 @@ function MysqlAction(host, user, password, database) {
                 className: className,
                 tableName: tableName,
                 fields: javaFields,
-                imports: _.uniq(imports)
+                imports: _.uniq(imports),
+                packages: fetchDalModelPackage(filePath)
             }, `${filePath}/${className}.java`)
             connection.destroy()
             let fullPath = `${filePath}/${className}.java`;
@@ -175,6 +176,19 @@ function MysqlAction(host, user, password, database) {
             }
         })
     }
+}
+
+
+/**
+ * 根据路径生成java的包目录
+ * @param filePath "sass-dal/src/main/java/com/idea/sass/dal/model/entity/group";
+ * @returns {string}
+ */
+function fetchDalModelPackage(filePath) {
+    let strings = _.split(filePath, "java/");
+    let str = strings[1];
+    let reg = new RegExp("/", 'g');//g就是代表全部
+    return str.replace(reg, ".");
 }
 
 

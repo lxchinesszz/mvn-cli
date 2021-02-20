@@ -4,6 +4,7 @@ const Table = require('cli-table');
 const chalk = require('chalk')
 const {successTip} = require('../action/EchoVersionAction')
 const FileDirCreatorAction = require('./FileDirCreatorAction')
+const logger = require('../util/logger')
 
 function _dir(path) {
     new FileDirCreatorAction().create(path)
@@ -18,10 +19,10 @@ function MavenHooks(projectTemplateConfig) {
      * @param webPath
      */
     this.webCreateHook = function (webPath) {
-        console.log(chalk.yellow('MavenHooks webPath:' + webPath))
+        logger.info('MavenHooks webPath:' + webPath)
         if (projectTemplateConfig.modelFlag) {
-            _dir(`${webPath}model/VO/`)
-            _dir(`${webPath}model/DTO/`)
+            _dir(`${webPath}model/vo/`)
+            _dir(`${webPath}model/dto/`)
         }
 
     }
@@ -31,9 +32,9 @@ function MavenHooks(projectTemplateConfig) {
      * @param servicePath
      */
     this.serviceCreateHook = function (servicePath) {
-        console.log(chalk.yellow('MavenHooks servicePath:' + servicePath))
+        logger.info('MavenHooks servicePath:' + servicePath)
         if (projectTemplateConfig.modelFlag) {
-            _dir(`${servicePath}model/DTO/`)
+            _dir(`${servicePath}model/dto/`)
         }
     }
 
@@ -42,9 +43,9 @@ function MavenHooks(projectTemplateConfig) {
      * @param domainPath
      */
     this.domainCreateHook = function (domainPath) {
-        console.log(chalk.yellow('MavenHooks domainPath:' + domainPath))
+        logger.info('MavenHooks domainPath:' + domainPath)
         if (projectTemplateConfig.modelFlag) {
-            _dir(`${domainPath}model/BO/`)
+            _dir(`${domainPath}model/bo/`)
         }
     }
 
@@ -53,9 +54,9 @@ function MavenHooks(projectTemplateConfig) {
      * @param dalPath
      */
     this.dalCreateHook = function (dalPath) {
-        console.log(chalk.yellow('MavenHooks dalPath:' + dalPath))
+        logger.info('MavenHooks dalPath:' + dalPath)
         if (projectTemplateConfig.modelFlag) {
-            _dir(`${dalPath}model/DO/`)
+            _dir(`${dalPath}model/entity/`)
         }
     }
 
@@ -64,9 +65,9 @@ function MavenHooks(projectTemplateConfig) {
      * @param integrationPath
      */
     this.integrationCreateHook = function (integrationPath) {
-        console.log(chalk.yellow('MavenHooks integrationPath:' + integrationPath))
+        logger.info('MavenHooks integrationPath:' + integrationPath)
         if (projectTemplateConfig.modelFlag) {
-            _dir(`${integrationPath}model/DTO/`)
+            _dir(`${integrationPath}model/dto/`)
         }
     }
 
@@ -75,7 +76,7 @@ function MavenHooks(projectTemplateConfig) {
      * @param configPath
      */
     this.configCreateHook = function (configPath) {
-        console.log(chalk.yellow('MavenHooks configPath:' + configPath))
+        logger.info('MavenHooks configPath:' + configPath)
     }
 
     /**
@@ -83,7 +84,7 @@ function MavenHooks(projectTemplateConfig) {
      * @param commonPath
      */
     this.commonCreateHook = function (commonPath) {
-        console.log(chalk.yellow('MavenHooks commonPath:' + commonPath))
+        logger.info('MavenHooks commonPath:' + commonPath)
     }
 
     /**
@@ -107,7 +108,8 @@ function MavenHooks(projectTemplateConfig) {
             projectName: projectName,
             port: port,
         }, applicationPath)
-        console.log(chalk.yellow('Build:'), chalk.green(`Add SpringBoot Config:${applicationPath}`));
+
+        logger.success(`Build: Add SpringBoot Config:${applicationPath}`);
     }
 
     /**

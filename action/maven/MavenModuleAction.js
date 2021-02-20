@@ -5,6 +5,7 @@ const chalk = require('chalk')
 const {log} = require('../../config/config')
 const {MavenPomTemplate} = require('../../template/MavenPomTemplate')
 const {SpringBootTemplate} = require('../../template/SpringBootTemplate')
+const logger = require('../../util/logger')
 
 const FileDirCreatorAction = require('../FileDirCreatorAction')
 
@@ -123,7 +124,7 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
         try {
             callback(path)
         } catch (Error) {
-            console.log(Error)
+            logger.error(Error)
         }
     }
 
@@ -226,7 +227,7 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
      */
     this._createProjectPom = function () {
         let dependencyManagement = this._mavenModuleDependenciesAction
-            .getIntegrationDependencyManagement(['spring-boot-web','mybatis-plus'])
+            .getIntegrationDependencyManagement(['spring-boot-web','mybatis-plus-annotation'])
         let projectName = this._mavenModuleNamespaceConfig.getProjectName();
         let allNamespace = this._mavenModuleNamespaceConfig.getAllNamespace();
         let modules = _.map(allNamespace, 'moduleName')
@@ -261,14 +262,14 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
         let directory = namespace.path;
         let projectName = namespace.projectName
         let path = `${directory}src/main/java/${groupId}/${projectName}/${moduleName}/`
-        console.log(chalk.yellow('Build:'), chalk.green(`${path}`));
+        logger.info(`Build:${path}`);
         return path
     }
 
     this._createJavaResource = function (namespace) {
         let directory = namespace.path;
         let path = `${directory}src/main/resources/`
-        console.log(chalk.yellow('Build:'), chalk.green(`${path}`));
+        logger.info(`Build:${path}`);
         return path
     }
 

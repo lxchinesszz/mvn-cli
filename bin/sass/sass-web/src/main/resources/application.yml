@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: sass
+
+server:
+  port: 8081

@@ -66,3 +66,23 @@ function add(sourceConfig, newAddConfig) {
         })
     }
 }
+
+
+/**
+ *
+ * @param filePath "sass-dal/src/main/java/com/idea/sass/dal/model/entity/group";
+ * @returns {string}
+ */
+function fetchDalModelPackage(filePath){
+    let strings = _.split(filePath,"java/");
+    let str = strings[1];
+    let reg = new RegExp("/", 'g');//g就是代表全部
+    return str.replace(reg, ".");
+}
+
+
+function replaceAll(str, replaceKey, replaceVal) {
+    var reg = new RegExp(replaceKey, 'g');//g就是代表全部
+    return str.replace(reg, replaceVal || '');
+}
+console.log(fetchDalModelPackage());;

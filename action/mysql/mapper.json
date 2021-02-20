@@ -23,7 +23,8 @@
     "package": "java.math.BigDecimal"
   },
   "json": {
-    "javaType": "Map"
+    "javaType": "Map",
+    "package": "java.util.Map"
   },
   "timestamp": {
     "javaType": "Date",

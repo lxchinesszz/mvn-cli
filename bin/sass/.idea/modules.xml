@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/sass.iml" filepath="$PROJECT_DIR$/.idea/sass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sass-common/sass-common.iml" filepath="$PROJECT_DIR$/sass-common/sass-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sass-config/sass-config.iml" filepath="$PROJECT_DIR$/sass-config/sass-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sass-dal/sass-dal.iml" filepath="$PROJECT_DIR$/sass-dal/sass-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sass-domain/sass-domain.iml" filepath="$PROJECT_DIR$/sass-domain/sass-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sass-integration/sass-integration.iml" filepath="$PROJECT_DIR$/sass-integration/sass-integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sass-service/sass-service.iml" filepath="$PROJECT_DIR$/sass-service/sass-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sass-web/sass-web.iml" filepath="$PROJECT_DIR$/sass-web/sass-web.iml" />
+    </modules>
+  </component>
+</project>

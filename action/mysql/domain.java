@@ -1,4 +1,7 @@
+package {{@packages}};
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;{{each imports}}
 import {{$value}};{{/each}}
 
@@ -29,7 +32,7 @@ public class {{@className}} implements Serializable {
     * @return {{$value.javaType}} {{$value.comment}}
     **/
     public {{$value.javaType}} get<%=$imports.fistUpper($imports.camelCase($value.name))%>(){
-        return <%=$imports.camelCase($value.name)%>
+        return <%=$imports.camelCase($value.name)%>;
     }
    {{/each}}
     @Override
