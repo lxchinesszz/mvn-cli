@@ -1,8 +1,6 @@
 ## 一、介绍 | Introduce
 
 
-![](https://img.springlearn.cn/blog/learn_1614238723000.png)
-
 快速构建支持SpringBoot的Maven多模块应用,启动及快速打包部署
 
 
@@ -10,14 +8,8 @@
 ## 二、快速安装 | Fast installation
 
 ```
-# 登陆公司npm仓库
-➜ npm config set registry=http://nexus.danchuangglobal.com/repository/npm-group/
-
-# 通过公司VPN账号获取下载权限
-➜ npm login
-
 # 下载脚手架工具
-➜ npm i -g @access/jmvn
+➜ npm i -g /jmvn
 ```
 
 ## 三、功能介绍
@@ -52,13 +44,8 @@
 ℹ Build:sacc/sacc-common/src/main/resources/
 ℹ MavenHooks commonPath:sacc/sacc-common/src/main/java/com/idanchuang/sacc/common/
                                                   _  _ 
-     /\                                          | |(_)
-    /  \    ___  ___  ___  ___  ___  ______  ___ | | _ 
-   / /\ \  / __|/ __|/ _ \/ __|/ __||______|/ __|| || |
-  / ____ \| (__| (__|  __/\__ \\__ \       | (__ | || |
- /_/    \_\\___|\___|\___||___/|___/        \___||_||_|    Application sacc Build Success
 
-✔ 🚀 ACCESS CLI v1.0.0
+✔ 🚀 JMVN CLI v1.0.0
 ┌────────┬────────┬──────────┬────────────────┬──────────────┬────────┐
 │ 项目名 │ 作者   │ 项目版本 │ SpringBoot版本 │ 描述         │ 端口号 │
 ├────────┼────────┼──────────┼────────────────┼──────────────┼────────┤
@@ -109,19 +96,18 @@
 
 ```
   "dbConfig": {
-    "host": "10.70.20.121",
-    "user": "oms-test",
-    "password": "9GyvIJRsMHBgWIRZ",
-    "database": "abmau_release"
+    "host": "127.0.0.1",
+    "user": "test",
+    "password": "abc123456",
+    "database": "shop"
   },
   "models": [
     {
       "suffix": "DO",
       "tableName": [
-        "w_order",
-        "w_push_order"
+        "shop_order",
       ],
-      "path": "scm-dao/src/main/java/com/idanchuang/scm/dao/entity/Do"
+      "path": "scm-dao/src/main/java/com/idanchuang/scm/dao/entity"
     }
   ]
 ```
@@ -137,9 +123,9 @@ access i
 如果你是深度命令行换着,你也可以通过纯命令安装
 
 ```
-➜ access help i
-ACCESS CLI v1.0.0
-Usage: access install|i [options]
+➜ jmvn help i
+JMVN CLI v1.0.0
+Usage: jmvn install|i [options]
 
 安装数据模型
 
