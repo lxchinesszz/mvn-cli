@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: ascm
-
-server:
-  port: 8081

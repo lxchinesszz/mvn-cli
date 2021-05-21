@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     {{if root}}
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>com.idanchuang</groupId>
+        <artifactId>spring-cloud-starter-parent</artifactId>
         <version>{{@springBootVersion}}</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>

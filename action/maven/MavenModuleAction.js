@@ -54,7 +54,20 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
      * @type {{namespace: [], config: {}}}
      * @private
      */
-    this._localConfig = {namespace: [], config: {}}
+    this._localConfig = {
+        namespace: [], config: {}, dbConfig: {
+            "host": "",
+            "user": "",
+            "password": "",
+            "database": ""
+        }, models: [
+            {
+                "suffix": "DO",
+                "tableName": [],
+                "path": ""
+            }
+        ],
+    }
 
     /**
      * 构建maven项目
@@ -69,6 +82,7 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
         this._createModule(this._mavenModuleNamespaceConfig.integrationNamespace(), mavenHooks)
         this._createModule(this._mavenModuleNamespaceConfig.configNamespace(), mavenHooks)
         this._createModule(this._mavenModuleNamespaceConfig.commonNamespace(), mavenHooks)
+
         // 2. 构建模块之间的pom关系
         this._createProjectPom(this._mavenModuleNamespaceConfig)
 
@@ -120,14 +134,18 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
         return replaceAll(this._groupId, '\\.', '/')
     }
 
-    this.ignoreErrorHooks = function (callback, path) {
+    this.ignoreErrorHooks = function (callback, path, moduleBuildAction) {
         try {
-            callback(path)
+            callback(path, moduleBuildAction)
         } catch (Error) {
             logger.error(Error)
         }
     }
 
+    this._moduleBuildAction = function (singleModuleNamed) {
+        let fullJavaModulePath = this._createJavaModule(singleModuleNamed)
+        mkdir(fullJavaModulePath)
+    }
     /**
      * 构建模块
      * @param singleModuleNamed 单模块的构建
@@ -135,7 +153,7 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
      * @private 状态私有不允许外部使用
      */
     this._createModule = function (singleModuleNamed, mavenHooks) {
-        // 1. 构建模块的完整路径名并创建目录
+        // 1. 计算模块路径
         let fullJavaModulePath = this._createJavaModule(singleModuleNamed)
         let javaResourcesPath = this._createJavaResource(singleModuleNamed)
 
@@ -144,51 +162,67 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
             path: fullJavaModulePath,
             packagePath: `${this._getPackagePath(singleModuleNamed)}`
         })
-        mkdir(fullJavaModulePath)
 
         // 2. 根据模块类型构建依赖及目录
         let dependencyManagement
 
         // 3. 根据系统分层类型,构建测试资源、应用启动配置、及单模块的pom依赖
         let type = singleModuleNamed.type
+
+        let _this = this
         switch (type) {
             case 'web':
-                const javaModuleTestPath = this._createTestJavaModule(singleModuleNamed)
-                mkdir(javaResourcesPath)
-                mkdir(javaModuleTestPath)
-                this.ignoreErrorHooks(mavenHooks.webCreateHook, fullJavaModulePath)
+                this.ignoreErrorHooks(mavenHooks.webCreateHook, fullJavaModulePath, function () {
+                    // 构建模块的完整路径名并创建目录
+                    _this._moduleBuildAction(singleModuleNamed)
+                    const javaModuleTestPath = _this._createTestJavaModule(singleModuleNamed)
+                    mkdir(javaResourcesPath)
+                    mkdir(javaModuleTestPath)
+                })
                 this.ignoreErrorHooks(mavenHooks.createJavaResourceApplication, javaResourcesPath)
                 // 依赖common
                 dependencyManagement = this._mavenModuleDependenciesAction.getWebDependencies()
                 break
             case 'service':
                 // 依赖domain,common
-                this.ignoreErrorHooks(mavenHooks.serviceCreateHook, fullJavaModulePath)
+                this.ignoreErrorHooks(mavenHooks.serviceCreateHook, fullJavaModulePath, function () {
+                    _this._moduleBuildAction(singleModuleNamed)
+                })
                 dependencyManagement = this._mavenModuleDependenciesAction.getServiceDependencies()
                 break
             case 'domain':
                 // 依赖dal,integration,common
-                this.ignoreErrorHooks(mavenHooks.domainCreateHook, fullJavaModulePath)
+                this.ignoreErrorHooks(mavenHooks.domainCreateHook, fullJavaModulePath, function () {
+                    _this._moduleBuildAction(singleModuleNamed)
+                })
                 dependencyManagement = this._mavenModuleDependenciesAction.getDomainDependencies()
                 break
             case 'dal':
                 // 依赖common
-                this.ignoreErrorHooks(mavenHooks.dalCreateHook, fullJavaModulePath)
+                this.ignoreErrorHooks(mavenHooks.dalCreateHook, fullJavaModulePath, function () {
+                    _this._moduleBuildAction(singleModuleNamed)
+                })
                 this.ignoreErrorHooks(mavenHooks.createJavaResource, javaResourcesPath)
                 dependencyManagement = this._mavenModuleDependenciesAction.getDalDependencies()
                 break
             case 'integration':
                 // 依赖common
-                this.ignoreErrorHooks(mavenHooks.integrationCreateHook, fullJavaModulePath)
+                this.ignoreErrorHooks(mavenHooks.integrationCreateHook, fullJavaModulePath, function () {
+                    _this._moduleBuildAction(singleModuleNamed)
+                })
                 dependencyManagement = this._mavenModuleDependenciesAction.getIntegrationDependencies()
                 break
             case 'config':
                 // 依赖common
-                this.ignoreErrorHooks(mavenHooks.configCreateHook, fullJavaModulePath)
+                this.ignoreErrorHooks(mavenHooks.configCreateHook, fullJavaModulePath, function () {
+                    _this._moduleBuildAction(singleModuleNamed)
+                })
                 dependencyManagement = this._mavenModuleDependenciesAction.getConfigDependencies()
                 break
             case 'common':
-                this.ignoreErrorHooks(mavenHooks.commonCreateHook, fullJavaModulePath)
+                this.ignoreErrorHooks(mavenHooks.commonCreateHook, fullJavaModulePath, function () {
+                    _this._moduleBuildAction(singleModuleNamed)
+                })
                 dependencyManagement = this._mavenModuleDependenciesAction.getCommonDependencies()
                 break
             default:
@@ -227,7 +261,7 @@ function MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies) 
      */
     this._createProjectPom = function () {
         let dependencyManagement = this._mavenModuleDependenciesAction
-            .getIntegrationDependencyManagement(['spring-boot-web','mybatis-plus-annotation'])
+            .getIntegrationDependencyManagement(['spring-boot-web', 'mybatis-plus-annotation'])
         let projectName = this._mavenModuleNamespaceConfig.getProjectName();
         let allNamespace = this._mavenModuleNamespaceConfig.getAllNamespace();
         let modules = _.map(allNamespace, 'moduleName')

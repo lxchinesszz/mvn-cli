@@ -2,8 +2,14 @@
   "char": {
     "javaType": "String"
   },
+  "text": {
+    "javaType": "String"
+  },
   "varchar": {
     "javaType": "String"
+  },
+  "smallint": {
+    "javaType": "Integer"
   },
   "int": {
     "javaType": "Integer"
@@ -23,8 +29,7 @@
     "package": "java.math.BigDecimal"
   },
   "json": {
-    "javaType": "Map",
-    "package": "java.util.Map"
+    "javaType": "String"
   },
   "timestamp": {
     "javaType": "Date",

@@ -35,7 +35,7 @@ const ProjectTemplateConfig = {
     // 通用模块
     common: "common",
     // 分组
-    groupId: "com.danchuang",
+    groupId: "com.idanchuang",
     // 版本
     projectVersion: '1.0.0-SNAPSHOT',
     // maven编译版本
@@ -43,7 +43,7 @@ const ProjectTemplateConfig = {
     // 项目描述
     projectDescription: 'JMVN-CLI BUILD',
     // SpringBoot版本号
-    springBootVersion: '2.3.1.RELEASE',
+    springBootVersion: '0.5.1-RELEASE',
     // 端口号
     port: 8081,
     // 作者
@@ -64,7 +64,7 @@ const MvnConfig = {
     // 是否自动生成readme文档
     isAutoCreateReadme: true,
     // SpringBoot版本号
-    springBootVersion: '2.3.1.RELEASE',
+    springBootVersion: '0.5.1-RELEASE',
     // 持续集成
     integrations: [MYBATIS_PLUS, REDIS, RABBITMQ, WEB, LOMBOK]
 }
@@ -73,7 +73,7 @@ const MvnConfig = {
 const integrationCaches = []
 
 function log(ConfigSource) {
-    fs.writeFile(`${ProjectTemplateConfig.projectName}/.mvn-cli`, JSON.stringify(JSON.parse(ConfigSource), null, "\t"), err => {
+    fs.writeFile(`${ProjectTemplateConfig.projectName}/.jmvn.json`, JSON.stringify(JSON.parse(ConfigSource), null, "\t"), err => {
         if (err) {
             throw err;
         }
@@ -81,7 +81,7 @@ function log(ConfigSource) {
 }
 
 function mvnCliConfig() {
-    let configContext = fs.readFile(`${ProjectTemplateConfig.projectName}/.mvn-cli`, err => {
+    let configContext = fs.readFile(`${ProjectTemplateConfig.projectName}/.jmvn.json`, err => {
         throw Error("配置文件读取失败")
     })
     return JSON.stringify(configContext)

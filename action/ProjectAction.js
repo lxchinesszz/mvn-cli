@@ -2,6 +2,7 @@ const {NamespaceAction} = require('./NamespaceAction')
 const {MavenModuleAction} = require('./maven/MavenModuleAction')
 const {MavenModuleDependenciesAction} = require('./maven/MavenModuleDependenciesAction')
 const {MavenHooks} = require('./MavenHooks')
+const {plugin} = require('../plugins/Install')
 
 /**
  * 构建Maven多模块应用
@@ -26,7 +27,7 @@ function Project(config) {
         let mavenModule = new MavenModuleAction(mavenModuleNamespaceConfig, mavenModuleDependencies)
         // 4. 构建扩展的钩子函数
         let mavenHooks = new MavenHooks(this._projectTemplateConfig);
-        // 4. 注册钩子
+        // 5. 注册钩子
         mavenModule.init(mavenHooks);
     }
 }

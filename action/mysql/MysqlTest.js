@@ -11,10 +11,10 @@ const JavaFileTemplate = require('../../template/JavaFileTemplate')
 
 const MysqlAction = require('./MysqlAction')
 
-const mysqlAction1 = new MysqlAction('10.70.21.50','erp-test','c5ggCY9z65jggNHX','pms_dev')
-const mysqlAction2 = new MysqlAction('10.70.21.50','erp-test','c5ggCY9z65jggNHX','pms_dev')
+const mysqlAction1 = new MysqlAction('127.0.0.1','test','123456','dev')
+const mysqlAction2 = new MysqlAction('127.0.0.1','test','123456','dev')
 
 
-mysqlAction1.create("demand_plan_detail", "DO", './')
-mysqlAction2.create("demand_plan", "DO", './')
+mysqlAction1.create("sdad", "DO", './')
+mysqlAction2.create("sda", "DO", './')
 

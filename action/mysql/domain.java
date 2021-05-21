@@ -6,7 +6,7 @@ import java.io.Serializable;{{each imports}}
 import {{$value}};{{/each}}
 
 /**
- * @author jmvn-cli
+ * @author access-cli 自动创建
  **/
 @TableName(value = "{{@tableName}}", autoResultMap = true)
 public class {{@className}} implements Serializable {
@@ -16,9 +16,9 @@ public class {{@className}} implements Serializable {
    /**
     * {{$value.comment}}
     **/{{if($value.primary)}}
-    @TableId(value = "{{$value.name}}", type = IdType.ASSIGN_ID)
-    public {{$value.javaType}} <%=$imports.camelCase($value.name)%>;{{else}}
-    public {{$value.javaType}} <%=$imports.camelCase($value.name)%>;{{/if}}
+    @TableId(value = "{{$value.name}}", type = IdType.AUTO)
+    private {{$value.javaType}} <%=$imports.camelCase($value.name)%>;{{else}}
+    private {{$value.javaType}} <%=$imports.camelCase($value.name)%>;{{/if}}
     {{/each}}
    {{each fields}}
    /**

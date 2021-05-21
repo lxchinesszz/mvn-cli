@@ -15,11 +15,11 @@ function getConfig(filePath) {
  * @returns {*}
  */
 function getJmvnConfig() {
-    let jmvnConfig = getConfig('./.mvn-cli')
+    let jmvnConfig = getConfig('./.jmvn.json')
     try {
         JSON.parse(jmvnConfig)
     } catch (e) {
-        throw new Error("./mvn-cli Configuration file syntax error warning, It is recommended to copy the configuration information and check the JSON syntax！https://www.json.cn/️")
+        throw new Error("./.jmvn.json Configuration file syntax error warning, It is recommended to copy the configuration information and check the JSON syntax！https://www.json.cn/️")
     }
     return jmvnConfig
 }
@@ -29,7 +29,7 @@ function getJmvnConfig() {
  * @param jmvnConfig
  */
 function writeJmvnConfig(jmvnConfig) {
-    fs.writeFileSync('./.mvn-cli', jmvnConfig)
+    fs.writeFileSync('./.jmvn.json', jmvnConfig)
 }
 
 module.exports = {getJmvnConfig, writeJmvnConfig}

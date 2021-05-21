@@ -1,7 +1,7 @@
 {
   "name": "jmvn",
-  "version": "1.0.4",
-  "description": "构建maven多模块应用。",
+  "version": "1.0.5",
+  "description": "SpringBoot Maven多模块构建脚手架",
   "main": "bin/mvn-cli",
   "scripts": {
     "start": "node mvn-cli.js"

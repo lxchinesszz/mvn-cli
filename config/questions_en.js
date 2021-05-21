@@ -1,11 +1,12 @@
 const {MvnConfig} = require('./config');
 const inquirer = require('inquirer');
 const logSymbols = require("log-symbols")
+const _ = require('lodash')
 
-const projectInfoQuestions = [{
+const projectInfoQuestionsEn = [{
     type: 'input',
     name: 'projectName',
-    message: '请输入项目名称',
+    message: 'Please enter a project name',
     suffix: ':',
     prefix: logSymbols.success,
     filter: function (val) {
@@ -19,14 +20,14 @@ const projectInfoQuestions = [{
         if (new RegExp('^[a-zA-Z]*$').test(val)) {
             return true
         } else {
-            return '建议您使用有意义的名字,不要使用特殊字符(-/￥%@)'
+            return 'It is recommended that you use meaningful names and not special characters(-/￥%@)'
         }
     }
 },
     {
         type: 'input',
         name: 'projectAuthor',
-        message: '请输入作者',
+        message: 'Please enter author',
         suffix: ':',
         prefix: logSymbols.success,
         filter: function (val) {
@@ -40,7 +41,7 @@ const projectInfoQuestions = [{
     {
         type: 'input',
         name: 'projectDescription',
-        message: '项目描述',
+        message: 'Project description',
         suffix: ':',
         prefix: logSymbols.success,
         filter: function (val) {
@@ -54,22 +55,22 @@ const projectInfoQuestions = [{
     {
         type: 'input',
         name: 'groupId',
-        message: 'groupId坐标',
-        default: 'com.idanchuang',
+        message: 'GroupId coordinates',
+        default: 'com.github',
         suffix: ':',
         prefix: logSymbols.success,
         validate: function (val) {
             if (new RegExp('^[a-zA-Z]*\\.\\w*$').test(val)) {
                 return true
             } else {
-                return 'GroupId不合法(建议使用全字母 eg: com.idea/com.alibaba.taobao)'
+                return 'GroupId illegal(Full letters are recommended eg: com.idea/com.alibaba.taobao)'
             }
         }
     },
     {
         type: 'input',
         name: 'projectVersion',
-        message: '项目初始版本号',
+        message: 'The initial version number of the project',
         default: '1.0.0',
         prefix: logSymbols.success,
         suffix: ':'
@@ -77,16 +78,23 @@ const projectInfoQuestions = [{
     {
         type: 'input',
         name: 'port',
-        message: '应用端口号',
+        message: 'Application port number',
         default: '8081',
         prefix: logSymbols.success,
-        suffix: ':'
+        suffix: ':',
+        validate: function (val) {
+            if (_.isNumber(Number(val))) {
+                return true;
+            } else {
+                return 'Suggested range of port number (8080 ~ 30000)'
+            }
+        }
     }
     ,
     {
         type: 'input',
         name: 'springBootVersion',
-        message: 'SpringBoot版本号',
+        message: 'SpringBoot version number',
         default: '0.5.1-RELEASE',
         prefix: logSymbols.success,
         suffix: ':'
@@ -121,5 +129,5 @@ const projectInfoQuestions = [{
 ];
 
 module.exports = {
-    projectInfoQuestions
+    projectInfoQuestionsEn
 }

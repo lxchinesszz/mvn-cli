@@ -1,39 +1,347 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/sass/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/.mvn-cli" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-common/sass-common.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-config/sass-config.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-dal/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-dal/sass-dal.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-dal/src/main/java/com/idea/sass/dal/model/entity/SalesEstimateDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-dal/src/main/java/com/idea/sass/dal/model/entity/group/SalesEstimateDetailDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-domain/sass-domain.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-integration/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-integration/sass-integration.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-service/sass-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-web/sass-web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-web/src/main/java/com/idea/sass/SassApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-web/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/sass/sass-web/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/named/Named.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/action/named/filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/example/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/example/.jmvn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/example/example-dal/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/example/example-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/questions_en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/Install.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/Plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/PluginManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/git/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/git/GitAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/git/template/GitIgnoreTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/FileDirCreatorAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/FileDirCreatorAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/EchoVersionAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/EchoVersionAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/MavenHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/MavenHooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/ProjectAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/ProjectAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/maven/dependency.json" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/dependency.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action/mysql/MysqlAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/MysqlAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/maven/root.xml" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/root.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/mysql/MysqlTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/MysqlTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/mysql/domain.java" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/domain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/action/mysql/mapper.json" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/mapper.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/$PROJECT_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/intellij-javadocs-4.0.1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__classworlds_classworlds_1_1_alpha_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__commons_codec_commons_codec_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__commons_collections_commons_collections_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__commons_digester_commons_digester_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__commons_validator_commons_validator_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__junit_junit_4_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_doxia_doxia_core_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_doxia_doxia_decoration_model_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_doxia_doxia_logging_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_doxia_doxia_module_fml_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_doxia_doxia_module_xhtml_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_doxia_doxia_sink_api_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_doxia_doxia_site_renderer_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_aether_provider_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_artifact_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_artifact_manager_2_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_core_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_model_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_model_builder_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_plugin_api_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_plugin_registry_2_0_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_profile_2_0_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_project_2_0_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_repository_metadata_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_settings_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_maven_settings_builder_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_reporting_maven_reporting_api_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_reporting_maven_reporting_impl_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_shared_file_management_1_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_shared_maven_shared_io_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_maven_wagon_wagon_provider_api_1_0_alpha_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apache_velocity_velocity_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_assertj_assertj_core_3_16_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_codehaus_plexus_plexus_classworlds_2_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_codehaus_plexus_plexus_component_annotations_1_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_codehaus_plexus_plexus_container_default_1_0_alpha_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_codehaus_plexus_plexus_i18n_1_0_beta_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_codehaus_plexus_plexus_interpolation_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_3_0_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_codehaus_plexus_plexus_velocity_1_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_jacoco_jacoco_maven_plugin_0_8_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_jacoco_org_jacoco_agent_runtime_0_8_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_jacoco_org_jacoco_core_0_8_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_jacoco_org_jacoco_report_0_8_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_mockito_mockito_core_3_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_ow2_asm_asm_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_ow2_asm_asm_analysis_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_ow2_asm_asm_commons_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_ow2_asm_asm_tree_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_sonatype_aether_aether_api_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_sonatype_aether_aether_impl_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_sonatype_aether_aether_spi_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_sonatype_aether_aether_util_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_sonatype_plexus_plexus_cipher_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_sonatype_plexus_plexus_sec_dispatcher_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_sonatype_sisu_sisu_guice_noaop_2_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_sonatype_sisu_sisu_inject_bean_1_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_sonatype_sisu_sisu_inject_plexus_1_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_aop_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_beans_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_context_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_core_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_expression_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_test_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_web_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__org_yaml_snakeyaml_1_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__oro_oro_2_0_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__xerces_xercesImpl_2_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/qaplug_profiles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/.mvn-cli" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-common/ascm-common.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-common/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-common/target/ascm-common-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-common/target/ascm-common-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-common/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-config/ascm-config.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-config/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-config/target/ascm-config-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-config/target/ascm-config-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-config/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/ascm-dal.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/example/example-config/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/src/main/java/com/idea/ascm/dal/model/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/target/ascm-dal-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/target/ascm-dal-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/target/classes/com/idea/ascm/dal/model/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-dal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-domain/ascm-domain.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-domain/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-domain/target/ascm-domain-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-domain/target/ascm-domain-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-domain/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-integration/ascm-integration.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-integration/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-integration/target/ascm-integration-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-integration/target/ascm-integration-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-integration/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-integration/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-service/ascm-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-service/target/ascm-service-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-service/target/ascm-service-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/ascm-web.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/src/main/java/com/idea/ascm/AscmApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/src/main/java/com/idea/ascm/web/WebController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/src/test/java/com/idea/ascm/AscmApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/src/test/java/com/idea/ascm/dal/model/UserMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/src/test/java/com/idea/ascm/web/WebControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/ascm-web-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/ascm-web-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/ascm-web-1.0.0.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/example/example-web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/classes/com/idea/ascm/AscmApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/classes/com/idea/ascm/web/WebController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/com.idea.ascm.web/WebController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/com.idea.ascm.web/WebController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/com.idea.ascm.web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/com.idea.ascm.web/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/com.idea.ascm/AscmApplication.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/com.idea.ascm/AscmApplication.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/com.idea.ascm/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/com.idea.ascm/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/branchfc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/branchnc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/branchpc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/bundle.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/class.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/down.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/greenbar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/group.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/method.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/package.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/prettify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/redbar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/report.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/report.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/session.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/sort.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/sort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/source.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-resources/up.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco-sessions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco.exec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/coverage-reports/jacoco.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/surefire-reports/TEST-com.idea.ascm.AscmApplicationTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/surefire-reports/TEST-com.idea.ascm.dal.model.UserMapperTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/surefire-reports/TEST-com.idea.ascm.web.WebControllerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/surefire-reports/com.idea.ascm.AscmApplicationTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/surefire-reports/com.idea.ascm.dal.model.UserMapperTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/surefire-reports/com.idea.ascm.web.WebControllerTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/test-classes/com/idea/ascm/AscmApplicationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/test-classes/com/idea/ascm/dal/model/UserMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm-web/target/test-classes/com/idea/ascm/web/WebControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/ascm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascm/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_3_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_spring_aop_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_spring_beans_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_spring_context_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_spring_core_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_spring_expression_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_spring_web_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/libraries/Maven__org_yaml_snakeyaml_1_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/qaplug_profiles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/sass.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/.mvn-cli" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/example/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/example/example-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-common/sass-common.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/example/example-integration/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-config/sass-config.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-dal/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-dal/sass-dal.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-dal/src/main/java/com/idea/sass/dal/model/entity/SalesEstimateDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-dal/src/main/java/com/idea/sass/dal/model/entity/group/SalesEstimateDetailDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-dal/target/classes/com/idea/sass/dal/model/entity/SalesEstimateDO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-dal/target/classes/com/idea/sass/dal/model/entity/group/SalesEstimateDetailDO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/example/example-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-domain/sass-domain.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-integration/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-integration/sass-integration.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/example/example-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-service/sass-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-web/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-web/sass-web.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-web/src/main/java/com/idea/sass/SassApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bin/example/example-web/src/main/java/com/github/example/ExampleApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-web/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-web/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sass/sass-web/target/classes/com/idea/sass/SassApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/ConfigUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/ConfigUtils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +356,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/action/maven/MavenModuleAction.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1mJcyuDEIjdsC7Y2UGxnf3jldlr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -68,22 +378,28 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.14.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="13.13.44" />
+    <property name="javascript.nodejs.core.library.typings.version" value="13.13.52" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/template" />
       <recent name="$PROJECT_DIR$/action/maven" />
       <recent name="$USER_HOME$/Github/me_blog/ddd-website/src/theme" />
-      <recent name="$USER_HOME$/Github/me_blog/ddd-website/docs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ascm/ascm-dal/src/main/java/com/danchuang" />
@@ -112,9 +428,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.test.js" />
+        <item itemvalue="Node.js.TableUtils.js" />
         <item itemvalue="Node.js.OraUtils.js" />
         <item itemvalue="Node.js.main.js" />
-        <item itemvalue="Node.js.TableUtils.js" />
         <item itemvalue="Node.js.logger.js" />
       </list>
     </recent_temporary>
@@ -158,7 +474,18 @@
       <workItem from="1613723593597" duration="194000" />
       <workItem from="1613730403886" duration="366000" />
       <workItem from="1613801434392" duration="205000" />
-      <workItem from="1613810269247" duration="4498000" />
+      <workItem from="1613810269247" duration="5702000" />
+      <workItem from="1613969331691" duration="1895000" />
+      <workItem from="1613975060064" duration="1142000" />
+      <workItem from="1613980082551" duration="1375000" />
+      <workItem from="1613985119627" duration="15000" />
+      <workItem from="1613985644039" duration="633000" />
+      <workItem from="1613991478389" duration="1543000" />
+      <workItem from="1613998530227" duration="814000" />
+      <workItem from="1614074051366" duration="1218000" />
+      <workItem from="1614151708895" duration="872000" />
+      <workItem from="1614163981047" duration="58000" />
+      <workItem from="1621606676942" duration="2795000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -349,11 +676,55 @@
       <option name="project" value="LOCAL" />
       <updated>1613723704121</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="1. 支持数据导出">
+      <created>1613817053765</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1613817053765</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -363,47 +734,6 @@
     <MESSAGE value="1. 支持配置" />
     <MESSAGE value="1. 支持数据导出" />
     <option name="LAST_COMMIT_MESSAGE" value="1. 支持数据导出" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/mysql/MysqlTest.js</url>
-          <line>17</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/mysql/MysqlTest.js</url>
-          <line>18</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/mysql/MysqlAction.js</url>
-          <line>44</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/action/MavenHooks.js</url>
-          <line>104</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/util/TableUtils.js</url>
-          <line>72</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/mvn-cli</url>
-          <line>125</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/util/OraUtils.js</url>
-          <line>8</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
