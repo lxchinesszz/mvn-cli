@@ -159,7 +159,7 @@ function _exportFunction(config) {
 }
 
 // 打印当前版本号
-console.log(chalk.cyan(`ACCESS CLI v${packageConfig.version}`))
+console.log(chalk.cyan(`JMVN CLI v${packageConfig.version}`))
 getVersion(packageConfig.name).then(res => {
     // 获取网络最新版本
     const lastedVersion = res.data['dist-tags']['latest']
