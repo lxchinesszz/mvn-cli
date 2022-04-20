@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/bin/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/mysql/MysqlTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/MysqlTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/questions_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/questions_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +30,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1mJcyuDEIjdsC7Y2UGxnf3jldlr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -36,27 +42,16 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="13.14.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="13.13.52" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/liuxin/WebstormProjects/mvn-cli&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config" />
@@ -73,14 +68,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.test.js">
+  <component name="RunManager" selected="Node.js.MysqlTest.js">
+    <configuration name="MysqlTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/mysql/MysqlTest.js" working-dir="$PROJECT_DIR$/action/mysql">
+      <method v="2" />
+    </configuration>
     <configuration name="OraUtils.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/util/OraUtils.js" working-dir="$PROJECT_DIR$/util">
       <method v="2" />
     </configuration>
     <configuration name="TableUtils.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/util/TableUtils.js" working-dir="$PROJECT_DIR$/util">
-      <method v="2" />
-    </configuration>
-    <configuration name="logger.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/util/logger.js" working-dir="$PROJECT_DIR$/util">
       <method v="2" />
     </configuration>
     <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/main.js" working-dir="$PROJECT_DIR$">
@@ -91,11 +86,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.MysqlTest.js" />
         <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.TableUtils.js" />
         <item itemvalue="Node.js.OraUtils.js" />
         <item itemvalue="Node.js.main.js" />
-        <item itemvalue="Node.js.logger.js" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +144,11 @@
       <workItem from="1614074051366" duration="1218000" />
       <workItem from="1614151708895" duration="872000" />
       <workItem from="1614163981047" duration="58000" />
-      <workItem from="1621606676942" duration="3436000" />
+      <workItem from="1621606676942" duration="3540000" />
+      <workItem from="1625973826627" duration="3206000" />
+      <workItem from="1628129830637" duration="2213000" />
+      <workItem from="1650013209243" duration="1936000" />
+      <workItem from="1650115986312" duration="1488000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -361,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621609825411</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="默认的">
+      <created>1621610128657</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1621610128657</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +401,11 @@
             </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
     <option name="OPEN_GENERIC_TABS">
@@ -402,7 +413,6 @@
         <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -413,6 +423,17 @@
     <MESSAGE value="1. 支持数据导出" />
     <MESSAGE value="默认的" />
     <option name="LAST_COMMIT_MESSAGE" value="默认的" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/action/mysql/MysqlTest.js</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

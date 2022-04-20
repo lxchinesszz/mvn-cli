@@ -1,6 +1,6 @@
 {
   "name": "jmvn",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "SpringBoot Maven多模块构建脚手架",
   "main": "bin/mvn-cli",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "lxchinesszz",
   "license": "ISC",
   "dependencies": {
-    "art-template": "^4.13.2",
+    "art-template": "4.13.2",
     "axios": "^0.21.1",
     "blear.utils.plan": "^2.2.2",
     "chalk": "^4.1.0",

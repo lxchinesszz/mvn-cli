@@ -1,5 +1,3 @@
-const {MvnConfig} = require('./config');
-const inquirer = require('inquirer');
 const logSymbols = require("log-symbols")
 const _ = require('lodash')
 
