@@ -3,7 +3,7 @@ const {ProjectTemplateConfig} = require('../config/config');
 const {projectInfoQuestions} = require('../config/questions')
 const {projectInfoQuestionsEn} = require('../config/questions_en')
 
-const {DbQuestions} = require('../config/db_questions')
+const {DbQuestions, inputTableQuestions} = require('../config/db_questions')
 
 const DomainModelCreateAction = require('../action/DomainModelCreateAction')
 const Program = require("commander");
@@ -17,6 +17,7 @@ const axios = require('axios');
 const logger = require('../util/logger')
 let _ = require('lodash')
 const ora = require('ora')
+const {getDbConfig} = require('../util/DomainModelUtils')
 
 
 axios.interceptors.response.use(
@@ -100,26 +101,29 @@ function viewProgram() {
     const exportProgram = Program
         .command("export")
         .option('-c, --commanded [String]', '命令行模式运行')
-        .option('-m, --markdown [String]', '导出markdown格式', false)
-        .option('-h, --host [String]', '数据库[host]', "127.0.0.1")
-        .option('-u, --user [String]', '数据库登陆用户', "root")
-        .option('-p, --password [String]', '登陆密码(明文请注意安全)', "test")
-        .option('-t, --tables [String]', '要导出的表模型(支持,分隔)', "test")
-        .option('-db, --database [String]', '指定要导出的库', "test")
+        .option('-m, --markdown [String]', '导出markdown格式')
+        .option('-h, --host [String]', '数据库[host]')
+        .option('-u, --user [String]', '数据库登陆用户')
+        .option('-p, --password [String]', '登陆密码(明文请注意安全)')
+        .option('-t, --tables [String]', '要导出的表模型(支持,分隔)')
+        .option('-db, --database [String]', '指定要导出的库')
         .description("导出数据模型 (支持命令行模式 & 交互模式)");
     exportProgram.action(() => {
-        let config;
         if (exportProgram.commanded) {
             if (_.isUndefined(exportProgram.host)) {
                 logger.error(`Host cannot be empty(${exportProgram.host})`)
+                logger.error("建议输入jmvn help export,查看帮助")
             } else if (_.isUndefined(exportProgram.user)) {
                 logger.error("User cannot be empty")
+                logger.error("建议输入jmvn help export,查看帮助")
             } else if (_.isUndefined(exportProgram.tables)) {
                 logger.error("Tables cannot be empty")
+                logger.error("建议输入jmvn help export,查看帮助")
             } else if (_.isUndefined(exportProgram.database)) {
                 logger.error("Database cannot be empty")
+                logger.error("建议输入jmvn help export,查看帮助")
             } else {
-                config = {
+                let config = {
                     "host": exportProgram.host,
                     "user": exportProgram.user,
                     "password": exportProgram.password,
@@ -131,18 +135,40 @@ function viewProgram() {
                 _exportFunction(config)
             }
         } else {
-            Prompt.prompt(DbQuestions).then(result => {
-                logger.info(`您输入的表模型信息:${JSON.stringify(result)}`);
-                config = {
-                    "host": result.host,
-                    "user": result.user,
-                    "password": result.password,
-                    "database": result.database,
-                    "format": result.format,
-                    "tables": _.split(result.tables, ',').reverse()
-                };
-                _exportFunction(config)
-            })
+            let dbConfig = getDbConfig()
+            if (!_.isUndefined(dbConfig)
+                && !_.isUndefined(dbConfig.host) && dbConfig.host !== ''
+                && !_.isUndefined(dbConfig.user) && dbConfig.user !== ''
+                && !_.isUndefined(dbConfig.password) && dbConfig.password !== '') {
+                // 添加了配置，且有添加了数据库host和密码信息会走简短的
+                logger.info(`检查到当前项目已配置过数据库信息,当前自动读取数据库配置。若想导出非本项目,请使用 jmvn export -c`);
+                Prompt.prompt(inputTableQuestions).then(result => {
+                    logger.info(`您输入的表模型信息:${JSON.stringify(result)}`);
+                    let config = {
+                        "host": dbConfig.host,
+                        "user": dbConfig.user,
+                        "password": dbConfig.password,
+                        "database": dbConfig.database,
+                        "format": result.format,
+                        "tables": _.split(result.tables, ',').reverse()
+                    };
+                    _exportFunction(config)
+                })
+            } else {
+                // 如果没有添加配置文件走这个
+                Prompt.prompt(DbQuestions).then(result => {
+                    logger.info(`您输入的表模型信息:${JSON.stringify(result)}`);
+                    let config = {
+                        "host": result.host,
+                        "user": result.user,
+                        "password": result.password,
+                        "database": result.database,
+                        "format": result.format,
+                        "tables": _.split(result.tables, ',').reverse()
+                    };
+                    _exportFunction(config)
+                })
+            }
         }
 
     });

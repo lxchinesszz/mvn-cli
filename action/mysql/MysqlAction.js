@@ -34,7 +34,7 @@ function MysqlAction(host, user, password, database) {
     this.create = function (tableName, suffix, filePath) {
         let connection = this._createConn()
         let table_info_query = `select TABLE_SCHEMA,TABLE_NAME, COLUMN_NAME,COLUMN_KEY,DATA_TYPE,COLUMN_COMMENT from information_schema.COLUMNS where table_name = '${tableName}' and TABLE_SCHEMA = '${database}';`
-        logger.info("SQL:" + table_info_query)
+        logger.debug("SQL:" + table_info_query)
         let currentTableName = tableName
         connection.query(table_info_query, function (error, results, fields) {
             if (!results || results.length === 0) {
@@ -164,8 +164,9 @@ function MysqlAction(host, user, password, database) {
                 throw new ExportError(tableError);
             } else {
                 connection.query(table_info_query, function (error, results, fields) {
-                    if (error) {
-                        logger.error(error)
+                    if (!error) {
+                        logger.error(`数据模型导出失败,请检查数据库配置或是否存在将要导出的表名:${table_name}`)
+                        throw new ExportError(tableError);
                     }
                     callback({
                         tableName: table_name,

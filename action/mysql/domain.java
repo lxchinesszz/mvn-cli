@@ -6,7 +6,7 @@ import java.io.Serializable;{{each imports}}
 import {{$value}};{{/each}}
 
 /**
- * @author access-cli 自动创建
+ * @author jmvn install 自动创建
  **/
 @TableName(value = "{{@tableName}}", autoResultMap = true)
 public class {{@className}} implements Serializable {

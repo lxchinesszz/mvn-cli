@@ -1,3 +1,27 @@
+const inputTableQuestions = [
+    {
+        type: 'rawlist',
+        message: '请选择要导出的格式',
+        name: 'format',
+        choices: [
+            "markdown",
+            "table"
+        ]
+    },
+    {
+        type: 'input',
+        name: 'tables',
+        message: '请输入要导出的表模型',
+        suffix: ':',
+        filter: function (val) {
+            if (val) {
+                return val
+            } else {
+                throw Error('请输入要导出的表模型');
+            }
+        }
+    }
+]
 const DbQuestions = [
     {
         type: 'rawlist',
@@ -70,5 +94,6 @@ const DbQuestions = [
 ];
 
 module.exports = {
-    DbQuestions
+    DbQuestions,
+    inputTableQuestions
 }

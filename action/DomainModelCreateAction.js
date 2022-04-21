@@ -49,7 +49,7 @@ function DomainModelCreateAction() {
         // 1. 创建实例
         let mysqlAction = new MysqlAction(dbConfig.host, dbConfig.user, dbConfig.password, dbConfig.database)
         dbConfig.tables.forEach(tableName => {
-            animation(`正在执行导出表[${tableName}]从库[${dbConfig.database}]}`
+            animation(`正在执行导出表[${tableName}]从库[${dbConfig.database}]`
                 , `${tableName}导出成功`
                 , 5000,
                 () => {
@@ -67,7 +67,7 @@ function DomainModelCreateAction() {
         // 1. 创建实例
         let mysqlAction = new MysqlAction(dbConfig.host, dbConfig.user, dbConfig.password, dbConfig.database)
         dbConfig.tables.forEach(tableName => {
-            animation(`正在执行导出表[${tableName}]从库[${dbConfig.database}]}`,
+            animation(`正在执行导出表[${tableName}]从库[${dbConfig.database}]`,
                 `${tableName}导出成功`,
                 5000, () => {
                     mysqlAction.exportMarkdown(tableName);

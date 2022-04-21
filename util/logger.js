@@ -24,5 +24,9 @@ logger.successNoIcon = function (msg) {
     console.log(chalk.greenBright(msg))
 }
 
+logger.debug = function (msg){
+    console.log(chalk.cyan(msg))
+}
+
 module.exports = logger
 

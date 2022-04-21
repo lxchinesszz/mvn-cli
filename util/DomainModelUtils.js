@@ -1,5 +1,6 @@
 let {getJmvnConfig, writeJmvnConfig} = require('./ConfigUtils')
 let _ = require('lodash')
+const {re} = require("semver");
 
 /**
  * 对比并且更新
@@ -39,12 +40,19 @@ function add(sourceConfig, newAddConfig) {
             // 去重
             sourceConfig.tableName = _.uniq(sourceConfig.tableName)
         })
-    }else {
+    } else {
         // 2. 没有匹配上就新增
         sourceConfig.push(newAddConfig)
     }
 }
 
+// 获取db的配置
+function getDbConfig() {
+    let jmvnConfig = getJmvnConfig();
+    return  JSON.parse(jmvnConfig)["dbConfig"];
+}
+
+// 获取数据模型的配置
 function getDomainModels() {
     let jmvnConfig = getJmvnConfig();
     let domainModels = JSON.parse(jmvnConfig)["models"];
@@ -83,4 +91,4 @@ function getDomainModels() {
     return newDomainModels
 }
 
-module.exports = {getDomainModels, comparedDomainModel}
+module.exports = {getDomainModels, comparedDomainModel, getDbConfig}
