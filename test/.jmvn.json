@@ -1,0 +1,35 @@
+{
+  "namespace": [
+  ],
+  "config": {},
+  "dbConfig": {
+    "host": "10.80.20.8",
+    "user": "abm_dev",
+    "password": "pOj*4Z%^izKy0o23o8aH",
+    "database": "pms_dev"
+  },
+  "models": [
+    {
+      "suffix": "DO",
+      "tableName": [
+        "replenish_order",
+        "replenish_order_detail"
+      ],
+      "path": "purchase-center-dal/src/main/java/com/idanchuang/purchase/center/dal/entity"
+    }
+  ],
+  "plugins": [
+    {
+      "name": "GitIgnore2",
+      "desc": "GitIgnore创建",
+      "type": "BUILD_COMPLETE",
+      "action": "/Users/liuxin/WebstormProjects/mvn-cli/test/DyntaxAction.js"
+    },
+    {
+      "name": "GitIgnore1",
+      "desc": "GitIgnore创建",
+      "type": "BUILD_COMPLETE",
+      "action": "/Users/liuxin/WebstormProjects/mvn-cli/test/DyntaxAction.js"
+    }
+  ]
+}

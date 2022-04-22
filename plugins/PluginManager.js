@@ -1,6 +1,8 @@
 let {Plugin} = require('./Plugin')
 let logger = require('../util/logger')
 let _ = require('lodash')
+const {getPlugins} = require("../util/DomainModelUtils");
+const Asserts = require("../util/Asserts");
 
 function PluginManager() {
 
@@ -18,7 +20,16 @@ function PluginManager() {
 
     this.register = function (plugin) {
         this._checkPlugin(plugin);
-        this.plugins.push(plugin);
+        let existingIndex = _.findIndex(this.plugins, p => {
+            return p.name === plugin.name
+        })
+        if (existingIndex >= 0) {
+            logger.error(`${plugin.name} 插件名称重复,请确认核实。默认执行插件覆盖`)
+            this.plugins.splice(existingIndex, 1)
+            this.plugins.push(plugin);
+        } else {
+            this.plugins.push(plugin);
+        }
     }
 
     this._checkPlugin = function (plugin) {
@@ -72,6 +83,29 @@ function PluginManager() {
             if (!_.isUndefined(action)) {
                 action()
             }
+        }
+    }
+
+    this.loadPlugins = function () {
+        // 从配置文件中加载插件
+        let plugins = getPlugins();
+        if (plugins) {
+            plugins.forEach(plugin => {
+                if (Asserts.isBlank(plugin.name)) {
+                    logger.error("插件名称不能为空")
+                }
+                if (Asserts.isBlank(plugin.desc)) {
+                    logger.error("插件描述不能为空")
+                }
+                if (Asserts.isBlank(plugin.type)) {
+                    logger.error("插件类型不能为空")
+                }
+                if (Asserts.isBlank(plugin.action)) {
+                    logger.error("插件文件不能为空")
+                }
+                let func = require(plugin.action)
+                Plugins.register(new Plugin(plugin.name, plugin.desc, plugin.type, func))
+            })
         }
     }
 }

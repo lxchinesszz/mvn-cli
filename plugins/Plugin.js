@@ -26,7 +26,7 @@ function Plugin(name, desc, type, action) {
      * 插件执行前[一定会执行]
      */
     this.before = function (envConfig) {
-        logger.success(`${this.name} before`)
+        logger.debug(`${this.name} before`)
     }
 
     /**
@@ -34,7 +34,7 @@ function Plugin(name, desc, type, action) {
      * @param envConfig
      */
     this.invoke = function (envConfig) {
-        logger.success(`${this.name} invoke`)
+        logger.debug(`${this.name} invoke`)
         this.defaultAction(envConfig)
     }
 
@@ -43,7 +43,7 @@ function Plugin(name, desc, type, action) {
      * @param envConfig
      */
     this.after = function (envConfig) {
-        logger.success(`${this.name} after`)
+        logger.debug(`${this.name} after`)
     }
 
     /**
@@ -52,7 +52,7 @@ function Plugin(name, desc, type, action) {
      * @param e
      */
     this.error = function (envConfig, e) {
-        logger.success(`${this.name} error`)
+        logger.debug(`${this.name} error`)
     }
 }
 

@@ -49,7 +49,7 @@ function add(sourceConfig, newAddConfig) {
 // 获取db的配置
 function getDbConfig() {
     let jmvnConfig = getJmvnConfig();
-    return  JSON.parse(jmvnConfig)["dbConfig"];
+    return JSON.parse(jmvnConfig)["dbConfig"];
 }
 
 // 获取数据模型的配置
@@ -91,4 +91,10 @@ function getDomainModels() {
     return newDomainModels
 }
 
-module.exports = {getDomainModels, comparedDomainModel, getDbConfig}
+
+function getPlugins() {
+    let jmvnConfig = getJmvnConfig();
+    return JSON.parse(jmvnConfig)["plugins"];
+}
+
+module.exports = {getDomainModels, comparedDomainModel, getDbConfig, getPlugins}
