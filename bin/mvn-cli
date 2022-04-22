@@ -137,10 +137,10 @@ function viewProgram() {
             }
         } else {
             let dbConfig = getDbConfig()
-            if (Asserts.isBlank(dbConfig)
-                && Asserts.isBlank(dbConfig.host)
-                && Asserts.isBlank(dbConfig.user)
-                && Asserts.isBlank(dbConfig.password)) {
+            if (!Asserts.isBlank(dbConfig)
+                && !Asserts.isBlank(dbConfig.host)
+                && !Asserts.isBlank(dbConfig.user)
+                && !Asserts.isBlank(dbConfig.password)) {
                 // 添加了配置，且有添加了数据库host和密码信息会走简短的
                 logger.info(`检查到当前项目已配置过数据库信息,当前自动读取数据库配置。若想导出非本项目,请使用 jmvn export -c`);
                 Prompt.prompt(inputTableQuestions).then(result => {

@@ -164,7 +164,9 @@ function MysqlAction(host, user, password, database) {
                 throw new ExportError(tableError);
             } else {
                 connection.query(table_info_query, function (error, results, fields) {
-                    if (!error) {
+                    try {
+                        let tableResultElement = tableResults[0]['TABLE_COMMENT'];
+                    } catch (TypeError) {
                         logger.error(`数据模型导出失败,请检查数据库配置或是否存在将要导出的表名:${table_name}`)
                         throw new ExportError(tableError);
                     }

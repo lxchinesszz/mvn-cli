@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/test/.jmvn.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/AssertTest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/DyntaxAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/PluginTest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/Asserts.js" afterDir="false" />
+    <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="1. 增加单测模块&#10;2. 增加字符串判断&#10;3. 支持根据配置加载外部插件能力">
+      <change afterPath="$PROJECT_DIR$/test/OraTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/DomainModelCreateAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/DomainModelCreateAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/mysql/MysqlAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/MysqlAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/Plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/PluginManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/PluginManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/DomainModelUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/DomainModelUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/logger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/OraUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/OraUtils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +44,18 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/liuxin/WebstormProjects/mvn-cli/test",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "JavaScript.Libraries",
-    "ts.external.directory.path": "/Users/liuxin/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5080.193/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/liuxin/WebstormProjects/mvn-cli/test&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;JavaScript.Libraries&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/liuxin/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5080.193/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test" />
@@ -77,7 +72,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.PluginTest.js">
+  <component name="RunManager" selected="Node.js.OraTest.js">
     <configuration name="AssertTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/AssertTest.js" working-dir="$PROJECT_DIR$/test">
       <method v="2" />
     </configuration>
@@ -87,7 +82,7 @@
     <configuration name="LoggerTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/LoggerTest.js" working-dir="$PROJECT_DIR$/test">
       <method v="2" />
     </configuration>
-    <configuration name="MysqlTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/action/mysql/MysqlTest.js" working-dir="$PROJECT_DIR$/action/mysql">
+    <configuration name="OraTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/OraTest.js" working-dir="$PROJECT_DIR$/test">
       <method v="2" />
     </configuration>
     <configuration name="PluginTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/PluginTest.js" working-dir="$PROJECT_DIR$/test">
@@ -95,11 +90,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.OraTest.js" />
         <item itemvalue="Node.js.PluginTest.js" />
         <item itemvalue="Node.js.AssertTest.js" />
         <item itemvalue="Node.js.Asserts.js" />
         <item itemvalue="Node.js.LoggerTest.js" />
-        <item itemvalue="Node.js.MysqlTest.js" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +156,8 @@
       <workItem from="1650465789304" duration="6331000" />
       <workItem from="1650507549008" duration="28000" />
       <workItem from="1650507651229" duration="869000" />
-      <workItem from="1650591171529" duration="6797000" />
+      <workItem from="1650591171529" duration="6866000" />
+      <workItem from="1650617976682" duration="2108000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -394,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650508518387</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="1. 增加单测模块&#10;2. 增加字符串判断&#10;3. 支持根据配置加载外部插件能力">
+      <created>1650617618523</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1650617618523</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +452,8 @@
     <MESSAGE value="1. 支持配置" />
     <MESSAGE value="1. 支持数据导出" />
     <MESSAGE value="默认的" />
-    <option name="LAST_COMMIT_MESSAGE" value="默认的" />
+    <MESSAGE value="1. 增加单测模块&#10;2. 增加字符串判断&#10;3. 支持根据配置加载外部插件能力" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 增加单测模块&#10;2. 增加字符串判断&#10;3. 支持根据配置加载外部插件能力" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -462,37 +466,31 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/AssertTest.js</url>
           <line>6</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/plugins/PluginManager.js</url>
           <line>90</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/plugins/PluginManager.js</url>
           <line>27</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/plugins/PluginManager.js</url>
           <line>21</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/plugins/PluginManager.js</url>
           <line>25</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/plugins/PluginManager.js</url>
           <line>22</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>

@@ -51,7 +51,7 @@ function DomainModelCreateAction() {
         dbConfig.tables.forEach(tableName => {
             animation(`正在执行导出表[${tableName}]从库[${dbConfig.database}]`
                 , `${tableName}导出成功`
-                , 5000,
+                , 2000,
                 () => {
                     mysqlAction.export(tableName)
                 })
@@ -69,7 +69,7 @@ function DomainModelCreateAction() {
         dbConfig.tables.forEach(tableName => {
             animation(`正在执行导出表[${tableName}]从库[${dbConfig.database}]`,
                 `${tableName}导出成功`,
-                5000, () => {
+                2000, () => {
                     mysqlAction.exportMarkdown(tableName);
                 })
         })
