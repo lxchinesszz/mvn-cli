@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.idanchuang</groupId>
+        <artifactId>spring-cloud-starter-parent</artifactId>
+        <version>1.0.4-RELEASE</version>
+    </parent>
+
+    <artifactId>pms</artifactId>
+    <version>1.0-RELEASE</version>
+    <packaging>pom</packaging>
+
+    <name>pms</name>
+    <description>采购中心</description>
+
+    <modules>
+        <module>purchase-center-common</module>
+        <module>purchase-center-dal</module>
+        <module>purchase-center-core</module>
+        <module>purchase-center-provider-api</module>
+        <module>purchase-center-provider</module>
+        <module>purchase-center-domain</module>
+        <!--    <module>pms-integration</module>-->
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <abmau.service.base.sso.api.version>1.0.3-RELEASE</abmau.service.base.sso.api.version>
+        <swagger.annotation.version>1.5.22</swagger.annotation.version>
+        <swagger.models.version>1.5.22</swagger.models.version>
+        <scm.address.client.api.version>1.0.0</scm.address.client.api.version>
+        <pms.sdk.common>1.0.4-RELEASE</pms.sdk.common>
+        <pms.sdk.integration>1.1.23-RELEASE</pms.sdk.integration>
+        <druid.spring.boot.starter.version>1.2.6</druid.spring.boot.starter.version>
+        <druid.version>1.2.6</druid.version>
+        <jmockdata.version>4.3.0</jmockdata.version>
+        <excel-component.version>2.0.4-RELEASE</excel-component.version>
+        <retry-component.version>1.2-RELEASE</retry-component.version>
+        <message.push.version>0.0.3-RELEASE</message.push.version>
+        <dingding.version>1.0.9-RELEASE</dingding.version>
+        <pms-open-api.version>1.2.9-RELEASE</pms-open-api.version>
+        <easyexcel.version>0.0.1-release</easyexcel.version>
+        <inventory-client.version>2.0.8-RELEASE</inventory-client.version>
+        <inventory-center-common.version>1.4-RELEASE</inventory-center-common.version>
+        <abmau-service-base-sequence-mongo-open-api.version>1.0.2.RELEASE
+        </abmau-service-base-sequence-mongo-open-api.version>
+        <pms-base-api.version>0.0.5-RELEASE</pms-base-api.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- 鉴权 -->
+        <dependency>
+            <groupId>com.abmau</groupId>
+            <artifactId>abmau-component-authority</artifactId>
+            <version>1.0.8-RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.idanchuang.mqlistener</groupId>
+            <artifactId>danchuang-base-mq</artifactId>
+            <version>1.1.0-RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.abmau</groupId>
+            <artifactId>abmau-service-base-sso-api</artifactId>
+            <version>${abmau.service.base.sso.api.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger.annotation.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-models</artifactId>
+            <version>${swagger.models.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.idanchuang.component</groupId>
+            <artifactId>component-logback</artifactId>
+            <version>1.0.52-RELEASE</version>
+        </dependency>
+
+        <!-- Spring Cache -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+            <version>2.1.3.RELEASE</version>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.jsonzou</groupId>
+                <artifactId>jmockdata</artifactId>
+                <version>${jmockdata.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-all</artifactId>
+                <version>1.3</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.idanchuang</groupId>
+                <artifactId>pms-sdk-integration</artifactId>
+                <version>${pms.sdk.integration}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.idanchuang.scm</groupId>
+                <artifactId>pms-sdk-common</artifactId>
+                <version>${pms.sdk.common}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.idanchuang.scm</groupId>
+                <artifactId>excel-component</artifactId>
+                <version>${excel-component.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.idanchuang</groupId>
+                <artifactId>pms-open-api</artifactId>
+                <version>${pms-open-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.idanchuang</groupId>
+                <artifactId>retry-component</artifactId>
+                <version>${retry-component.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.idanchuang</groupId>
+                <artifactId>message-push-api</artifactId>
+                <version>${message.push.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.idanchuang</groupId>
+                <artifactId>message-dingding-api</artifactId>
+                <version>${dingding.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dc-easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.abmau</groupId>
+                <artifactId>abmau-service-base-sequence-mongo-open-api</artifactId>
+                <version>${abmau-service-base-sequence-mongo-open-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.idanchuang</groupId>
+                <artifactId>pms-base-api</artifactId>
+                <version>${pms-base-api.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

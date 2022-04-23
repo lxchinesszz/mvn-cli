@@ -1,12 +1,14 @@
 let path = require('path')
 let fs = require('fs')
+const logger = require('../util/logger')
 
 function getConfig(filePath) {
     let jmvnConfigPath = path.resolve(filePath)
     if (fs.existsSync(jmvnConfigPath)) {
         return fs.readFileSync(jmvnConfigPath, 'utf-8');
     } else {
-        throw new Error(`File not found:[${jmvnConfigPath}',Please check if it is under the root of the project.`)
+        logger.error(`Jmvn Config File not found:[${jmvnConfigPath},请检查根目录下是否存在".jmvn.json"文件`)
+        return "{}";
     }
 }
 

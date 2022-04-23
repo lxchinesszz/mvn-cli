@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 const {ProjectTemplateConfig} = require('../config/config');
-const {projectInfoQuestions} = require('../config/questions')
 const {projectInfoQuestionsEn} = require('../config/questions_en')
-
 const {DbQuestions, inputTableQuestions} = require('../config/db_questions')
-
 const DomainModelCreateAction = require('../action/DomainModelCreateAction')
 const Program = require("commander");
 const Prompt = require("inquirer");
@@ -16,7 +13,6 @@ const semver = require('semver')
 const axios = require('axios');
 const logger = require('../util/logger')
 let _ = require('lodash')
-const ora = require('ora')
 const {getDbConfig} = require('../util/DomainModelUtils')
 const Asserts = require('../util/Asserts')
 
@@ -43,7 +39,6 @@ async function getVersion(id) {
 Program
     .version(`v${packageConfig.version}`)
     .description("快速构建支持SpringBoot的Maven多模块应用")
-
 
 /**
  * 命令行函数定义

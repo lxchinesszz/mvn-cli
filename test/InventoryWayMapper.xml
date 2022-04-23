@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--suppress ALL -->
+<mapper namespace="com.idanchuang.purchase.center.dal.mapper.IInventoryWayMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, title, status, purchase_plan_id, expand_field, locking, del_flag, gmt_create, creater_id, gmt_modify, modifier_id
+    </sql>
+
+    <select id="selectListByDeployIdAndWarehouseIds" resultType="com.idanchuang.purchase.center.dal.entity.InventoryWayDetail">
+        SELECT
+            wd.*
+        FROM
+            inventory_way AS w
+        LEFT JOIN
+            inventory_way_detail AS wd ON wd.inventory_way_id = w.id
+        WHERE
+            w.locking = 0 AND w.del_flag = 0 AND wd.del_flag = 0
+            AND wd.goods_deploy_id = #{deployId}
+            AND wd.warehouse_id IN
+            <foreach collection="warehouseIds" separator="," index="index" item="id" open="(" close=")">
+                #{id}
+            </foreach>
+    </select>
+
+    <select id="selectVoList" resultType="com.idanchuang.purchase.center.dal.param.vo.InventoryWayVO">
+        SELECT
+            w.id, w.title, p.title AS planTitle, p.purchase_code AS planPurchaseCode, w.status, w.locking, w.gmt_create, w.modifier_id
+        FROM
+            inventory_way AS w
+        LEFT JOIN
+            purchase_plan AS p ON p.id = w.purchase_plan_id AND p.del_flag = 0
+        WHERE
+            w.del_flag = 0
+            <if test="dto.wayName != null and dto.wayName != ''">
+                AND w.title LIKE CONCAT('%', #{dto.wayName}, '%')
+            </if>
+            <if test="dto.plan != null and dto.plan != ''">
+                AND (p.title LIKE CONCAT('%', #{dto.plan}, '%') OR p.purchase_code LIKE CONCAT('%', #{dto.plan}, '%'))
+            </if>
+            <if test="dto.status != null">
+                AND w.status = #{dto.status}
+            </if>
+            <if test="dto.gmtCreate != null and dto.gmtCreate != ''">
+                AND DATE_FORMAT(w.gmt_create, '%Y-%m') <![CDATA[>=]]> #{dto.gmtCreate}
+            </if>
+            <if test="dto.gmtCreateEnd != null and dto.gmtCreateEnd != ''">
+                AND DATE_FORMAT(w.gmt_create, '%Y-%m') <![CDATA[<=]]> #{dto.gmtCreateEnd}
+            </if>
+        ORDER BY
+            w.gmt_create DESC
+    </select>
+
+    <select id="selectIds" resultType="java.lang.Long">
+        SELECT
+              w.id
+        FROM
+              inventory_way AS w
+        LEFT JOIN
+              purchase_plan AS p ON p.id = w.purchase_plan_id AND p.del_flag = 0
+        WHERE
+              w.del_flag = 0
+          <if test="dto.wayName != null and dto.wayName != ''">
+            AND w.titile LIKE CONCAT('%', #{dto.wayName}, '%')
+          </if>
+          <if test="dto.plan != null and dto.plan != ''">
+            AND (p.title LIKE CONCAT('%', #{dto.plan}, '%') OR p.purchase_code LIKE CONCAT('%', #{dto.plan}, '%'))
+          </if>
+          <if test="dto.status != null">
+            AND w.status = #{dto.status}
+          </if>
+          <if test="dto.gmtCreate != null and dto.gmtCreate != ''">
+            AND DATE_FORMAT(w.gmt_create, '%Y-%m') <![CDATA[>=]]> #{dto.gmtCreate}
+          </if>
+          <if test="dto.gmtCreateEnd != null and dto.gmtCreateEnd != ''">
+            AND DATE_FORMAT(w.gmt_create, '%Y-%m') <![CDATA[<=]]> #{dto.gmtCreateEnd}
+          </if>
+    </select>
+
+
+</mapper>
