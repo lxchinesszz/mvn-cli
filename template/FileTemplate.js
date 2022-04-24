@@ -1,9 +1,9 @@
-const template = require('art-template')
-const fs = require('fs')
-const _ = require('lodash')
+import template from 'art-template'
+import fs from 'fs'
+import _ from 'lodash'
 
 
-function FileTemplate(filePath) {
+export function FileTemplate(filePath) {
 
     /**
      * 当前处理的文件模板路径
@@ -51,4 +51,3 @@ function FileTemplate(filePath) {
     }
 }
 
-module.exports = FileTemplate

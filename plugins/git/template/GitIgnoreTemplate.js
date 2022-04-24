@@ -1,6 +1,6 @@
-const fs = require('fs')
+import fs from 'fs'
 
-function GitIgnoreTemplate(filePath) {
+export function GitIgnoreTemplate(filePath) {
 
 
     /**
@@ -22,4 +22,3 @@ function GitIgnoreTemplate(filePath) {
     }
 }
 
-module.exports = {GitIgnoreTemplate}

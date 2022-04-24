@@ -1,21 +1,21 @@
 #!/usr/bin/env node
-const {ProjectTemplateConfig} = require('../config/config');
-const {projectInfoQuestionsEn} = require('../config/questions_en')
-const {DbQuestions, inputTableQuestions} = require('../config/db_questions')
-const DomainModelCreateAction = require('../action/DomainModelCreateAction')
-const Program = require("commander");
-const Prompt = require("inquirer");
-const {Project} = require('../action/ProjectAction')
-const chalk = require('chalk')
-const Table = require('cli-table');
-const packageConfig = require('../package.json')
-const semver = require('semver')
-const axios = require('axios');
-const logger = require('../util/logger')
-let _ = require('lodash')
-const {getDbConfig} = require('../util/DomainModelUtils')
-const Asserts = require('../util/Asserts')
-
+import {ProjectTemplateConfig} from '../config/config.js';
+import {projectInfoQuestionsEn} from '../config/questions_en.js';
+import DomainModelCreateAction from '../action/DomainModelCreateAction.js'
+import {DbQuestions, inputTableQuestions} from '../config/db_questions.js'
+import Program from 'commander'
+import Prompt from 'inquirer'
+import {Project} from '../action/ProjectAction.js'
+import chalk from "chalk";
+import Table from 'cli-table'
+import semver from 'semver'
+import axios from "axios";
+import {logger} from "../util/logger.js";
+import _ from 'lodash'
+import {getDbConfig} from "../util/DomainModelUtils.js";
+import {Asserts} from "../util/Asserts.js";
+import {toJson} from "../util/JsonUtils.js";
+let packageConfig = toJson('../package.json')
 
 axios.interceptors.response.use(
     response => {
@@ -203,5 +203,4 @@ getVersion(packageConfig.name).then(res => {
         viewProgram()
     }
 })
-
 

@@ -1,6 +1,5 @@
-const Table = require('cli-table');
-let _ = require('lodash')
-
+import Table from 'cli-table';
+import _ from 'lodash';
 
 const MD_STYLE = {
     'top': ' ', 'top-mid': '', 'top-left': '', 'top-right': ''
@@ -69,7 +68,7 @@ function _bold(heads) {
     })
 }
 
-function _headLine(rows){
+function _headLine(rows) {
     let lines = []
     for (let i = 0; i < rows[0].length; i++) {
         lines.push("------------")
@@ -77,5 +76,5 @@ function _headLine(rows){
     rows.unshift(lines)
 }
 
-module.exports = {consoleTableString, markdownTableString}
+export {consoleTableString, markdownTableString}
 

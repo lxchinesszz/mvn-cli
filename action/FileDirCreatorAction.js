@@ -1,6 +1,5 @@
-const fs = require("fs");
-
-function FileDirCreatorAction() {
+import fs from "fs";
+export default function FileDirCreatorAction() {
 
     /**
      * 创建目录
@@ -18,4 +17,3 @@ function FileDirCreatorAction() {
     }
 }
 
-module.exports = FileDirCreatorAction

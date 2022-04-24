@@ -1,9 +1,8 @@
-const template = require('art-template')
-const fs = require('fs')
-const _ = require('lodash')
+import template from 'art-template'
+import fs from 'fs'
 
 
-function SpringBootTemplate(filePath) {
+export function SpringBootTemplate(filePath) {
 
     /**
      * 当前处理的文件模板路径
@@ -44,4 +43,3 @@ function SpringBootTemplate(filePath) {
         })
     }
 }
-module.exports = {SpringBootTemplate}

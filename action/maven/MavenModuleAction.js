@@ -1,13 +1,11 @@
-const fs = require("fs");
-const _ = require('lodash')
-const path = require('path')
-const chalk = require('chalk')
-const {log} = require('../../config/config')
-const {MavenPomTemplate} = require('../../template/MavenPomTemplate')
-const {SpringBootTemplate} = require('../../template/SpringBootTemplate')
-const logger = require('../../util/logger')
+import {log} from '../../config/config.js'
 
-const FileDirCreatorAction = require('../FileDirCreatorAction')
+import {MavenPomTemplate} from '../../template/MavenPomTemplate.js'
+import {SpringBootTemplate} from '../../template/SpringBootTemplate.js'
+import {logger} from '../../util/logger.js'
+import FileDirCreatorAction from '../FileDirCreatorAction.js'
+import _ from 'lodash';
+import path from "path";
 
 /**
  * 构建module依赖
@@ -327,4 +325,4 @@ function replaceAll(str, replaceKey, replaceVal) {
     return str.replace(reg, replaceVal || '');
 }
 
-module.exports = {MavenModuleAction}
+export {MavenModuleAction}

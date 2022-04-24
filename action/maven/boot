@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * SpringBootApplication 建议放在同路径名下,
  * 因为默认会向下面路径去扫描类信息
- * @author mvn-cli
+ * @author mvn-cli.js
  */
 @SpringBootApplication
 public class {{@className}}{

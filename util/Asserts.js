@@ -1,6 +1,6 @@
-let _ = require('lodash')
+import _ from 'lodash'
 
-function Asserts() {
+export function Asserts() {
 }
 
 Asserts.isBlank = function (value) {
@@ -16,5 +16,4 @@ Asserts.isBlank = function (value) {
     }
     return false;
 }
-module.exports = Asserts
 

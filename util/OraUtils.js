@@ -1,6 +1,5 @@
-const ora = require('ora')
-
-const chalk = require('chalk');
+import ora from 'ora';
+import chalk from 'chalk';
 
 /**
  *
@@ -9,7 +8,7 @@ const chalk = require('chalk');
  * @param timeout 延迟执行
  * @param callback 数据处理函数
  */
-function animation(runtimeMsg, successMsg, timeout, callback) {
+export function animation(runtimeMsg, successMsg, timeout, callback) {
     const spinner = ora({
         text: `${chalk.greenBright(runtimeMsg)}`,
     }).start()
@@ -26,8 +25,6 @@ function animation(runtimeMsg, successMsg, timeout, callback) {
             spinner.fail(`${chalk.redBright('执行失败')}`)
         }
     }
-
 }
 
-module.exports = {animation}
 

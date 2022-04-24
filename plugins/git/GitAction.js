@@ -1,7 +1,7 @@
-const {GitIgnoreTemplate} = require('./template/GitIgnoreTemplate')
-const path = require('path')
+import path from 'path'
+import {GitIgnoreTemplate} from "./template/GitIgnoreTemplate.js";
 
-function GitAction() {
+export function GitAction() {
 
     /**
      * 创建gitignore文件
@@ -13,4 +13,3 @@ function GitAction() {
     }
 }
 
-module.exports = GitAction

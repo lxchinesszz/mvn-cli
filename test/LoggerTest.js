@@ -1,5 +1,4 @@
-const logger = require('../util/logger')
-
+import {logger} from '../util/logger.js'
 
 logger.info("info")
 logger.successNoIcon("successNoIcon")

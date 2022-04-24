@@ -1,7 +1,6 @@
-const {MvnConfig} = require('./config');
-const inquirer = require('inquirer');
-const logSymbols = require("log-symbols")
-
+import inquirer from 'inquirer'
+import {MvnConfig} from "./config.js";
+import logSymbols from "log-symbols";
 const projectInfoQuestions = [{
     type: 'input',
     name: 'projectName',
@@ -33,7 +32,7 @@ const projectInfoQuestions = [{
             if (val) {
                 return val
             } else {
-                return 'mvn-cli'
+                return 'mvn-cli.js'
             }
         }
     },
@@ -120,6 +119,6 @@ const projectInfoQuestions = [{
     // }
 ];
 
-module.exports = {
+export {
     projectInfoQuestions
 }

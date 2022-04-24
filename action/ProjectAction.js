@@ -1,15 +1,14 @@
-const {NamespaceAction} = require('./NamespaceAction')
-const {MavenModuleAction} = require('./maven/MavenModuleAction')
-const {MavenModuleDependenciesAction} = require('./maven/MavenModuleDependenciesAction')
-const {MavenHooks} = require('./MavenHooks')
-const {plugin} = require('../plugins/Install')
+import NamespaceAction from "./NamespaceAction.js";
+import {MavenModuleAction} from "./maven/MavenModuleAction.js";
+import {MavenModuleDependenciesAction} from "./maven/MavenModuleDependenciesAction.js";
+import {MavenHooks} from "./MavenHooks.js";
 
 /**
  * 构建Maven多模块应用
  * @param config 项目配置
  * @constructor
  */
-function Project(config) {
+export function Project(config) {
 
     /**
      * 项目的模板配置
@@ -33,4 +32,3 @@ function Project(config) {
 }
 
 
-module.exports = {Project}

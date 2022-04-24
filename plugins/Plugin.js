@@ -1,4 +1,4 @@
-const logger = require('../util/logger')
+import {logger} from "../util/logger.js";
 
 /**
  * 定义插件
@@ -114,7 +114,7 @@ const PluginEventType = {
     BUILD_JAVA_WEB_RESOURCE: 'BUILD_JAVA_WEB_RESOURCE'
 
 }
-module.exports = {
+export {
     Plugin,
     PluginEventType
 }

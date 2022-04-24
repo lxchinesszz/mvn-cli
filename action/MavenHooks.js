@@ -1,19 +1,18 @@
-const FileTemplate = require('../template/FileTemplate')
-const path = require('path')
-const Table = require('cli-table');
-const chalk = require('chalk')
-const {successTip} = require('../action/EchoVersionAction')
-const FileDirCreatorAction = require('./FileDirCreatorAction')
-const logger = require('../util/logger')
-const GitAction = require('../plugins/git/GitAction')
-const Plugins = require('../plugins/PluginManager')
-const {PluginEventType} = require('../plugins/Plugin')
-
+import {FileTemplate} from "../template/FileTemplate.js";
+import path from "path";
+import Table from 'cli-table'
+import chalk from "chalk";
+import {successTip} from "./EchoVersionAction.js";
+import FileDirCreatorAction from "./FileDirCreatorAction.js";
+import {logger} from "../util/logger.js";
+import {GitAction} from "../plugins/git/GitAction.js";
+import {Plugins} from "../plugins/PluginManager.js";
+import {PluginEventType} from "../plugins/Plugin.js";
 function _dir(path) {
     new FileDirCreatorAction().create(path)
 }
 
-function MavenHooks(projectTemplateConfig) {
+export function MavenHooks(projectTemplateConfig) {
 
     this._projectTemplateConfig = projectTemplateConfig
 
@@ -185,4 +184,3 @@ function MavenHooks(projectTemplateConfig) {
     }
 }
 
-module.exports = {MavenHooks}

@@ -1,11 +1,10 @@
-const Plugins = require('../plugins/PluginManager')
-const {Plugin, PluginEventType} = require('../plugins/Plugin')
-const GitAction = require('../plugins/git/GitAction')
-const {getPlugins} = require('../util/DomainModelUtils')
-const logger = require('../util/logger')
-let _ = require('lodash')
-const Asserts = require('../util/Asserts')
-
+import {GitAction} from "../plugins/git/GitAction.js";
+import {getPlugins} from "../util/DomainModelUtils.js";
+import {logger} from "../util/logger.js";
+import _ from 'lodash'
+import {Plugin, PluginEventType} from "../plugins/Plugin.js";
+import {Plugins} from "../plugins/PluginManager.js";
+import {Asserts} from "../util/Asserts.js";
 
 // 注册一个git忽略文件插件,接受maven构建完成事件
 // Plugins.register(new Plugin('GitIgnore', 'GitIgnore创建', PluginEventType.BUILD_COMPLETE, new GitAction().createGitIgnoreFile))

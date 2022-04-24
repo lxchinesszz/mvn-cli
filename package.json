@@ -2,12 +2,12 @@
   "name": "jmvn",
   "version": "1.0.7",
   "description": "SpringBoot Maven多模块构建脚手架",
-  "main": "bin/mvn-cli",
+  "main": "bin/mvn-cli.js",
   "scripts": {
-    "start": "node mvn-cli.js"
+    "start": "node ./bin/mvn-cli.js"
   },
   "bin": {
-    "jmvn": "bin/mvn-cli"
+    "jmvn": "bin/mvn-cli.js"
   },
   "keywords": [],
   "type": "module",
@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "art-template": "4.13.2",
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "blear.utils.plan": "^2.2.2",
     "chalk": "^4.1.0",
     "cli-color": "^2.0.0",
@@ -24,7 +24,7 @@
     "commander": "^6.2.1",
     "fs": "0.0.1-security",
     "inquirer": "^7.3.3",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "log-symbols": "^4.0.0",
     "mysql": "^2.18.1",
     "ora": "^5.3.0",

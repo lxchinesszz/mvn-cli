@@ -5,13 +5,7 @@
 // scm/scm-_integration/
 // scm/scm-_config/
 // scm/scm-_common/
-
-/**
- * 根据配置构建项目模块
- * @param config
- * @constructor
- */
-function NamespaceAction(config) {
+export default function NamespaceAction(config) {
 
     /**
      * 项目名
@@ -94,7 +88,7 @@ function NamespaceAction(config) {
      * 获取SpringBoot版本号
      * @returns {string|undefined|*}
      */
-    this.getSpringBootVersion = function (){
+    this.getSpringBootVersion = function () {
         return this._springBootVersion
     }
 
@@ -102,7 +96,7 @@ function NamespaceAction(config) {
      * 获取项目描述
      * @returns {string|MavenModuleAction._createModulePom._namespaceAction.projectDescription|*}
      */
-    this.getProjectDescription = function (){
+    this.getProjectDescription = function () {
         return this._projectDescription;
     }
 
@@ -285,6 +279,5 @@ function NamespaceAction(config) {
 
 }
 
-module.exports = {NamespaceAction}
 
 

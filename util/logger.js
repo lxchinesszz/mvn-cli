@@ -1,7 +1,7 @@
-const logSymbols = require("log-symbols")
-const chalk = require('chalk')
+import logSymbols from 'log-symbols';
+import chalk from 'chalk';
 
-function logger() {
+export function logger() {
 }
 
 logger.info = function (msg) {
@@ -24,9 +24,8 @@ logger.successNoIcon = function (msg) {
     console.log(chalk.greenBright(msg))
 }
 
-logger.debug = function (msg){
+logger.debug = function (msg) {
     // console.log(chalk.cyan(msg))
 }
 
-module.exports = logger
 

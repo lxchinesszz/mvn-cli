@@ -5,17 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1bd3609-f5fd-418a-8063-b1e1ebf1827a" name="默认的" comment="1. 增加单测模块&#10;2. 增加字符串判断&#10;3. 支持根据配置加载外部插件能力">
-      <change afterPath="$PROJECT_DIR$/test/InventoryWayMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/XmlTest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/PomUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/CommanderTest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/JsonUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/DomainModelCreateAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/DomainModelCreateAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/EchoVersionAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/EchoVersionAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/FileDirCreatorAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/FileDirCreatorAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/MavenHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/MavenHooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/NamespaceAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/NamespaceAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/ProjectAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/ProjectAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/maven/MavenModuleDependenciesAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/mysql/MysqlAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/MysqlAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/mysql/MysqlTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/mysql/MysqlTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action/named/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/action/named/filter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/mvn-cli" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mvn-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db_questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/db_questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/questions_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/questions_en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Install.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Install.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/PluginManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/PluginManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/git/GitAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/git/GitAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/git/template/GitIgnoreTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/git/template/GitIgnoreTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/FileTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/FileTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/JavaFileTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/JavaFileTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/MavenPomTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/MavenPomTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/SpringBootTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/SpringBootTemplate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/AssertTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/AssertTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/DyntaxAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/DyntaxAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/LoggerTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/LoggerTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/OraTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/OraTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/PluginTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/PluginTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/XmlTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/XmlTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Asserts.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/Asserts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util/ConfigUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/ConfigUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/DbUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/DbUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/DomainModelUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/DomainModelUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/OraUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/OraUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/PomUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/PomUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/TableUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/TableUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/logger.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +71,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/bin/mvn-cli" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/bin/mvn-cli" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/config.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/config.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/db_questions.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/questions.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/questions_en.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/main.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/plugins/Install.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/plugins/Plugin.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/plugins/git/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/plugins/git/GitAction.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/test/AssertTest.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/test/DyntaxAction.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/test/LoggerTest.js" root0="FORCE_HIGHLIGHTING" />
@@ -82,36 +124,43 @@
       <recent name="$PROJECT_DIR$/action/maven" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/util" />
       <recent name="$PROJECT_DIR$/ascm/ascm-dal/src/main/java/com/danchuang" />
       <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/action/maven" />
       <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.XmlTest.js">
-    <configuration name="AssertTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/AssertTest.js" working-dir="$PROJECT_DIR$/test">
+  <component name="RunManager" selected="Node.js.CommanderTest.js (1)">
+    <configuration name="CommanderTest.js (1)" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/CommanderTest.js" working-dir="$PROJECT_DIR$/test">
       <method v="2" />
     </configuration>
-    <configuration name="Asserts.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/util/Asserts.js" working-dir="$PROJECT_DIR$/util">
+    <configuration name="CommanderTest.js" type="NodeJSConfigurationType" temporary="true" application-parameters="export" nameIsGenerated="true" path-to-js-file="CommanderTest.js" working-dir="$PROJECT_DIR$/test">
       <method v="2" />
     </configuration>
-    <configuration name="OraTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/OraTest.js" working-dir="$PROJECT_DIR$/test">
+    <configuration name="EchoVersionAction.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" node-parameters="--experimental-json-modules" path-to-js-file="EchoVersionAction.js" working-dir="$PROJECT_DIR$/action">
       <method v="2" />
     </configuration>
-    <configuration name="PluginTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/PluginTest.js" working-dir="$PROJECT_DIR$/test">
+    <configuration name="MysqlTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="MysqlTest.js" working-dir="$PROJECT_DIR$/action/mysql">
       <method v="2" />
     </configuration>
-    <configuration name="XmlTest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/XmlTest.js" working-dir="$PROJECT_DIR$/test">
+    <configuration name="mvn-cli.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" node-parameters="--experimental-json-modules" path-to-js-file="$PROJECT_DIR$/bin/mvn-cli.js" working-dir="$PROJECT_DIR$/bin">
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Node.js.CommanderTest.js (1)" />
+      <item itemvalue="Node.js.CommanderTest.js" />
+      <item itemvalue="Node.js.EchoVersionAction.js" />
+      <item itemvalue="Node.js.MysqlTest.js" />
+      <item itemvalue="Node.js.mvn-cli.js" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.XmlTest.js" />
-        <item itemvalue="Node.js.AssertTest.js" />
-        <item itemvalue="Node.js.OraTest.js" />
-        <item itemvalue="Node.js.PluginTest.js" />
-        <item itemvalue="Node.js.Asserts.js" />
+        <item itemvalue="Node.js.CommanderTest.js (1)" />
+        <item itemvalue="Node.js.CommanderTest.js" />
+        <item itemvalue="Node.js.EchoVersionAction.js" />
+        <item itemvalue="Node.js.MysqlTest.js" />
+        <item itemvalue="Node.js.mvn-cli.js" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +225,7 @@
       <workItem from="1650591171529" duration="6866000" />
       <workItem from="1650617976682" duration="2123000" />
       <workItem from="1650713259214" duration="2021000" />
-      <workItem from="1650715912659" duration="1600000" />
+      <workItem from="1650715912659" duration="8619000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610019559589</created>
@@ -423,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650620181774</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="1. 增加单测模块&#10;2. 增加字符串判断&#10;3. 支持根据配置加载外部插件能力">
+      <created>1650717817157</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1650717817157</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +547,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/AssertTest.js</url>
-          <line>7</line>
+          <line>3</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -521,9 +577,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/XmlTest.js</url>
-          <line>1</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/bin/mvn-cli</url>
+          <line>1</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/action/mysql/MysqlTest.js</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

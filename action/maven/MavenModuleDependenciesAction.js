@@ -1,5 +1,7 @@
-const dependencyConfig = require('./dependency.json')
-const _ = require('lodash')
+import _ from 'lodash'
+import {toJson} from "../../util/JsonUtils.js";
+
+let dependencyConfig = toJson('./dependency.json')
 
 /**
  * 依赖管理
@@ -166,4 +168,4 @@ function MavenModuleDependenciesAction(mavenModuleNamespaceConfig) {
     }
 }
 
-module.exports = {MavenModuleDependenciesAction}
+export {MavenModuleDependenciesAction}

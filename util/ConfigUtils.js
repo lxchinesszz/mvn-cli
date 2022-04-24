@@ -1,8 +1,9 @@
-let path = require('path')
-let fs = require('fs')
-const logger = require('../util/logger')
+import fs from 'fs'
+import path from 'path'
 
-function getConfig(filePath) {
+import {logger} from './logger.js'
+
+export function getConfig(filePath) {
     let jmvnConfigPath = path.resolve(filePath)
     if (fs.existsSync(jmvnConfigPath)) {
         return fs.readFileSync(jmvnConfigPath, 'utf-8');
@@ -16,7 +17,7 @@ function getConfig(filePath) {
  * 读取配置文件地址
  * @returns {*}
  */
-function getJmvnConfig() {
+export function getJmvnConfig() {
     let jmvnConfig = getConfig('./.jmvn.json')
     try {
         JSON.parse(jmvnConfig)
@@ -30,10 +31,9 @@ function getJmvnConfig() {
  * 文件重置
  * @param jmvnConfig
  */
-function writeJmvnConfig(jmvnConfig) {
+export function writeJmvnConfig(jmvnConfig) {
     fs.writeFileSync('./.jmvn.json', jmvnConfig)
 }
 
-module.exports = {getJmvnConfig, writeJmvnConfig}
 
 

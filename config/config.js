@@ -1,5 +1,4 @@
-const fs = require('fs')
-
+import fs from "fs";
 // 配置属性
 
 // Mybatis-Plus
@@ -58,7 +57,7 @@ const MvnConfig = {
     // 项目名称
     projectName: '',
     // 项目作者
-    projectAuthor: "mvn-cli",
+    projectAuthor: "mvn-cli.js",
     // 项目版本号
     projectVersion: '',
     // 是否自动生成readme文档
@@ -88,4 +87,4 @@ function mvnCliConfig() {
 }
 
 
-module.exports = {MvnConfig,  ProjectTemplateConfig, log, mvnCliConfig}
+export {MvnConfig, ProjectTemplateConfig, log, mvnCliConfig}

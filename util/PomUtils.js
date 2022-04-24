@@ -1,11 +1,9 @@
-let fs = require('fs')
-let path = require('path')
-let convert = require('xml-js');
-let _ = require('lodash')
+import path from 'path';
+import convert from 'xml-js';
+import fs from 'fs';
+import _ from 'lodash';
 
-
-
-function parsePom(pomFile) {
+export function parsePom(pomFile) {
     let xmlFile = path.resolve('pom.xml')
     let pom = '{}'
     if (fs.existsSync(xmlFile)) {
@@ -27,7 +25,7 @@ function parsePom(pomFile) {
  * @param pomFile pom文件
  * @returns {*} []
  */
-function modules(pomFile) {
+export function modules(pomFile) {
     /**
      * [
      *   { _text: 'purchase-center-common' },
@@ -42,4 +40,3 @@ function modules(pomFile) {
     return _.map(modules, module => module['_text'])
 }
 
-module.exports = {parsePom, modules}

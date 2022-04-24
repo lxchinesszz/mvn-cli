@@ -93,7 +93,7 @@ const DbQuestions = [
     },
 ];
 
-module.exports = {
+export {
     DbQuestions,
     inputTableQuestions
 }

@@ -1,8 +1,8 @@
-let {Plugin} = require('./Plugin')
-let logger = require('../util/logger')
-let _ = require('lodash')
-const {getPlugins} = require("../util/DomainModelUtils");
-const Asserts = require("../util/Asserts");
+import {Plugin} from './Plugin.js'
+import {logger} from '../util/logger.js'
+import _ from 'lodash'
+import {getPlugins} from "../util/DomainModelUtils.js";
+import {Asserts} from '../util/Asserts.js'
 
 function PluginManager() {
 
@@ -111,5 +111,5 @@ function PluginManager() {
 }
 
 const Plugins = new PluginManager();
-module.exports = Plugins
 
+export {Plugins}

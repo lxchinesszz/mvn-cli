@@ -1,10 +1,9 @@
-const {getDbConfig} = require('../util/DbUtils')
-const MysqlAction = require('./mysql/MysqlAction')
-const {getDomainModels, comparedDomainModel} = require('../util/DomainModelUtils')
-const logger = require('../util/logger')
-const {animation} = require('../util/OraUtils')
+import {getDbConfig} from '../util/DbUtils.js'
+import MysqlAction from './mysql/MysqlAction.js'
+import {getDomainModels, comparedDomainModel} from '../util/DomainModelUtils.js'
+import {animation} from "../util/OraUtils.js";
 
-function DomainModelCreateAction() {
+export default function DomainModelCreateAction() {
 
     /**
      * 读取配置文件并构建表结构
@@ -77,4 +76,3 @@ function DomainModelCreateAction() {
 
 }
 
-module.exports = DomainModelCreateAction

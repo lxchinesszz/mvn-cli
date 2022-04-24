@@ -1,7 +1,8 @@
-let {getJmvnConfig} = require('./ConfigUtils')
-let _ = require('lodash')
+import _ from 'lodash'
+import {getJmvnConfig}  from './ConfigUtils.js'
 
-function getDbConfig() {
+
+export function getDbConfig() {
     let jmvnConfig = getJmvnConfig();
     // console.info("jmvnConfig:" + jmvnConfig)
     let dbConfig = JSON.parse(jmvnConfig)["dbConfig"];
@@ -29,4 +30,3 @@ function getDbConfig() {
     return dbConfig
 }
 
-module.exports = {getDbConfig}

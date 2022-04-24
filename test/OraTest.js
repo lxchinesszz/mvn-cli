@@ -1,7 +1,4 @@
-let ora = require('ora')
-
-
-const {animation} = require('../util/OraUtils')
+import {animation} from '../util/OraUtils.js';
 
 animation("下载中", "下载完成", 5000, () => {
     console.log()

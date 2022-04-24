@@ -1,7 +1,7 @@
-const template = require('art-template')
-const fs = require('fs')
+import template from 'art-template'
+import fs from 'fs'
 
-function MavenPomTemplate(filePath) {
+export function MavenPomTemplate(filePath) {
 
     /**
      * 当前处理的文件模板路径
@@ -102,7 +102,6 @@ function setPrefix(prefixIndex) {
 
 // console.log(template.render('{{@name}}', {name: 'lx'}));
 
-module.exports = {MavenPomTemplate}
 
 
 // new MavenPomTemplate('../template/root.xml').create({

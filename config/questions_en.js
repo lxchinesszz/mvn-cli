@@ -1,5 +1,5 @@
-const logSymbols = require("log-symbols")
-const _ = require('lodash')
+import _ from 'lodash'
+import logSymbols from "log-symbols";
 
 const projectInfoQuestionsEn = [{
     type: 'input',
@@ -32,7 +32,7 @@ const projectInfoQuestionsEn = [{
             if (val) {
                 return val
             } else {
-                return 'mvn-cli'
+                return 'mvn-cli.js'
             }
         }
     },
@@ -126,6 +126,6 @@ const projectInfoQuestionsEn = [{
     // }
 ];
 
-module.exports = {
+export {
     projectInfoQuestionsEn
 }

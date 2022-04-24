@@ -1,12 +1,10 @@
-let {getJmvnConfig, writeJmvnConfig} = require('./ConfigUtils')
-let _ = require('lodash')
-const {re} = require("semver");
-
+import {getJmvnConfig, writeJmvnConfig} from './ConfigUtils.js'
+import _ from 'lodash'
 /**
  * 对比并且更新
  * @param models
  */
-function comparedDomainModel(models) {
+export function comparedDomainModel(models) {
     let jmvnConfigStr = getJmvnConfig();
     let jmvnConfig = JSON.parse(jmvnConfigStr);
     let domainModels = jmvnConfig["models"];
@@ -25,7 +23,7 @@ function comparedDomainModel(models) {
  * @param sourceConfig 原来的配置文件
  * @param newAddConfig 要新增的配置文件
  */
-function add(sourceConfig, newAddConfig) {
+export function add(sourceConfig, newAddConfig) {
     // 如果配置文件中没有配置,则直接信息
     if (!sourceConfig) {
         sourceConfig = [].push(newAddConfig)
@@ -47,13 +45,13 @@ function add(sourceConfig, newAddConfig) {
 }
 
 // 获取db的配置
-function getDbConfig() {
+export function getDbConfig() {
     let jmvnConfig = getJmvnConfig();
     return JSON.parse(jmvnConfig)["dbConfig"];
 }
 
 // 获取数据模型的配置
-function getDomainModels() {
+export function getDomainModels() {
     let jmvnConfig = getJmvnConfig();
     let domainModels = JSON.parse(jmvnConfig)["models"];
     if (!domainModels) {
@@ -92,9 +90,8 @@ function getDomainModels() {
 }
 
 
-function getPlugins() {
+export function getPlugins() {
     let jmvnConfig = getJmvnConfig();
     return JSON.parse(jmvnConfig)["plugins"];
 }
 
-module.exports = {getDomainModels, comparedDomainModel, getDbConfig, getPlugins}

@@ -1,12 +1,12 @@
-const mysql = require('mysql')
-const path = require('path')
-const JavaFileTemplate = require('../../template/JavaFileTemplate')
-const javaFileTemplate = new JavaFileTemplate(path.resolve(__dirname, 'domain.java'))
-let typeMapping = require('./mapper.json')
-const {consoleTableString, markdownTableString} = require('../../util/TableUtils')
-const _ = require('lodash')
-const logger = require('../../util/logger')
-const FileDirCreatorAction = require('../FileDirCreatorAction')
+import mysql from 'mysql';
+import path from "path";
+import {JavaFileTemplate} from '../../template/JavaFileTemplate.js';
+import {toJson} from "../../util/JsonUtils.js";
+const javaFileTemplate = new JavaFileTemplate('./domain.java')
+import {consoleTableString, markdownTableString} from '../../util/TableUtils.js'
+import _ from 'lodash';
+import {logger} from "../../util/logger.js";
+import FileDirCreatorAction from '../FileDirCreatorAction.js';
 
 function ExportError(msg) {
     this.name = "ExportError";
@@ -17,8 +17,9 @@ ExportError.prototype = Object.create(Error.prototype);
 
 ExportError.prototype.constructor = ExportError
 
+const typeMapping = toJson('./mapper.json')
 
-function MysqlAction(host, user, password, database) {
+export default function MysqlAction(host, user, password, database) {
 
 
     this._createConn = function () {
@@ -200,4 +201,3 @@ function fistUpper(name) {
 }
 
 
-module.exports = MysqlAction
