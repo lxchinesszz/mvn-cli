@@ -40,3 +40,28 @@ export function modules(pomFile) {
     return _.map(modules, module => module['_text'])
 }
 
+export function dependencyManagement(pomFile) {
+    let dependencies = parsePom(pomFile)['project']['dependencyManagement']['dependencies']['dependency'];
+    return _.map(dependencies, dependency => new Dependency(getValue(dependency, 'groupId'), getValue(dependency, 'artifactId'), getValue(dependency, 'version'), getValue(dependency, 'scope')))
+}
+
+export function properties(pomFile){
+
+}
+
+class Dependency {
+    constructor(groupId, artifactId, version, scope) {
+        this.groupId = groupId;
+        this.artifactId = artifactId;
+        this.version = version;
+        this.scope = scope;
+    }
+}
+
+
+function getValue(element, key) {
+    if (element && element[key]) {
+        return element[key]['_text']
+    }
+    return null;
+}
