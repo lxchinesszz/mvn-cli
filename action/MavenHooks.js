@@ -8,6 +8,8 @@ import {logger} from "../util/logger.js";
 import {GitAction} from "../plugins/git/GitAction.js";
 import {Plugins} from "../plugins/PluginManager.js";
 import {PluginEventType} from "../plugins/Plugin.js";
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
 function _dir(path) {
     new FileDirCreatorAction().create(path)
 }

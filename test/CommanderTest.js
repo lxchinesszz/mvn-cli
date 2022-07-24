@@ -15,8 +15,8 @@ import _ from 'lodash'
 import {getDbConfig} from "../util/DomainModelUtils.js";
 import {Asserts} from "../util/Asserts.js";
 import {toJson} from "../util/JsonUtils.js";
-let packageConfig = toJson('../package.json')
 
+let packageConfig = toJson('../package.json')
 axios.interceptors.response.use(
     response => {
         return response

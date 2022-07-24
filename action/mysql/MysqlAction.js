@@ -17,7 +17,7 @@ ExportError.prototype = Object.create(Error.prototype);
 
 ExportError.prototype.constructor = ExportError
 
-const typeMapping = toJson('./mapper.json')
+const typeMapping = toJson('../action/mysql/mapper.json')
 
 export default function MysqlAction(host, user, password, database) {
 

@@ -1,7 +1,6 @@
 import _ from 'lodash'
 import {toJson} from "../../util/JsonUtils.js";
-
-let dependencyConfig = toJson('./dependency.json')
+let dependencyConfig = toJson('../action/maven/dependency.json')
 
 /**
  * 依赖管理

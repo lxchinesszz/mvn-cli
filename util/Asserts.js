@@ -12,7 +12,7 @@ Asserts.isBlank = function (value) {
     }
     // 是字符串,trim后长度是0，说明是空
     if (_.isString(value) && _.trim(value).length === 0) {
-        return false;
+        return true;
     }
     return false;
 }

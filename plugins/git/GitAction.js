@@ -1,6 +1,6 @@
 import path from 'path'
 import {GitIgnoreTemplate} from "./template/GitIgnoreTemplate.js";
-
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 export function GitAction() {
 
     /**

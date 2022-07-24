@@ -1,12 +1,11 @@
 import {log} from '../../config/config.js'
-
+import path from 'path'
 import {MavenPomTemplate} from '../../template/MavenPomTemplate.js'
 import {SpringBootTemplate} from '../../template/SpringBootTemplate.js'
 import {logger} from '../../util/logger.js'
 import FileDirCreatorAction from '../FileDirCreatorAction.js'
 import _ from 'lodash';
-import path from "path";
-
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 /**
  * 构建module依赖
  * @param NamespaceAction 命名管理

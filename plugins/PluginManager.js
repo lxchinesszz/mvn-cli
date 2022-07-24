@@ -87,27 +87,42 @@ function PluginManager() {
     }
 
     this.loadPlugins = function () {
-        // 从配置文件中加载插件
-        let plugins = getPlugins();
-        if (plugins) {
-            plugins.forEach(plugin => {
-                if (Asserts.isBlank(plugin.name)) {
-                    logger.error("插件名称不能为空")
-                }
-                if (Asserts.isBlank(plugin.desc)) {
-                    logger.error("插件描述不能为空")
-                }
-                if (Asserts.isBlank(plugin.type)) {
-                    logger.error("插件类型不能为空")
-                }
-                if (Asserts.isBlank(plugin.action)) {
-                    logger.error("插件文件不能为空")
-                }
-                let func = require(plugin.action)
-                Plugins.register(new Plugin(plugin.name, plugin.desc, plugin.type, func))
+        let _this = this
+        return new Promise(function (resolve, reject) {
+            // 从配置文件中加载插件
+            let plugins = getPlugins();
+            let importPromises = []
+            if (plugins) {
+                plugins.forEach(plugin => {
+                    if (Asserts.isBlank(plugin.name)) {
+                        logger.error("插件名称不能为空")
+                    }
+                    if (Asserts.isBlank(plugin.desc)) {
+                        logger.error("插件描述不能为空")
+                    }
+                    if (Asserts.isBlank(plugin.type)) {
+                        logger.error("插件类型不能为空")
+                    }
+                    if (Asserts.isBlank(plugin.action)) {
+                        logger.error("插件文件不能为空")
+                    }
+                    importPromises.push(dynamicImport(plugin))
+                })
+            }
+            Promise.all(importPromises).then(values => {
+                resolve(_this)
             })
-        }
+        })
+
     }
+}
+
+function dynamicImport(plugin) {
+    return new Promise((resolve, reject) => {
+        let importPluginPromise = import(plugin.action);
+        Plugins.register(new Plugin(plugin.name, plugin.desc, plugin.type, importPluginPromise.action))
+        resolve()
+    })
 }
 
 const Plugins = new PluginManager();

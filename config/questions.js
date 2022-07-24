@@ -86,7 +86,7 @@ const projectInfoQuestions = [{
         type: 'input',
         name: 'springBootVersion',
         message: 'SpringBoot版本号',
-        default: '0.5.1-RELEASE',
+        default: '2021.0.3',
         prefix: logSymbols.success,
         suffix: ':'
     }

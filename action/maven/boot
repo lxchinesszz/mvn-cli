@@ -1,14 +1,21 @@
 package {{@packagePath}};
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.logging.Logger;
+
 
 /**
- * SpringBootApplication 建议放在同路径名下,
- * 因为默认会向下面路径去扫描类信息
- * @author mvn-cli.js
+ * @author jmvn
  */
 @SpringBootApplication
 public class {{@className}}{
+
+    private final static Logger LOGGER = Logger.getLogger("console");
+
 
     /**
      * SpringBoot主函数
@@ -16,7 +23,29 @@ public class {{@className}}{
      */
     public static void main(String[]args){
         // 引导启动
-        SpringApplication.run({{@className}}.class,args);
+        ConfigurableApplicationContext context = SpringApplication.run({{@className}}.class,args);
+        print(context);
     }
 
+    /**
+     * 演示使用,项目使用请移除
+     *
+     * @param context 容器
+     */
+    private static void print(ConfigurableApplicationContext context) {
+        Integer port = context.getEnvironment().getProperty("server.port", Integer.TYPE);
+        LOGGER.info("http://127.0.0.1:" + port + "/jmvn");
+    }
+
+    /**
+     * 演示使用,项目使用请移除
+     */
+    @RestController
+    public static class HelloController {
+
+        @GetMapping(value = "jmvn", consumes = MediaType.ALL_VALUE)
+        public String helloWorld() {
+            return "<h1> hello jmvn </h1>";
+        }
+    }
 }

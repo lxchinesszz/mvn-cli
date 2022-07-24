@@ -15,6 +15,7 @@ import _ from 'lodash'
 import {getDbConfig} from "../util/DomainModelUtils.js";
 import {Asserts} from "../util/Asserts.js";
 import {toJson} from "../util/JsonUtils.js";
+import {listJavaProcess,listLocalClass} from "../util/jvm.js";
 let packageConfig = toJson('../package.json')
 
 axios.interceptors.response.use(
@@ -64,7 +65,6 @@ function viewProgram() {
                 project.create();
             })
         });
-
 
     const installProgram = Program
         .command("install")
@@ -168,6 +168,21 @@ function viewProgram() {
         }
 
     });
+
+    const jvmProgram = Program.command("jvm")
+        .option('-jps, --jps [String]', '查询当前系统运行的Java进程', false)
+        .option('-class, --class [String]', '要安装的路径地址(相对路径)', false)
+        .description("JVM信息查询");
+
+    jvmProgram.action(() => {
+        if (jvmProgram.jps) {
+            listJavaProcess();
+        }
+        if (jvmProgram.class) {
+            listLocalClass(jvmProgram.class);
+        }
+    });
+
     Program.parse(process.argv);
 }
 
